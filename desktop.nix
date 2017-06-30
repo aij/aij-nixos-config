@@ -3,6 +3,7 @@
   imports = [ ./standard.nix ];
 
   environment.systemPackages = with pkgs; [
+     man-pages
      gkrellm
      gnupg kismet # openssh_with_kerberos
      xscreensaver rxvt_unicode terminus_font pidgin geeqie mplayer vlc mpv
