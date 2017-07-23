@@ -17,6 +17,7 @@
      zfs btrfs-progs xfsprogs
      lynx w3m
      git ack binutils ocaml emacs 
+     rxvt_unicode.terminfo
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
