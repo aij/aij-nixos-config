@@ -14,7 +14,7 @@
   environment.systemPackages = with pkgs; [
      wget vim screen latencytop powertop htop lsof psmisc pwgen traceroute mtr tree tcpdump zip unzip pciutils ethtool sdparm lsscsi rlwrap
      file usbutils bsdgames fping hdparm iotop finger_bsd openssl inetutils unar smartmontools sysstat
-     zfs btrfs-progs
+     zfs btrfs-progs xfsprogs
      lynx w3m
      git ack binutils ocaml emacs 
   ];

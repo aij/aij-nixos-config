@@ -7,7 +7,7 @@
      gkrellm
      gnupg kismet # openssh_with_kerberos
      xscreensaver rxvt_unicode terminus_font pidgin geeqie mplayer vlc mpv
-     xorg.xinit xorg.xdpyinfo xorg.xbacklight xorg.xdriinfo xfontsel x2x
+     xorg.xinit xorg.xdpyinfo xorg.xbacklight xorg.xdriinfo xorg.xev xorg.xmodmap xfontsel x2x
      chromium  firefox google-chrome # chromiumDev
      evince gphoto2 gphoto2fs
      enlightenment.rage enlightenment.terminology
@@ -17,6 +17,8 @@
      keepassx2
      gnumake scala jdk python python3 ack clang ocamlPackages.utop # jre
      androidsdk
+     rustc cargo
+     sshfs-fuse
      lsdvd dvdbackup handbrake      
   ];
 
