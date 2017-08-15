@@ -19,7 +19,7 @@
      androidsdk
      rustc cargo
      sshfs-fuse
-     lsdvd dvdbackup handbrake      
+     lsdvd dvdbackup handbrake cdrkit
   ];
 
 
