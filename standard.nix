@@ -16,8 +16,10 @@
      file usbutils bsdgames fping hdparm iotop finger_bsd openssl inetutils unar smartmontools sysstat
      zfs btrfs-progs xfsprogs
      lynx w3m
-     git ack binutils ocaml emacs 
+     git ack binutils ocaml
      rxvt_unicode.terminfo
+     # Customized emacs package
+     (import pkg/emacs.nix { inherit pkgs; })
   ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
