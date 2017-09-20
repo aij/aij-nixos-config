@@ -9,7 +9,7 @@
      xscreensaver rxvt_unicode terminus_font pidgin geeqie mplayer vlc mpv
      xorg.xinit xorg.xdpyinfo xorg.xbacklight xorg.xdriinfo xorg.xev xorg.xmodmap xfontsel x2x
      chromium  firefox google-chrome # chromiumDev
-     evince gphoto2 gphoto2fs imagemagick
+     evince gphoto2 gphoto2fs imagemagick gnumeric abiword
      enlightenment.rage enlightenment.terminology
      trayer haskellPackages.xmobar
      audacity fldigi
