@@ -22,6 +22,18 @@
      lsdvd dvdbackup handbrake cdrkit
   ];
 
+  services.xserver = {
+    enable = true;
+    layout = "dvorak";
+    # services.xserver.xkbOptions = "ctrl:nocaps, terminate:ctrl_alt_bksp, compose:rwin";
+    enableCtrlAltBackspace = true;
+    windowManager = {
+      xmonad.enable = true;
+      xmonad.enableContribAndExtras = true;
+      default = "xmonad";
+    };
+  };
+
 
   fonts = {
     enableFontDir = true;
@@ -31,5 +43,4 @@
         terminus_font
     ];
   };
-
 } 
