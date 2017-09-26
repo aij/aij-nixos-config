@@ -4,9 +4,11 @@
 
   environment.systemPackages = with pkgs; [
      man-pages wdiff
-     gnumake gcc scala jdk ack ag clang ocamlPackages.utop # jre
+     gnumake gcc scala jdk ack ag ocamlPackages.utop # jre
+     (clang.overrideAttrs(oldAttrs: { meta.priority = -1; }))
      dash zsh
-     python python3
+     python
+     python3
      #androidsdk
      rustc cargo
      sshfs-fuse

@@ -8,7 +8,10 @@
      # Packages needed for CCAP3 development
      nodejs yarn purescript
      postgresql
-     (python.withPackages(ps: with ps; [ lxml beautifulsoup4 ]))
+     ((python
+       .withPackages(ps: with ps; [ lxml beautifulsoup4 ]))
+       .overrideAttrs(oldAttrs: { meta.priority = -1000; })
+     )
      google-chrome-beta remmina 
   ];
 } 
