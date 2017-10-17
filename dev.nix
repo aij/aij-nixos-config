@@ -9,6 +9,7 @@
      dash zsh
      python
      python3
+     ruby
      #androidsdk
      rustc cargo
      sshfs-fuse

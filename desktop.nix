@@ -7,6 +7,7 @@
      gnupg kismet # openssh_with_kerberos
      xscreensaver rxvt_unicode terminus_font pidgin geeqie mplayer vlc mpv
      xorg.xinit xorg.xdpyinfo xorg.xbacklight xorg.xdriinfo xorg.xev xorg.xmodmap xfontsel x2x
+     xclip
      chromium  firefox google-chrome # chromiumDev
      evince gphoto2 gphoto2fs imagemagick gnumeric abiword
      enlightenment.rage enlightenment.terminology
@@ -15,6 +16,7 @@
      exif exiftags
      keepassx2
      androidsdk
+     graphviz
      sshfs-fuse
      lsdvd dvdbackup handbrake cdrkit
   ];
