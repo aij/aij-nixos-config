@@ -9,7 +9,8 @@
      xorg.xinit xorg.xdpyinfo xorg.xbacklight xorg.xdriinfo xorg.xev xorg.xmodmap xfontsel x2x
      xclip
      chromium  firefox google-chrome # chromiumDev
-     evince gphoto2 gphoto2fs imagemagick gnumeric abiword
+     evince xpdf pdfmod gphoto2 gphoto2fs imagemagick gnumeric abiword
+     gnome3.gconf # hack
      enlightenment.rage enlightenment.terminology
      trayer haskellPackages.xmobar
      audacity fldigi
@@ -42,4 +43,4 @@
         terminus_font
     ];
   };
-} 
+}
