@@ -20,31 +20,25 @@ let
   emacsWithPackages = (pkgs.emacsPackagesNgGen myEmacs).emacsWithPackages;
 in
   emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
-    nix-mode
     magit          # ; Integrate git <C-x g>
-    #zerodark-theme # ; Nicolas' theme
-  ]) ++ (with epkgs.melpaPackages; [
-    bind-key
-    company
-    diminish
-    ensime
-    #epl #? A package management library for Emacs...
     groovy-mode
     json-mode
     math-symbol-lists
-    pkg-info #?
     projectile
-    psc-ide
-    purescript-mode
     rainbow-delimiters
-    rjsx-mode
     rust-mode
     sbt-mode
     scala-mode
     smartparens
+    use-package # Useful for package configuration, even when they are installed via nix.
+    #zerodark-theme # ; Nicolas' theme
+  ]) ++ (with epkgs.melpaPackages; [
+    ensime
+    nix-mode
+    psc-ide
+    purescript-mode
+    rjsx-mode
     undo-tree      # ; <C-x u> to show the undo tree
-    use-package #? Remove?
-    yasnippet #? Used by ?
     #zoom-frm       # ; increase/decrease font size for all buffers <C-x C-+>
   ]) ++ (with epkgs.elpaPackages; [
     #auctex         # ; LaTeX mode
