@@ -23,6 +23,7 @@ in
     magit          # ; Integrate git <C-x g>
     groovy-mode
     json-mode
+    markdown-mode
     math-symbol-lists
     projectile
     rainbow-delimiters
