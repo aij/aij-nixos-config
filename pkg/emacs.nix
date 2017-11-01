@@ -31,6 +31,7 @@ in
     scala-mode
     smartparens
     use-package # Useful for package configuration, even when they are installed via nix.
+    yaml-mode
     #zerodark-theme # ; Nicolas' theme
   ]) ++ (with epkgs.melpaPackages; [
     ensime
