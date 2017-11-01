@@ -11,6 +11,7 @@
      chromium  firefox google-chrome # chromiumDev
      evince xpdf pdfmod gphoto2 gphoto2fs imagemagick gnumeric abiword
      gnome3.gconf # hack
+     gimp-with-plugins
      enlightenment.rage enlightenment.terminology
      trayer haskellPackages.xmobar
      audacity fldigi
