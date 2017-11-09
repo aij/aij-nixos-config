@@ -19,7 +19,7 @@
      keepassx2
      androidsdk
      graphviz
-     sshfs-fuse
+     sshfs-fuse ansible
      lsdvd dvdbackup handbrake cdrkit
   ];
 
