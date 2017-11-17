@@ -20,9 +20,9 @@ let
   emacsWithPackages = (pkgs.emacsPackagesNgGen myEmacs).emacsWithPackages;
 in
   emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
-    magit          # ; Integrate git <C-x g>
     groovy-mode
     json-mode
+    magit          # ; Integrate git <C-x g>
     markdown-mode
     math-symbol-lists
     projectile
@@ -37,6 +37,7 @@ in
   ]) ++ (with epkgs.melpaPackages; [
     ensime
     nix-mode
+    prettier-js
     psc-ide
     purescript-mode
     rjsx-mode
