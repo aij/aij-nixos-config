@@ -5,7 +5,7 @@
   environment.systemPackages = with pkgs; [
      gkrellm
      gnupg kismet # openssh_with_kerberos
-     xscreensaver rxvt_unicode terminus_font pidgin geeqie mplayer vlc mpv
+     xscreensaver rxvt_unicode terminus_font geeqie mplayer vlc mpv
      xorg.xinit xorg.xdpyinfo xorg.xbacklight xorg.xdriinfo xorg.xev xorg.xmodmap xfontsel x2x
      xclip
      chromium  firefox google-chrome # chromiumDev
@@ -21,6 +21,9 @@
      graphviz
      sshfs-fuse ansible
      lsdvd dvdbackup handbrake cdrkit
+     (pidgin.override {
+       plugins = [ purple-plugin-pack ];
+     })
   ];
 
   services.xserver = {
