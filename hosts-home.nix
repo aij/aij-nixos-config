@@ -1,4 +1,4 @@
-{
+let hostlist = {
   m0 = {
     net0 = {
       iface= "enp2s0f0";
@@ -25,7 +25,7 @@
       ip = "192.168.1.21";
     };
   };
-  m3 = {
+  m4 = {
     net0 = {
       #iface= "";
       mac =  "BC:16:65:0B:0C:1A";
@@ -42,7 +42,7 @@
 
   c1n0 = {
     net1 = {
-      mac = "00:25:90:d3:fd:04":
+      mac = "00:25:90:d3:fd:04";
       ip = "10.0.1.163"; # Change to 110
     };
   };
@@ -89,4 +89,21 @@
       ip = "10.0.1.173";
     };
   };
+};
+#netOrder = ["net0", "net1"];
+in {
+  networking.hosts = (
+    with builtins;
+    let names = attrNames hostlist; in
+    let genLine = hostname: netname: let conf = hostlist.${hostname}.${netname}; in {
+      name = conf.ip;
+      value = [ "${hostname}.${netname}" hostname ];
+    }; in
+    # TODO: Avoid duplicating short names
+    let nested = map (hostname:
+      map (genLine hostname) (attrNames hostlist.${hostname})
+    ) names; in
+    listToAttrs(concatLists nested)
+  );
+
 }
