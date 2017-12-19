@@ -20,6 +20,7 @@
      zfs btrfs-progs xfsprogs
      lynx w3m
      git ack binutils ocaml
+     ripgrep # rg
      rxvt_unicode.terminfo
      # Customized emacs package
      (import pkg/emacs.nix { inherit pkgs; })
