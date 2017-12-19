@@ -15,5 +15,6 @@
      )
      subversionClient
      google-chrome-beta remmina 
+     python36Packages.xdot
   ];
 } 
