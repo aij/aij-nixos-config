@@ -12,7 +12,7 @@
   time.timeZone = "America/Chicago";
 
   environment.systemPackages = with pkgs; [
-     wget vim screen latencytop powertop htop lsof psmisc pwgen traceroute tree tcpdump zip unzip pciutils ethtool sdparm lsscsi rlwrap
+     wget vim screen powertop htop lsof psmisc pwgen traceroute tree tcpdump zip unzip pciutils ethtool sdparm lsscsi rlwrap
      file usbutils bsdgames fping hdparm iotop finger_bsd openssl inetutils unar smartmontools sysstat beep numactl
      dmidecode
      memtester
