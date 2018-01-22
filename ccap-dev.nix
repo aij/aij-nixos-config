@@ -6,7 +6,7 @@
 
   environment.systemPackages = with pkgs; [
      # Packages needed for CCAP3 development
-     nodejs yarn purescript
+     nodejs yarn purescript flow
      nodePackages.prettier
      postgresql
      ((python
@@ -17,4 +17,7 @@
      google-chrome-beta remmina 
      python36Packages.xdot
   ];
+
+  # For running IE in virtualbox.
+  virtualisation.virtualbox.host.enable = true;
 } 
