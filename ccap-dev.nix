@@ -14,7 +14,7 @@
        .overrideAttrs(oldAttrs: { meta.priority = -1000; })
      )
      subversionClient
-     google-chrome-beta remmina 
+     google-chrome-beta remmina rdesktop
      python36Packages.xdot
   ];
 
