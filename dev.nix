@@ -14,5 +14,6 @@
      rustc cargo
      sshfs-fuse
      nix-repl
+     patdiff
   ];
 } 
