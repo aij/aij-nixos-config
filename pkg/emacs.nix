@@ -20,6 +20,7 @@ let
   emacsWithPackages = (pkgs.emacsPackagesNgGen myEmacs).emacsWithPackages;
 in
   emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
+    dumb-jump
     groovy-mode
     json-mode
     magit          # ; Integrate git <C-x g>
