@@ -15,7 +15,6 @@
      )
      subversionClient
      google-chrome-beta remmina rdesktop
-     python36Packages.xdot
   ];
 
   # For running IE in virtualbox.
