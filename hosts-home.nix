@@ -13,9 +13,13 @@ let hostlist = {
   };
   m1 = {
     net0 = {
-      iface= "enp1s0f0";
+      iface = "enp1s0f0";
       mac =  "e4:c7:22:84:03:60";
       ip = "192.168.1.22";
+    };
+    ib = {
+      iface ="ib0";
+      ip = "10.0.9.11";
     };
   };
   m2 = {
@@ -30,6 +34,10 @@ let hostlist = {
       #iface= "";
       mac =  "BC:16:65:0B:0C:1A";
       ip = "192.168.1.23";
+    };
+    ib = {
+      iface ="ib0";
+      ip = "10.0.9.14";
     };
   };
   c0n0 = {
