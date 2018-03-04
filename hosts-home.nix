@@ -10,6 +10,10 @@ let hostlist = {
       mac = "B8:38:61:7B:F7:DD";
       ip = "10.0.1.11";
     };
+    ib = {
+      iface ="ib0";
+      ip = "10.0.9.10";
+    };
   };
   m1 = {
     net0 = {
