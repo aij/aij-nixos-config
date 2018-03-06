@@ -6,7 +6,7 @@
 
   environment.systemPackages = with pkgs; [
      # Packages needed for CCAP3 development
-     nodejs yarn purescript flow
+     nodejs-8_x yarn purescript flow
      nodePackages.prettier
      postgresql
      ((python
