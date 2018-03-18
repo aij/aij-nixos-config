@@ -24,12 +24,15 @@
      (pidgin.override {
        plugins = [ purple-plugin-pack ];
      })
+
+     tetex ghostscriptX poppler_utils
+
   ];
 
   services.xserver = {
     enable = true;
     layout = "dvorak";
-    # services.xserver.xkbOptions = "ctrl:nocaps, terminate:ctrl_alt_bksp, compose:rwin";
+    xkbOptions = "ctrl:nocaps, terminate:ctrl_alt_bksp, compose:ralt";
     enableCtrlAltBackspace = true;
     windowManager = {
       xmonad.enable = true;
