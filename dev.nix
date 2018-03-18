@@ -15,5 +15,8 @@
      sshfs-fuse
      nix-repl
      patdiff
+     vagrant
   ];
+
+  virtualisation.virtualbox.host.enable = true;
 } 
