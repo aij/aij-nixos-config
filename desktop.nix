@@ -41,6 +41,7 @@
     };
   };
 
+  sound.enable = true;
 
   fonts = {
     enableFontDir = true;
