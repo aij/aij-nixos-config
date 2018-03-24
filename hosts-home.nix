@@ -1,4 +1,16 @@
-let hostlist = {
+let
+nets = {
+  net0 = {
+    prefixLength = 24;
+  };
+  net1 = {
+    prefixLength = 24;
+  };
+  ib = {
+    prefixLength = 24;
+  };
+};
+hostlist = {
   m0 = {
     net0 = {
       iface= "enp2s0f0";
@@ -124,4 +136,20 @@ in {
     listToAttrs(concatLists nested)
   );
 
+  networking.interfaces = { config, lib, ...}: (
+    with builtins;
+    let c = hostlist.${config.networking.hostName} or {}; in
+    let s = lib.filterAttrs (_: i: i ? iface) c; in
+    {
+      networking.interfaces =  lib.mapAttrs' (n: v: {
+        name = v.iface;
+        value = {
+          ipv4.addresses = [{
+            address = v.ip;
+            prefixLength = nets.${n}.prefixLength;
+          }];
+        };
+      }) s;
+    }
+  );
 }
