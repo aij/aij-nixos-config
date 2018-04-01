@@ -20,7 +20,7 @@ hostlist = {
     net1 = {
       iface = "enp2s0f1";
       mac = "B8:38:61:7B:F7:DD";
-      ip = "10.0.1.11"; # Moving to m1...
+      ip = "10.0.1.10";
     };
     ib = {
       iface ="ib0";
