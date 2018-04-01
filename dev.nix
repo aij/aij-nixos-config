@@ -16,7 +16,9 @@
      nix-repl
      patdiff
      vagrant
+     # Customized emacs package
+     (import pkg/emacs.nix { inherit pkgs; })
   ];
 
   virtualisation.virtualbox.host.enable = true;
-} 
+}
