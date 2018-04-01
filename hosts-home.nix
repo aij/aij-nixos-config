@@ -20,7 +20,7 @@ hostlist = {
     net1 = {
       iface = "enp2s0f1";
       mac = "B8:38:61:7B:F7:DD";
-      ip = "10.0.1.11";
+      ip = "10.0.1.11"; # Moving to m1...
     };
     ib = {
       iface ="ib0";
@@ -32,6 +32,10 @@ hostlist = {
       iface = "enp1s0f0";
       mac =  "e4:c7:22:84:03:60";
       ip = "192.168.1.22";
+    };
+    net1 = {
+      iface = "enp1s0f1";
+      ip = "10.0.1.11";
     };
     ib = {
       iface ="ib0";
@@ -54,6 +58,12 @@ hostlist = {
     ib = {
       iface ="ib0";
       ip = "10.0.9.14";
+    };
+  };
+  m5 = {
+    net1 = {
+      mac = "90:b1:1c:fc:c6:51";
+      ip = "10.0.1.180";
     };
   };
   c0n0 = {
