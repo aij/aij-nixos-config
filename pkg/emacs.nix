@@ -21,6 +21,7 @@ let
 in
   emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
     dumb-jump
+    go-mode
     groovy-mode
     json-mode
     magit          # ; Integrate git <C-x g>
