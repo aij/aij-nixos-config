@@ -8,7 +8,8 @@
      # Packages needed for CCAP3 development
      nodejs-8_x yarn purescript flow
      nodePackages.prettier
-     postgresql
+     groovy
+     postgresql100
      ((python
        .withPackages(ps: with ps; [ lxml beautifulsoup4 ]))
        .overrideAttrs(oldAttrs: { meta.priority = -1000; })
