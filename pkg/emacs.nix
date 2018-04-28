@@ -50,5 +50,5 @@ in
     #beacon         # ; highlight my cursor when scrolling
     #nameless       # ; hide current package name everywhere in elisp code
   ]) ++ [
-    pkgs.notmuch   # From main packages set
+    #pkgs.notmuch   # From main packages set
   ])
