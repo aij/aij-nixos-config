@@ -44,6 +44,7 @@ in
     purescript-mode
     rjsx-mode
     undo-tree      # ; <C-x u> to show the undo tree
+    web-mode
     #zoom-frm       # ; increase/decrease font size for all buffers <C-x C-+>
   ]) ++ (with epkgs.elpaPackages; [
     #auctex         # ; LaTeX mode
