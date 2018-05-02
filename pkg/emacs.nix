@@ -43,13 +43,13 @@ in
     psc-ide
     purescript-mode
     rjsx-mode
-    undo-tree      # ; <C-x u> to show the undo tree
     web-mode
     #zoom-frm       # ; increase/decrease font size for all buffers <C-x C-+>
   ]) ++ (with epkgs.elpaPackages; [
     #auctex         # ; LaTeX mode
     #beacon         # ; highlight my cursor when scrolling
     #nameless       # ; hide current package name everywhere in elisp code
+    undo-tree      # ; <C-x u> to show the undo tree
   ]) ++ [
     #pkgs.notmuch   # From main packages set
   ])
