@@ -8,7 +8,7 @@
      xscreensaver rxvt_unicode terminus_font geeqie mplayer vlc mpv
      xorg.xinit xorg.xdpyinfo xorg.xbacklight xorg.xdriinfo xorg.xev xorg.xmodmap xfontsel x2x
      xclip
-     chromium  firefox google-chrome # chromiumDev
+     chromium  firefox #google-chrome # chromiumDev
      evince xpdf pdfmod gphoto2 gphoto2fs imagemagick gnumeric abiword
      gnome3.gconf # hack
      gimp-with-plugins
