@@ -51,9 +51,13 @@ hostlist = {
   };
   m4 = {
     net0 = {
-      #iface= "";
+      iface= "enp8s0f0";
       mac =  "BC:16:65:0B:0C:1A";
       ip = "192.168.1.23";
+    };
+    net1 = {
+      iface = "enp8s0f1";
+      ip = "10.0.1.14";
     };
     ib = {
       iface ="ib0";
