@@ -14,6 +14,10 @@
        .withPackages(ps: with ps; [ lxml beautifulsoup4 ]))
        .overrideAttrs(oldAttrs: { meta.priority = -1000; })
      )
+     ((python3
+       .withPackages(ps: with ps; [ lxml beautifulsoup4 ]))
+       .overrideAttrs(oldAttrs: { meta.priority = -1000; })
+     )
      subversionClient
      google-chrome-beta remmina rdesktop
   ];
