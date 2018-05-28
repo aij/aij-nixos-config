@@ -4,7 +4,7 @@
 
   environment.systemPackages = with pkgs; [
      gkrellm
-     gnupg kismet # openssh_with_kerberos
+     gnupg kismet wireshark # openssh_with_kerberos
      xscreensaver rxvt_unicode terminus_font geeqie mplayer vlc mpv
      xorg.xinit xorg.xdpyinfo xorg.xbacklight xorg.xdriinfo xorg.xev xorg.xmodmap xfontsel x2x
      xclip
