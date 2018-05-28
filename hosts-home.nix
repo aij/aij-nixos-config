@@ -15,7 +15,7 @@ hostlist = {
     net0 = {
       iface= "enp2s0f0";
       mac =  "B8:38:61:7B:F7:DC";
-      ip = "192.168.1.11";
+      ip = "10.0.0.10";
     };
     net1 = {
       iface = "enp2s0f1";
@@ -31,7 +31,7 @@ hostlist = {
     net0 = {
       iface = "enp1s0f0";
       mac =  "e4:c7:22:84:03:60";
-      ip = "192.168.1.22";
+      ip = "10.0.0.11";
     };
     net1 = {
       iface = "enp1s0f1";
@@ -53,7 +53,7 @@ hostlist = {
     net0 = {
       iface= "enp8s0f0";
       mac =  "BC:16:65:0B:0C:1A";
-      ip = "192.168.1.23";
+      ip = "10.0.0.14";
     };
     net1 = {
       iface = "enp8s0f1";
@@ -74,7 +74,7 @@ hostlist = {
     net0 = {
       #iface = "eno1"
       mac =  "34:40:b5:bc:15:c7";
-      ip = "192.168.1.83";
+      ip = "10.0.0.111";
     };
   };
   c0n1 = {
@@ -135,7 +135,7 @@ hostlist = {
   };
   sw0 = {
     net0 = {
-      ip = "192.168.1.2";
+      ip = "10.0.0.2";
     };
     net1 = {
       ip = "10.0.1.1";
