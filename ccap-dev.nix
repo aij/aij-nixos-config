@@ -22,6 +22,9 @@
      google-chrome-beta remmina rdesktop
   ];
 
+  # For request monitoring app.
+  services.mongodb.enable = true;
+
   # For running IE in virtualbox.
   virtualisation.virtualbox.host.enable = true;
 } 
