@@ -1,0 +1,70 @@
+{config, ...}:
+let id = config.networking.hostName; in
+{
+  boot.kernel.sysctl = { "vm.nr_hugepages" = 128; };
+
+  services.xmr-stak = {
+    enable = true;
+    extraArgs =  [
+      #"--rigid ${id}"
+      #"--httpd 8081"
+      #"-o cryptonightv7.usa.nicehash.com:3363 -u 37xxrZgNu8ytQfEFo6jVC9nJ4tAEb73URJ.${id} -p x --use-nicehash --currency monero7"
+      #"-o a.mwork.io:4334 -u WmtysDKqGscTRaFnPMPQyiHJ93hdKmifaDfhgCp1k44QXCuDYpnSY9MSU4BfWaLutETaNvqBwBSykXAXTuZBLoCj33gPcZpEU -p x --currency cryptonight_lite"
+      #"-o m0:3333 -u ${id} -p x --use-nicehash --currency monero7"
+      #"-o m1:3333 -u ${id} -p x --use-nicehash --currency monero7"
+    ];
+
+    configText = ''
+      "daemon_mode" : true,
+      "h_print_time" : 600,
+      "verbose_level" : 4,
+      "flush_stdout" : true,
+      "httpd_port" : 8081,
+      /* defaults */
+      "call_timeout" : 10,
+      "retry_time" : 30,
+      "giveup_limit" : 0,
+      "print_motd" : true,
+      "aes_override" : null,
+      "use_slow_memory" : "warn",
+      "tls_secure_algo" : true,
+      "output_file" : "",
+      "http_login" : "",
+      "http_pass" : "",
+      "prefer_ipv4" : true,
+    '';
+    poolConfigText =
+      let proxy = ''
+        "currency" : "cryptonight_v7",
+        "pool_list" :
+        [
+          {"pool_address" : "m0:3333", "wallet_address" : "${id}", "rig_id" : "${id}", "pool_password" : "x", "use_nicehash" : true, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 1 },
+          {"pool_address" : "m1:3333", "wallet_address" : "${id}", "rig_id" : "${id}", "pool_password" : "x", "use_nicehash" : true, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 2 },
+        ],
+      '';
+       nicehash = ''
+        "currency" : "cryptonight_v7",
+        "pool_list" :
+        [
+          {"pool_address" : "cryptonightv7.usa.nicehash.com:3363", "wallet_address" : "37xxrZgNu8ytQfEFo6jVC9nJ4tAEb73URJ.${id}", "rig_id" : "${id}", "pool_password" : "x", "use_nicehash" : true, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 1 },
+        ],
+       '';
+      in nicehash;
+
+    niceness = 10;
+  };
+  networking.firewall.allowedTCPPorts = [
+    8081
+  ];
+
+  nixpkgs.config.packageOverrides = pkgs: {
+    xmr-stak = pkgs.xmr-stak.overrideAttrs (oldAttrs: {
+      src = pkgs.fetchFromGitHub {
+        owner = "psychocrypt";
+        repo = "xmr-stak";
+        rev = "6168eecaacca1b932eec832c898e8ec5e0a920b0";
+        sha256 = "1f25k1if5l494nhz559afzrgzxrw80mk3idc8iq9cn8pvizlh4kd";
+      };
+    });
+  };
+}

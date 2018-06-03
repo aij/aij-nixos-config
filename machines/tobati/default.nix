@@ -6,6 +6,7 @@
     ../../sshd.nix
     ../../desktop.nix
     ../../dev.nix
+    ../../profiles/miner.nix
   ];
 
   networking.hostName = "tobati";
