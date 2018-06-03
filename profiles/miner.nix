@@ -49,7 +49,16 @@ let id = config.networking.hostName; in
           {"pool_address" : "cryptonightv7.usa.nicehash.com:3363", "wallet_address" : "37xxrZgNu8ytQfEFo6jVC9nJ4tAEb73URJ.${id}", "rig_id" : "${id}", "pool_password" : "x", "use_nicehash" : true, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 1 },
         ],
        '';
-      in nicehash;
+       aeon = ''
+        "currency" : "aeon7",
+        "pool_list" :
+        [
+          {"pool_address" : "mine.aeon-pool.com:7777", "wallet_address" : "WmtysDKqGscTRaFnPMPQyiHJ93hdKmifaDfhgCp1k44QXCuDYpnSY9MSU4BfWaLutETaNvqBwBSykXAXTuZBLoCj33gPcZpEU", "rig_id" : "${id}", "pool_password" : "x", "use_nicehash" : false, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 1 },
+          // STH pool didn't update for the fork. :(
+          // {"pool_address" : "a.mwork.io:4334", "wallet_address" : "WmtysDKqGscTRaFnPMPQyiHJ93hdKmifaDfhgCp1k44QXCuDYpnSY9MSU4BfWaLutETaNvqBwBSykXAXTuZBLoCj33gPcZpEU", "rig_id" : "${id}", "pool_password" : "x", "use_nicehash" : false, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 1 },
+        ],
+       '';
+      in aeon;
 
     niceness = 10;
   };
