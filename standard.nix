@@ -17,7 +17,7 @@
      dmidecode
      memtester
      fio
-     zfs btrfs-progs xfsprogs
+     btrfs-progs xfsprogs
      lynx w3m
      git ack binutils ocaml
      ripgrep # rg

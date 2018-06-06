@@ -58,5 +58,9 @@ if [ "$mkswap" ]; then
     swapon "/dev/zvol/$poolname/SWAP"
 fi
 
+# mkfs.vfat -n efiboot /dev/...
 # mount EFI partition at future /boot
 mount  /dev/disk/by-label/efiboot /mnt/boot
+
+echo Suggested config:
+cksum /etc/machine-id | awk '{ printf "networking.hostId = \"%x\";", $1 }'

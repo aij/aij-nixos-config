@@ -9,7 +9,7 @@
      xorg.xinit xorg.xdpyinfo xorg.xbacklight xorg.xdriinfo xorg.xev xorg.xmodmap xfontsel x2x
      xrestop
      xclip
-     chromium  firefox google-chrome # chromiumDev
+     chromium  firefox #google-chrome # chromiumDev
      evince xpdf gphoto2 gphoto2fs imagemagick gnumeric abiword
      # pdfmod
      gnome3.gconf # hack
