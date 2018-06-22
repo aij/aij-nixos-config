@@ -23,6 +23,7 @@ in
     dumb-jump
     go-mode
     groovy-mode
+    haskell-mode
     json-mode
     magit          # ; Integrate git <C-x g>
     markdown-mode
