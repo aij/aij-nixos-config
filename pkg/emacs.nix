@@ -34,11 +34,13 @@ in
     sbt-mode
     scala-mode
     smartparens
+    tuareg
     use-package # Useful for package configuration, even when they are installed via nix.
     yaml-mode
     #zerodark-theme # ; Nicolas' theme
   ]) ++ (with epkgs.melpaPackages; [
     ensime
+    flow-minor-mode
     nix-mode
     prettier-js
     psc-ide
