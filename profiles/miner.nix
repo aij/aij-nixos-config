@@ -58,7 +58,7 @@ let id = config.networking.hostName; in
           // {"pool_address" : "a.mwork.io:4334", "wallet_address" : "WmtysDKqGscTRaFnPMPQyiHJ93hdKmifaDfhgCp1k44QXCuDYpnSY9MSU4BfWaLutETaNvqBwBSykXAXTuZBLoCj33gPcZpEU", "rig_id" : "${id}", "pool_password" : "x", "use_nicehash" : false, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 1 },
         ],
        '';
-      in aeon;
+      in nicehash;
 
     niceness = 10;
   };
