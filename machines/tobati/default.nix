@@ -11,7 +11,7 @@
   networking.hostName = "tobati";
   networking.hostId = "235d6160";
 
-  networking.hosts = (import ./aij/hosts-home.nix).networking.hosts;
+  networking.hosts = (import ../../hosts-home.nix).networking.hosts;
 
   services.openssh.enable = true;
 
