@@ -39,4 +39,9 @@
     isNormalUser = true;
     uid = 1001;
   };
+
+  # pcspkr won't load automatically because it is blacklisted by
+  # /etc/modprobe.d/ubuntu.conf
+  # TODO: Patch/override pkgs.kmod-blacklist-ubuntu instead?
+  boot.kernelModules = [ "pcspkr" ];
 }
