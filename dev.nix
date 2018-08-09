@@ -7,6 +7,8 @@
      gnumake gcc scala jdk ack ag ocamlPackages.utop # jre
      (clang.overrideAttrs(oldAttrs: { meta.priority = -1; }))
      dash zsh
+     ghc
+     jbuilder
      python
      python3
      ruby

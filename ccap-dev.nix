@@ -19,6 +19,7 @@
        .overrideAttrs(oldAttrs: { meta.priority = -1000; })
      )
      subversionClient
+     jetbrains.idea-community
      google-chrome-beta remmina rdesktop
   ];
 
