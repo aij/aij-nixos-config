@@ -11,8 +11,7 @@
      xclip
      chromium  firefox #google-chrome # chromiumDev
      evince xpdf gphoto2 gphoto2fs imagemagick gnumeric abiword
-     # pdfmod
-     gnome3.gconf # hack
+     # pdfmod gnome3.gconf # hack: pdfmod needed gconf, but was later broken anyway
      gimp-with-plugins
      # enlightenment.rage enlightenment.terminology
      trayer haskellPackages.xmobar
