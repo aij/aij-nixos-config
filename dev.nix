@@ -15,7 +15,6 @@
      #androidsdk
      rustc cargo
      sshfs-fuse
-     nix-repl
      patdiff
      vagrant
      # Customized emacs package
