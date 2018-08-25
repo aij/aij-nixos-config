@@ -25,6 +25,8 @@
   boot.loader.grub.efiInstallAsRemovable = true;
   boot.loader.grub.device = "nodev";
 
+  nixpkgs.config.allowUnfree = true;
+
   system.stateVersion = "18.03"; # Did you read the comment?
 
 }
