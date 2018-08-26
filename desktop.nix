@@ -42,6 +42,8 @@
     };
   };
 
+  services.keybase.enable = true;
+
   sound.enable = true;
 
   fonts = {
