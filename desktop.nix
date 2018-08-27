@@ -26,7 +26,7 @@
        plugins = [ purple-plugin-pack ];
      })
 
-     tetex ghostscriptX poppler_utils
+     tetex ghostscriptX
 
   ];
 

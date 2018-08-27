@@ -19,6 +19,7 @@
        .withPackages(ps: with ps; [ lxml beautifulsoup4 ]))
        .overrideAttrs(oldAttrs: { meta.priority = -1000; })
      )
+     (poppler_utils.overrideAttrs(oldAttrs: { meta.priority = -1; }))
      subversionClient
      jetbrains.idea-community
      google-chrome-beta remmina rdesktop

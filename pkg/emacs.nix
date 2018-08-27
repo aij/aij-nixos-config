@@ -41,6 +41,7 @@ in
   ]) ++ (with epkgs.melpaPackages; [
     ensime
     flow-minor-mode
+    flycheck-flow
     nix-mode
     prettier-js
     psc-ide
