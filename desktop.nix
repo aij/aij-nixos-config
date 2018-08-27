@@ -17,7 +17,7 @@
      trayer haskellPackages.xmobar
      audacity fldigi
      exif exiftags
-     keepassx2
+     keepassxc
      androidsdk
      graphviz
      sshfs-fuse ansible
@@ -43,6 +43,7 @@
   };
 
   services.keybase.enable = true;
+  services.kbfs.enable = true;
 
   sound.enable = true;
 
