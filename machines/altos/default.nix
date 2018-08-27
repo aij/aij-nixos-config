@@ -73,6 +73,19 @@
   };
   services.grafana.enable = true;
 
+  # Right-hand monitor is vertical, left (primary) is "normal"
+  services.xserver.xrandrHeads = [
+    { output = "DP2";
+      monitorConfig = ''
+       Option "PreferredMode" "1920x1080"
+    ''; }
+    { output = "HDMI2";
+      monitorConfig = ''
+       Option "Rotate" "left"
+       Option "PreferredMode" "1920x1080" # Hack: Adding the above rotation causes the default mode to be wrong, so set it explicitly.
+      ''; }
+  ];
+
   # CCAP CIFS mounts
   fileSystems = let
     cifs = src: dst: {
