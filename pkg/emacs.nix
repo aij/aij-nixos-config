@@ -42,6 +42,7 @@ in
     ensime
     flow-minor-mode
     flycheck-flow
+    highlight-indent-guides
     nix-mode
     prettier-js
     psc-ide
