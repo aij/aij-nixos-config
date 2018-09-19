@@ -102,6 +102,9 @@
     U = cifs "//ccap-rds-1/user" "/media/U";
   };
 
+
+  nix.useSandbox = true;
+
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "17.03";
 
