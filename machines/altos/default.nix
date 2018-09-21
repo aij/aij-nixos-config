@@ -96,10 +96,10 @@
       noCheck = true; # No fsck for cifs.
     };
   in {
-    H = cifs "//ccap-rds-1/user/staff/ijager" "/media/H";
-    M = cifs "//ccap-rds-1/user/data" "/media/M";
-    J = cifs "//ccap-rds-1/apps/Java" "/media/J";
-    U = cifs "//ccap-rds-1/user" "/media/U";
+    H = cifs "//ccap-dc/user/staff/ijager" "/media/H";
+    M = cifs "//ccap-dc/user/data" "/media/M";
+    J = cifs "//ccap-dc/apps/Java" "/media/J";
+    U = cifs "//ccap-dc/user" "/media/U";
   };
 
 
