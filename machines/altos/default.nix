@@ -79,7 +79,7 @@
       monitorConfig = ''
        Option "PreferredMode" "1920x1080"
     ''; }
-    { output = "HDMI2";
+    { output = "DP3";
       monitorConfig = ''
        Option "Rotate" "left"
        Option "PreferredMode" "1920x1080" # Hack: Adding the above rotation causes the default mode to be wrong, so set it explicitly.
