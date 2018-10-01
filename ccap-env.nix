@@ -9,7 +9,8 @@
   services.printing.drivers = [ pkgs.hplip ];
   services.avahi = { enable = true; nssmdns = true; };
   # Go to localhost:631, click Administration -> "Find new printers"
-  # (HP LaserJet P4015 [2402B5]) is in the hallway
-  # (HP LaserJet P4015 [1B42F3]) is near the kitchen
+  # RICOH Aficio MP 5002 0026736F58DB is in the 10th floor hallway, left as you
+  # come out of the elevators. PPD can be downloaded from
+  # http://www.openprinting.org/printer/Ricoh/Ricoh-Aficio_MP_5002
   # Is there a way to add these configurations declaratively?
 }
