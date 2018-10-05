@@ -26,6 +26,8 @@
      device = "/dev/disk/by-uuid/80687aab-261a-4ca9-aeec-6830df3308de";
   };
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   networking.hostName = "altos";
   networking.hostId = "8425e349";
   networking.interfaces.enp0s31f6.ipv4.addresses = [{ address = "165.219.91.75"; prefixLength = 22; }];
