@@ -17,6 +17,7 @@
      sshfs-fuse
      patdiff
      vagrant
+     direnv
      # Customized emacs package
      (import pkg/emacs.nix { inherit pkgs; })
   ];
