@@ -21,6 +21,7 @@ let
 in
   emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
     dumb-jump
+    direnv
     go-mode
     groovy-mode
     haskell-mode
