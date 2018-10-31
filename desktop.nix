@@ -18,6 +18,7 @@
      audacity fldigi
      exif exiftags
      keepassxc
+     pass browserpass
      androidsdk
      graphviz
      sshfs-fuse ansible
@@ -27,7 +28,7 @@
      })
 
      tetex ghostscriptX
-
+     rclone google-drive-ocamlfuse
   ];
 
   services.xserver = {
