@@ -10,7 +10,7 @@
      # purescript
      nodePackages.prettier
      groovy
-     postgresql100
+     postgresql_10
      ((python
        .withPackages(ps: with ps; [ lxml beautifulsoup4 ]))
        .overrideAttrs(oldAttrs: { meta.priority = -1000; })
