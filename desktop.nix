@@ -18,7 +18,8 @@
      audacity fldigi
      exif exiftags
      keepassxc
-     pass browserpass
+     (pass.withExtensions (ext: with ext; [ pass-import ]))
+     browserpass
      androidsdk
      graphviz
      sshfs-fuse ansible
@@ -45,6 +46,7 @@
 
   services.keybase.enable = true;
   services.kbfs.enable = true;
+  programs.browserpass.enable = true;
 
   sound.enable = true;
 
