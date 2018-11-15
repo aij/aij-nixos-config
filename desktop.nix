@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, nixpkgs, ... }:
 {
   imports = [ ./standard.nix ./dev.nix ];
 
@@ -31,6 +31,8 @@
      tetex ghostscriptX
      rclone google-drive-ocamlfuse
   ];
+
+  nixpkgs.config.android_sdk.accept_license = true;
 
   services.xserver = {
     enable = true;
