@@ -44,10 +44,10 @@ let id = config.networking.hostName; in
         ],
       '';
        nicehash = ''
-        "currency" : "cryptonight_v7",
+        "currency" : "cryptonight_v8",
         "pool_list" :
         [
-          {"pool_address" : "cryptonightv7.usa.nicehash.com:3363", "wallet_address" : "37xxrZgNu8ytQfEFo6jVC9nJ4tAEb73URJ.${id}", "rig_id" : "${id}", "pool_password" : "x", "use_nicehash" : true, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 1 },
+          {"pool_address" : "cryptonightv8.usa.nicehash.com:3367", "wallet_address" : "37xxrZgNu8ytQfEFo6jVC9nJ4tAEb73URJ.${id}", "rig_id" : "${id}", "pool_password" : "x", "use_nicehash" : true, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 1 },
         ],
        '';
        aeon = ''
