@@ -12,6 +12,7 @@
       ../../ccap-dev.nix
       ../../ccap-env.nix
       ../../latencytop.nix
+      ../../zfs-unstable.nix
     ];
 
   boot.loader.efi.canTouchEfiVariables = true;
@@ -26,7 +27,7 @@
      device = "/dev/disk/by-uuid/80687aab-261a-4ca9-aeec-6830df3308de";
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_4_18;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "altos";
   networking.hostId = "8425e349";
