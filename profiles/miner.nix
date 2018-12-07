@@ -14,7 +14,8 @@ let id = config.networking.hostName; in
       #"-o m1:3333 -u ${id} -p x --use-nicehash --currency monero7"
     ];
 
-    configText = ''
+    configFiles = {
+    "config.txt" = ''
       "daemon_mode" : true,
       "h_print_time" : 600,
       "verbose_level" : 4,
@@ -33,7 +34,7 @@ let id = config.networking.hostName; in
       "http_pass" : "",
       "prefer_ipv4" : true,
     '';
-    poolConfigText =
+    "pools.txt" =
       let proxy = ''
         "currency" : "cryptonight_v7",
         "pool_list" :
@@ -43,10 +44,10 @@ let id = config.networking.hostName; in
         ],
       '';
        nicehash = ''
-        "currency" : "cryptonight_v7",
+        "currency" : "cryptonight_v8",
         "pool_list" :
         [
-          {"pool_address" : "cryptonightv7.usa.nicehash.com:3363", "wallet_address" : "37xxrZgNu8ytQfEFo6jVC9nJ4tAEb73URJ.${id}", "rig_id" : "${id}", "pool_password" : "x", "use_nicehash" : true, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 1 },
+          {"pool_address" : "cryptonightv8.usa.nicehash.com:3367", "wallet_address" : "37xxrZgNu8ytQfEFo6jVC9nJ4tAEb73URJ.${id}", "rig_id" : "${id}", "pool_password" : "x", "use_nicehash" : true, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 1 },
         ],
        '';
        aeon = ''
@@ -59,21 +60,10 @@ let id = config.networking.hostName; in
         ],
        '';
       in nicehash;
-
-    niceness = 10;
+    };
+    #niceness = 10;
   };
   networking.firewall.allowedTCPPorts = [
     8081
   ];
-
-  nixpkgs.config.packageOverrides = pkgs: {
-    xmr-stak = pkgs.xmr-stak.overrideAttrs (oldAttrs: {
-      src = pkgs.fetchFromGitHub {
-        owner = "psychocrypt";
-        repo = "xmr-stak";
-        rev = "6168eecaacca1b932eec832c898e8ec5e0a920b0";
-        sha256 = "1f25k1if5l494nhz559afzrgzxrw80mk3idc8iq9cn8pvizlh4kd";
-      };
-    });
-  };
 }
