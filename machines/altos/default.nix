@@ -54,8 +54,8 @@
   #services.openssh.enable = true;
 
   services.prometheus = {
-    exporters.node.enable = true;
-    enable = true;
+    # exporters.node.enable = true;
+    # enable = true;
     scrapeConfigs =
       let hosts = ["localhost"]; in
       [
@@ -74,7 +74,7 @@
         }
       ];
   };
-  services.grafana.enable = true;
+  # services.grafana.enable = true;
 
   # Right-hand monitor is vertical, left (primary) is "normal"
   services.xserver.xrandrHeads = [
