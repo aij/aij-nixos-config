@@ -14,7 +14,8 @@
      # pdfmod gnome3.gconf # hack: pdfmod needed gconf, but was later broken anyway
      gimp-with-plugins
      # enlightenment.rage enlightenment.terminology
-     trayer haskellPackages.xmobar
+     trayer haskellPackages.xmobar # TODO: Remove after fully switching to taffybar.
+     taffybar
      audacity fldigi
      exif exiftags
      keepassxc
@@ -40,9 +41,12 @@
     xkbOptions = "ctrl:nocaps, terminate:ctrl_alt_bksp, compose:ralt";
     enableCtrlAltBackspace = true;
     windowManager = {
-      xmonad.enable = true;
-      xmonad.enableContribAndExtras = true;
       default = "xmonad";
+      xmonad = {
+        enable = true;
+        enableContribAndExtras = true;
+        extraPackages = p: [ p.taffybar ];
+      };
     };
   };
 
