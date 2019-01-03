@@ -15,13 +15,13 @@
      gimp-with-plugins
      # enlightenment.rage enlightenment.terminology
      trayer haskellPackages.xmobar # TODO: Remove after fully switching to taffybar.
-     taffybar
+     # taffybar Broken in unstable :(
      audacity fldigi
      exif exiftags
      keepassxc
      (pass.withExtensions (ext: with ext; [ pass-import ]))
      browserpass
-     androidsdk
+     # androidsdk TODO: Where'd it go?
      graphviz
      sshfs-fuse ansible
      lsdvd dvdbackup handbrake cdrkit
@@ -45,7 +45,7 @@
       xmonad = {
         enable = true;
         enableContribAndExtras = true;
-        extraPackages = p: [ p.taffybar ];
+       # extraPackages = p: [ p.taffybar ];
       };
     };
   };

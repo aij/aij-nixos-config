@@ -27,7 +27,7 @@
      device = "/dev/disk/by-uuid/80687aab-261a-4ca9-aeec-6830df3308de";
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_4_19;
 
   networking.hostName = "altos";
   networking.hostId = "8425e349";
