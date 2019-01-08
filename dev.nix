@@ -18,6 +18,7 @@
      patdiff
      vagrant
      direnv
+     ocamlPackages.merlin nodePackages_10_x.ocaml-language-server
      # Customized emacs package
      (import pkg/emacs.nix { inherit pkgs; })
   ];

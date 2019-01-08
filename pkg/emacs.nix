@@ -41,6 +41,7 @@ in
     #zerodark-theme # ; Nicolas' theme
   ]) ++ (with epkgs.melpaPackages; [
     ensime
+    eglot
     flow-minor-mode
     flycheck-flow
     highlight-indent-guides
