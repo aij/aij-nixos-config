@@ -21,6 +21,7 @@
     efiSupport = true;
     device = "nodev";
     memtest86.enable = true;
+    configurationLimit = 50;
   };
 
   boot.initrd.luks.devices."nixcrypt" = {
