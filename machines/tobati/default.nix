@@ -16,7 +16,7 @@
   services.openssh.enable = true;
 
   services.xserver.videoDrivers = [ "amdgpu" "modesetting" ];
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_4_19;
 
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
