@@ -10,6 +10,7 @@
      xrestop
      xclip
      chromium  firefox #google-chrome # chromiumDev
+     thunderbird
      evince xpdf gphoto2 gphoto2fs imagemagick gnumeric abiword
      # pdfmod gnome3.gconf # hack: pdfmod needed gconf, but was later broken anyway
      gimp-with-plugins
