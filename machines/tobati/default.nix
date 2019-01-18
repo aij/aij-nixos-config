@@ -15,7 +15,19 @@
 
   services.openssh.enable = true;
 
-  services.xserver.videoDrivers = [ "amdgpu" "modesetting" ];
+  services.xserver = {
+    videoDrivers = [ "amdgpu" "modesetting" ];
+    xrandrHeads = [
+      { output = "HDMI-A-0";
+        monitorConfig = ''
+          Option "Primary" "true"
+        ''; }
+      { output = "DisplayPort-2";
+        monitorConfig = ''
+          Option "RightOf" "HDMI-A-0"
+        ''; }
+    ];
+  };
   boot.kernelPackages = pkgs.linuxPackages_4_19;
 
   # Use the GRUB 2 boot loader.
