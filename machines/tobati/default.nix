@@ -9,7 +9,8 @@
   ];
 
   networking.hostName = "tobati";
-  networking.hostId = "235d6160";
+  #networking.hostId = "235d6160";
+  networking.hostId = "a638cdd5";
 
   networking.hosts = (import ../../hosts-home.nix).networking.hosts;
 
@@ -39,7 +40,7 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  system.stateVersion = "18.03"; # Did you read the comment?
+  system.stateVersion = "19.03"; # Did you read the comment?
 
   nixpkgs.overlays = [
     (self: super: {
