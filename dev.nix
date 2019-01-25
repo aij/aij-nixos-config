@@ -9,6 +9,7 @@
      dash zsh
      ghc
      jbuilder
+     nox
      python
      python3
      ruby
