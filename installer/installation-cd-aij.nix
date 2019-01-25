@@ -7,41 +7,48 @@
 {
   imports =
     [ <nixpkgs/nixos/modules/installer/cd-dvd/installation-cd-base.nix>
+      ../standard.nix
     ];
 
   boot.supportedFilesystems = [ "zfs" ];
-
-  # Select internationalisation properties.
-  i18n = {
-    consoleFont = "Lat2-Terminus16";
-    consoleKeyMap = "dvorak";
-    defaultLocale = "en_US.UTF-8";
-  };
-
-  # Set your time zone.
-  time.timeZone = "America/Chicago";
-
-  environment.systemPackages = with pkgs; [
-     wget vim screen latencytop powertop htop lsof psmisc pwgen traceroute mtr tree tcpdump zip unzip pciutils ethtool sdparm lsscsi rlwrap
-     file usbutils bsdgames fping hdparm iotop finger_bsd openssl inetutils unar smartmontools sysstat beep numactl
-     zfs btrfs-progs xfsprogs
-     lynx w3m
-     git ack binutils ocaml
-     rxvt_unicode.terminfo
-
-     megacli
-  ];
+  boot.zfs.enableUnstable = true;
+  boot.zfs.forceImportRoot = false;
+  boot.zfs.forceImportAll = false;
 
   services.openssh.enable = true;
 
+  # Don't stall sshd.
+  systemd.services.sshd.wantedBy = lib.mkForce [ "multi-user.target" ];
+
   users.users.root.openssh.authorizedKeys.keys = [
-    "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAm/qx6C2ZvSTGlUJXvucKpOs2rx6B1XnJWo0I8IYyCYoQxzjjNEwcLiy7bgOCjfYNqb2z/5XlMuspa0S32sUx0Z3WuJe9g6HOMzpxxaS9iYVW4eXtfpkbXBBkwXrwaFQ/3NX+/12cgj+8hgkkQFFBBUdUcU1UBRrBo9N5MqCSpjkDKFpFObSQ/gAu9Rv0cgQD4nRSvktEkd/43tI0PE+DLW0/xB6DOCN76eAEK9vB+EvPXndzAkaChF+ICmX6CLfSQVHPzujkQrFVVQCIWR2kQgtIFCh28hIp8wRJko3bUyN3oY40fFxAriP70ze3RX2M6GzuH4oN88rGCOW2WT08P/6hcqPZWQQxr7ZlWn/e1dFTH3RJluiitQ3Em7Z1jHfTy/1NWRl2s0+ZEUA1H9uUUvejPUo5J15Vjrepc7RGZ0CWtU2aP+nTTQQfvDizMiVXMNyIoUl8uTJt8zn8loLx82O8qrZ3D+7fbV2mXUlJVmG/aZvlU86dDX8BLU29B1LBFaLd3bJnIoZ/JnTEKXYKs/vZaFiU/IQpw80Ev91P5KkXsxOssIL5VpZ7S4nAUz+0FjPEeQfj0lnjb5a7nFhIFG7K46p95HUrmojJ3+6jzKUHMQdVEefYRKYo/yDK63PF2JMzDnkTO0t4rSeAqXHE47Vv8MrbgWOQ/w4HyZccmMc= aij@ita"
+    # "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZZxLNfxTM3SMkP/3Q9aMRDS9tza5Zm4wxy0NlPkNuz5ka4h40kIP+TsyhQ9pFtWwYXtAB9MxmAcrQpo/yb1RqyXu2eUTnYEYmbKrPjTdRXKprXYrNsONJXb6JCI0V+fHddghNlH0MBYup/Lu2JZQ+uRa/W/2zvxi/y9RoQN2pNriZEG/znJfcTLnQogHbkuz6NHDJPOZ5K35ND7Afb0S4H8IX8u07F5kiW9DcB0h9YoDQ05EjwM+Xs0DK1b1h4hQyBBny2Lxd2m0vaC/J//8FI35Z1N1k8f3etLgJPRzjOiTf6zn5IUgE7GxM93JStKAvrryO+NcfMGzBx5yjCWjv aij@altos"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDTGD3FImr4dsW6pmGT5muMDjEoOTPMxxvhwWMMyAcpC ivan@tobati"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIORLMYgWkpO8Psfx9cI/kLtgrxo7M4sbgBL/4wNKQDvL ivan@ita"
   ];
   # For the Mac Pro
-  networking.enableB43Firmware = true;
-  nixpkgs.config.allowUnfree = true;
-  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.wireless.networks = {
-    "linksys" = {};
-  };
+  #networking.enableB43Firmware = true;
+  #nixpkgs.config.allowUnfree = true;
+  #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  #networking.wireless.networks = {
+  #  "linksys" = {};
+  #};
+
+  # For Tobati:
+  nixpkgs.overlays = [
+    (self: super: {
+      # The "firmware-linux-nonfree: 20181017 -> 20181213" upgrade causes crashing on boot.
+      # (nixos/nixpkgs@374a672424f9407ac5c3f66578e42b7fa8775c34)
+      # I suspect https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/?id=ec4b0cd394472ee1491df6ef5f215d1f0953f836
+      firmwareLinuxNonfree = super.firmwareLinuxNonfree.overrideAttrs (oldAttrs: {
+        version = "2018-10-17";
+        src = pkgs.fetchgit {
+          url = "https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git";
+          rev = "de9cefa74bba6fce3834144460868a468b8818f2";
+          sha256 = "101j4jk3ixl8r3mxbkcrr5ybhb44ij3l52js4dqfxpylpiaw2cgk";
+        };
+        outputHash = "1ndwp9yhpmx0kzayddy9i93mpv3d8gxypqm85069ic13lrjz1gdf";
+        });
+    })
+  ];
+
 }
