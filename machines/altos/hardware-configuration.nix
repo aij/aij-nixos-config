@@ -13,24 +13,32 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "zaltos/root/nixos";
+    { device = "rpool/ROOT";
+      fsType = "zfs";
+    };
+
+  fileSystems."/nix" =
+    { device = "rpool/NIX";
+      fsType = "zfs";
+    };
+
+  fileSystems."/var" =
+    { device = "rpool/VAR";
       fsType = "zfs";
     };
 
   fileSystems."/home" =
-    { device = "zaltos/home";
+    { device = "rpool/HOME";
       fsType = "zfs";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/50D2-0D3D";
+    { device = "/dev/disk/by-uuid/F5F4-4A59";
       fsType = "vfat";
     };
 
-  #swapDevices =
-  #  [ { device = "/dev/zd0"; }
-  #  ];
+  swapDevices = [ ];
 
   nix.maxJobs = lib.mkDefault 8;
-  powerManagement.cpuFreqGovernor = "powersave";
+  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
 }

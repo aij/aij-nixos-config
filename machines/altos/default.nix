@@ -13,6 +13,7 @@
       ../../ccap-env.nix
       ../../latencytop.nix
       ../../zfs-unstable.nix
+      ../../sshd.nix
     ];
 
   boot.loader.efi.canTouchEfiVariables = true;
@@ -24,15 +25,20 @@
     configurationLimit = 50;
   };
 
-  boot.initrd.luks.devices."nixcrypt" = {
-     device = "/dev/disk/by-uuid/80687aab-261a-4ca9-aeec-6830df3308de";
+#  boot.initrd.luks.devices."nixcrypt" = {
+#     device = "/dev/disk/by-uuid/80687aab-261a-4ca9-aeec-6830df3308de";
+#  };
+  boot.initrd.network.ssh = {
+    enable = true;
+    authorizedKeys = ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZZxLNfxTM3SMkP/3Q9aMRDS9tza5Zm4wxy0NlPkNuz5ka4h40kIP+TsyhQ9pFtWwYXtAB9MxmAcrQpo/yb1RqyXu2eUTnYEYmbKrPjTdRXKprXYrNsONJXb6JCI0V+fHddghNlH0MBYup/Lu2JZQ+uRa/W/2zvxi/y9RoQN2pNriZEG/znJfcTLnQogHbkuz6NHDJPOZ5K35ND7Afb0S4H8IX8u07F5kiW9DcB0h9YoDQ05EjwM+Xs0DK1b1h4hQyBBny2Lxd2m0vaC/J//8FI35Z1N1k8f3etLgJPRzjOiTf6zn5IUgE7GxM93JStKAvrryO+NcfMGzBx5yjCWjv aij@altos"];
   };
+  services.sshd.enable = true;
 
   boot.kernelPackages = pkgs.linuxPackages_4_19;
 
-  networking.hostName = "altos";
-  networking.hostId = "8425e349";
-  networking.interfaces.enp0s31f6.ipv4.addresses = [{ address = "165.219.91.75"; prefixLength = 22; }];
+  networking.hostName = "altos2";
+  networking.hostId = "3971fab1";
+  networking.interfaces.enp0s31f6.ipv4.addresses = [{ address = "165.219.88.118"; prefixLength = 22; }];
   networking.defaultGateway = "165.219.90.3";
   networking.nameservers = [ "165.219.91.41" "165.219.91.42" ];
   # Hack for CCAP3
