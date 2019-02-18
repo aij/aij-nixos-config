@@ -42,7 +42,7 @@ in
     yaml-mode
     #zerodark-theme # ; Nicolas' theme
   ]) ++ (with epkgs.melpaPackages; [
-    ensime
+    # ensime
     eglot
     flow-minor-mode
     flycheck-flow
