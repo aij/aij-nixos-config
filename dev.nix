@@ -20,6 +20,7 @@
      vagrant
      direnv
      ocamlPackages.merlin nodePackages_10_x.ocaml-language-server
+     coursier scalafmt scalafix
      # Customized emacs package
      (import pkg/emacs.nix { inherit pkgs; })
   ];
