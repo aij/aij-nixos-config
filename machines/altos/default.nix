@@ -74,12 +74,12 @@
   # services.grafana.enable = true;
 
   # Right-hand monitor is vertical, left (primary) is "normal"
-  services.xserver.xrandrHeads = [
-    { output = "DP2";
+  services.xserver.xrandrHeads = let left = "DP-2"; right = "DP-3"; in [
+    { output = left;
       monitorConfig = ''
        Option "PreferredMode" "1920x1080"
     ''; }
-    { output = "DP3";
+    { output = right;
       monitorConfig = ''
        Option "Rotate" "left"
        Option "PreferredMode" "1920x1080" # Hack: Adding the above rotation causes the default mode to be wrong, so set it explicitly.
