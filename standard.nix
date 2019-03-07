@@ -24,7 +24,6 @@
      git ack binutils ocaml
      ripgrep # rg
      rxvt_unicode.terminfo
-     linuxPackages.bcc
   ];
 
   # Default changed in 5a5db609e5bd83bc589f36eef394f3ad172d6648 and 9df79de1a115920bd96a7d4e66bc3782865c8146
