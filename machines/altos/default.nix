@@ -28,7 +28,7 @@
 
   networking.hostName = "altos";
   networking.hostId = "3971fab1";
-  networking.interfaces.enp0s31f6.ipv4.addresses = [{ address = "165.219.91.75"; prefixLength = 22; }];
+  networking.interfaces.enp0s31f6.ipv4.addresses = [{ address = "165.219.88.70"; prefixLength = 22; }];
   networking.defaultGateway = "165.219.90.3";
   networking.nameservers = [ "165.219.91.41" "165.219.91.42" ];
   # Hack for CCAP3
