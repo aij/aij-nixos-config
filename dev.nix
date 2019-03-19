@@ -8,6 +8,7 @@
      (clang.overrideAttrs(oldAttrs: { meta.priority = -1; }))
      dash zsh
      ghc
+     ispell
      jbuilder
      nox
      python
@@ -20,6 +21,7 @@
      vagrant
      direnv
      ocamlPackages.merlin nodePackages_10_x.ocaml-language-server
+     ocamlPackages.reason
      coursier scalafmt scalafix
      # Customized emacs package
      (import pkg/emacs.nix { inherit pkgs; })
