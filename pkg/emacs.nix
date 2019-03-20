@@ -44,6 +44,7 @@ in
     eglot
     flow-minor-mode
     flycheck-flow
+    flymd
     highlight-indent-guides
     nix-mode
     prettier-js
