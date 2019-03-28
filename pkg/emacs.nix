@@ -29,6 +29,7 @@ in
     magit          # ; Integrate git <C-x g>
     markdown-mode
     math-symbol-lists
+    # multiple-cursors # Looks interesting
     projectile
     rainbow-delimiters
     rust-mode
@@ -37,6 +38,7 @@ in
     smartparens
     tuareg
     use-package # Useful for package configuration, even when they are installed via nix.
+    yafolding # Code folding based on indentation.
     yaml-mode
     #zerodark-theme # ; Nicolas' theme
   ]) ++ (with epkgs.melpaPackages; [
