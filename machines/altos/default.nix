@@ -42,7 +42,7 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     stress stress-ng
-    # nixops # Broken in nixos-unstable 373488e6f4c
+    nixops
   ];
   nixpkgs.config.allowUnfree = true;
 
