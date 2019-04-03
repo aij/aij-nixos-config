@@ -2,9 +2,11 @@
 {
   imports = [ ./standard.nix ];
 
+  programs.java.enable = true;
+
   environment.systemPackages = with pkgs; [
      man-pages wdiff
-     gnumake gcc scala jdk ack ag ocamlPackages.utop # jre
+     gnumake gcc scala ack ag ocamlPackages.utop
      (clang.overrideAttrs(oldAttrs: { meta.priority = -1; }))
      dash zsh
      ghc
