@@ -41,7 +41,7 @@ in
     #zerodark-theme # ; Nicolas' theme
   ]) ++ (with epkgs.melpaPackages; [
     # ensime
-    # eglot
+    eglot
     lsp-mode lsp-ui # lsp-scala
     scala-mode
     sbt-mode
