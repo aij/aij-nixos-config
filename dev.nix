@@ -25,6 +25,8 @@
      ocamlPackages.merlin nodePackages_10_x.ocaml-language-server
      ocamlPackages.reason
      coursier scalafmt scalafix
+     bloop
+     vscode
      # Customized emacs package
      (import pkg/emacs.nix { inherit pkgs; })
   ];

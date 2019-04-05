@@ -33,8 +33,6 @@ in
     projectile
     rainbow-delimiters
     rust-mode
-    sbt-mode
-    scala-mode
     smartparens
     tuareg
     use-package # Useful for package configuration, even when they are installed via nix.
@@ -42,8 +40,12 @@ in
     yaml-mode
     #zerodark-theme # ; Nicolas' theme
   ]) ++ (with epkgs.melpaPackages; [
-    ensime
+    # ensime
     eglot
+    lsp-mode lsp-ui # lsp-scala
+    scala-mode
+    sbt-mode
+    
     flow-minor-mode
     flycheck-flow
     flymd
