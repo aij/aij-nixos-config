@@ -10,6 +10,7 @@
      (clang.overrideAttrs(oldAttrs: { meta.priority = -1; }))
      dash zsh
      ghc
+     idris
      ispell
      jbuilder
      nox
