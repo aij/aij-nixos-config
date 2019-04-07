@@ -22,9 +22,10 @@
      patdiff
      vagrant
      direnv
-     ocamlPackages.merlin nodePackages_10_x.ocaml-language-server
+     ocamlPackages.merlin
      ocamlPackages.reason
-     coursier scalafmt scalafix
+     # nodePackages_10_x.ocaml-language-server # Only in nixos-unstable
+     coursier scalafmt # scalafix
      # Customized emacs package
      (import pkg/emacs.nix { inherit pkgs; })
   ];
