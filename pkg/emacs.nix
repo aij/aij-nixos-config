@@ -62,6 +62,7 @@ in
     #auctex         # ; LaTeX mode
     #beacon         # ; highlight my cursor when scrolling
     #nameless       # ; hide current package name everywhere in elisp code
+    delight        # Diminish minor mode names
     undo-tree      # ; <C-x u> to show the undo tree
   ]) ++ [
     #pkgs.notmuch   # From main packages set
