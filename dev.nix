@@ -10,6 +10,7 @@
      (clang.overrideAttrs(oldAttrs: { meta.priority = -1; }))
      dash zsh
      ghc
+     idris
      ispell
      jbuilder
      nox
@@ -22,9 +23,10 @@
      patdiff
      vagrant
      direnv
-     ocamlPackages.merlin nodePackages_10_x.ocaml-language-server
+     ocamlPackages.merlin
      ocamlPackages.reason
-     coursier scalafmt scalafix
+     # nodePackages_10_x.ocaml-language-server # Only in nixos-unstable
+     coursier scalafmt # scalafix
      bloop
      vscode
      # Customized emacs package

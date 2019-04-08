@@ -50,6 +50,7 @@ in
     flycheck-flow
     flymd
     highlight-indent-guides
+    idris-mode
     nix-mode
     prettier-js
     psc-ide
