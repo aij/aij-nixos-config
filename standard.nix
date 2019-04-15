@@ -42,6 +42,10 @@
     isNormalUser = true;
     uid = 1001;
   };
+  users.extraUsers.ijager = {
+    isNormalUser = true;
+    uid = 1002;
+  };
 
   # pcspkr won't load automatically because it is blacklisted by
   # /etc/modprobe.d/ubuntu.conf
