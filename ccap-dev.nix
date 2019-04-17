@@ -8,6 +8,7 @@
      # Packages needed for CCAP3 development
      nodejs-8_x yarn flow
      # purescript
+     inotifyTools
      nodePackages.prettier
      groovy
      postgresql_10
