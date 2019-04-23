@@ -46,6 +46,8 @@
           rev = "de9cefa74bba6fce3834144460868a468b8818f2";
           sha256 = "101j4jk3ixl8r3mxbkcrr5ybhb44ij3l52js4dqfxpylpiaw2cgk";
         };
+        outputHashAlgo = "sha256";
+        outputHashMode = "recursive";
         outputHash = "1ndwp9yhpmx0kzayddy9i93mpv3d8gxypqm85069ic13lrjz1gdf";
         });
     })
