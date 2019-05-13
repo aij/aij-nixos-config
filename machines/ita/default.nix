@@ -41,7 +41,6 @@
      # openarena zeroad openttd xonotic # ioquake3
      esniper
      icedtea8_web
-     nixops
      tetex ghostscriptX
      transmission rtorrent
      bitcoin

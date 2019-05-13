@@ -24,7 +24,7 @@
      browserpass
      # androidsdk TODO: Where'd it go?
      graphviz
-     sshfs-fuse ansible
+     sshfs-fuse ansible nixops
      lsdvd dvdbackup handbrake cdrkit
      (pidgin.override {
        plugins = [ purple-plugin-pack ];
