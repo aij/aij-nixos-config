@@ -40,6 +40,7 @@ in
     yaml-mode
     #zerodark-theme # ; Nicolas' theme
   ]) ++ (with epkgs.melpaPackages; [
+    god-mode
     # ensime
     eglot
     lsp-mode lsp-ui # lsp-scala
