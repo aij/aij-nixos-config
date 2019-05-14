@@ -13,6 +13,7 @@
      idris
      ispell
      jbuilder
+     nix-prefetch-git
      nox
      python
      python3
