@@ -9,6 +9,7 @@
      gnumake gcc scala ack ag ocamlPackages.utop
      (clang.overrideAttrs(oldAttrs: { meta.priority = -1; }))
      dash zsh
+     dhall
      ghc
      idris
      ispell

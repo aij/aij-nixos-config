@@ -46,7 +46,8 @@ in
     lsp-mode lsp-ui # lsp-scala
     scala-mode
     sbt-mode
-    
+
+    dhall-mode
     flow-minor-mode
     flycheck-flow
     flymd
