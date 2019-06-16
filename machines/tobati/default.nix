@@ -37,6 +37,7 @@
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.efiInstallAsRemovable = true;
   boot.loader.grub.device = "nodev";
+  boot.loader.grub.memtest86.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 
