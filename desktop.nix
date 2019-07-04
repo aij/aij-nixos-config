@@ -13,7 +13,8 @@
      thunderbird
      evince xpdf gphoto2 gphoto2fs imagemagick gnumeric abiword
      # pdfmod gnome3.gconf # hack: pdfmod needed gconf, but was later broken anyway
-     gimp-with-plugins inkscape
+     gimp # gimp-with-plugins is broken in unstable
+     inkscape
      # enlightenment.rage enlightenment.terminology
      trayer haskellPackages.xmobar # TODO: Remove after fully switching to taffybar.
      # taffybar Broken in unstable :(
