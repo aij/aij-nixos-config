@@ -12,7 +12,7 @@
       ../../ccap-dev.nix
       ../../ccap-env.nix
       ../../latencytop.nix
-      ../../zfs-unstable.nix
+      ../../zfs.nix
     ];
 
   boot.loader.efi.canTouchEfiVariables = true;

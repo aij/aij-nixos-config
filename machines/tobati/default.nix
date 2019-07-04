@@ -2,7 +2,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../zfs-unstable.nix
+    ../../zfs.nix
     ../../desktop.nix
     ../../dev.nix
     # ../../profiles/miner.nix
