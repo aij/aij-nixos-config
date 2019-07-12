@@ -24,7 +24,7 @@
     configurationLimit = 50;
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_4_19;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "altos";
   networking.hostId = "3971fab1";
