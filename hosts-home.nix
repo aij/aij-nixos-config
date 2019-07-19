@@ -67,12 +67,12 @@ hostlist = {
   m5 = {
     net0 = {
       iface = "eno1";
-      mac = "90:b1:1c:fc:c6:51";
+      mac = "d4:ae:52:e8:e8:25";
       ip = "10.0.0.15";
     };
     net1 = {
       iface = "eno2";
-      mac = "90:b1:1c:fc:c6:53";
+      mac = "d4:ae:52:e8:e8:27";
       ip = "10.0.1.15";
     };
   };
