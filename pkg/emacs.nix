@@ -43,7 +43,6 @@ in
     god-mode
     # ensime
     eglot
-    lsp-mode lsp-ui # lsp-scala
     scala-mode
     sbt-mode
 
