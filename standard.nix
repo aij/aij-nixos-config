@@ -17,6 +17,7 @@
      # unar
      sg3_utils
      nvme-cli
+     ddrescue
      dmidecode
      memtester
      fio
