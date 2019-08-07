@@ -32,7 +32,8 @@
      bloop
      vscode
      # Customized emacs package
-     (import pkg/emacs.nix { inherit pkgs; })
+     #(import pkg/emacs.nix { inherit pkgs; })
+     emacs
   ];
 
   virtualisation.virtualbox.host.enable = true;

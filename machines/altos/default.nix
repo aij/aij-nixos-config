@@ -42,6 +42,8 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     stress stress-ng
+    offlineimap
+    notmuch
   ];
   nixpkgs.config.allowUnfree = true;
 
