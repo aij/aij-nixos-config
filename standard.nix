@@ -15,6 +15,7 @@
      wget vim screen powertop htop lsof psmisc pwgen traceroute tree tcpdump zip unzip pciutils ethtool sdparm lsscsi rlwrap
      file usbutils bsdgames fping hdparm iotop finger_bsd openssl inetutils smartmontools sysstat beep numactl
      # unar
+     sg3_utils
      nvme-cli
      dmidecode
      memtester
