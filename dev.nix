@@ -8,6 +8,8 @@
      man-pages wdiff
      gnumake gcc scala ack ag ocamlPackages.utop
      (clang.overrideAttrs(oldAttrs: { meta.priority = -1; }))
+     clang-tools
+     rtags
      dash zsh
      dhall
      ghc
