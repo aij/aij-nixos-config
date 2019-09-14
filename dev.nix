@@ -28,9 +28,8 @@
      ocamlPackages.merlin
      ocamlPackages.reason
      # nodePackages_10_x.ocaml-language-server # Only in nixos-unstable
-     coursier scalafmt # scalafix
+     coursier # scalafmt # scalafix
      bloop
-     vscode
      # Customized emacs package
      #(import pkg/emacs.nix { inherit pkgs; })
      emacs
