@@ -23,7 +23,7 @@ hostlist = {
       ip = "10.0.1.10";
     };
     ib = {
-      iface ="ib0";
+      iface ="ibp5s0";
       ip = "10.0.9.10";
     };
   };
@@ -38,7 +38,7 @@ hostlist = {
       ip = "10.0.1.11";
     };
     ib = {
-      iface ="ib0";
+      iface ="ibp3s0";
       ip = "10.0.9.11";
     };
   };
@@ -60,7 +60,7 @@ hostlist = {
       ip = "10.0.1.14";
     };
     ib = {
-      iface ="ib0";
+      iface ="ibp3s0";
       ip = "10.0.9.14";
     };
   };
@@ -74,6 +74,10 @@ hostlist = {
       iface = "eno2";
       mac = "d4:ae:52:e8:e8:27";
       ip = "10.0.1.15";
+    };
+    ib = {
+      iface = "ibp33s0";
+      ip = "10.0.9.15";
     };
   };
   c0n0 = {
