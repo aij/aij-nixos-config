@@ -65,7 +65,10 @@
     };
   };
 
-  #services.ipfs.enable = true;
+  services.ipfs = {
+    enable = true;
+    autoMount = true;
+  };
   #services.tor = {
   #  enable = true;
   #  client.enable = true;
