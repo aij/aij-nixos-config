@@ -7,6 +7,8 @@
   environment.systemPackages = with pkgs; [
      man-pages wdiff
      gnumake gcc scala ack ag ocamlPackages.utop
+     gdb
+     inotifyTools watchexec
      (clang.overrideAttrs(oldAttrs: { meta.priority = -1; }))
      clang-tools
      rtags
@@ -17,6 +19,7 @@
      ispell
      jbuilder
      nix-prefetch-git
+     nix-index
      nox
      python
      python3
