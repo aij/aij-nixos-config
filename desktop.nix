@@ -41,6 +41,8 @@
     enable = true;
     layout = "dvorak";
     xkbOptions = "ctrl:nocaps, terminate:ctrl_alt_bksp, compose:ralt";
+    autoRepeatDelay = 160;
+    autoRepeatInterval = 45;
     enableCtrlAltBackspace = true;
     windowManager = {
       default = "xmonad";
