@@ -7,7 +7,11 @@
   environment.systemPackages = with pkgs; [
      man-pages wdiff
      gnumake gcc scala ack ag ocamlPackages.utop
+     gdb
+     inotifyTools watchexec
      (clang.overrideAttrs(oldAttrs: { meta.priority = -1; }))
+     clang-tools
+     rtags
      dash zsh
      dhall
      ghc
@@ -15,6 +19,7 @@
      ispell
      jbuilder
      nix-prefetch-git
+     nix-index
      nox
      python
      python3
@@ -28,11 +33,11 @@
      ocamlPackages.merlin
      ocamlPackages.reason
      # nodePackages_10_x.ocaml-language-server # Only in nixos-unstable
-     coursier scalafmt # scalafix
+     coursier # scalafmt # scalafix
      bloop
-     vscode
      # Customized emacs package
-     (import pkg/emacs.nix { inherit pkgs; })
+     #(import pkg/emacs.nix { inherit pkgs; })
+     emacs
   ];
 
   virtualisation.virtualbox.host.enable = true;

@@ -6,7 +6,7 @@
 
   environment.systemPackages = with pkgs; [
      # Packages needed for CCAP3 development
-     nodejs-8_x yarn flow
+     nodejs-10_x yarn flow
      # purescript
      inotifyTools
      nodePackages.prettier
