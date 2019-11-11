@@ -15,7 +15,7 @@
      dash zsh
      dhall
      ghc
-     # idris # Broken in nixos-unstable
+     idris
      ispell
      jbuilder
      nix-prefetch-git
