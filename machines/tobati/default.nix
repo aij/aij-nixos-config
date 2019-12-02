@@ -29,7 +29,7 @@
         ''; }
     ];
   };
-  boot.kernelPackages = pkgs.linuxPackages_5_2;
+  boot.kernelPackages = pkgs.linuxPackages_5_3;
 
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;

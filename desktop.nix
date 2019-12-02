@@ -11,7 +11,7 @@
      xclip
      chromium  firefox #google-chrome # chromiumDev
      notmuch offlineimap
-     evince xpdf gphoto2 gphoto2fs imagemagick gnumeric abiword
+     evince gphoto2 gphoto2fs imagemagick gnumeric abiword
      # pdfmod gnome3.gconf # hack: pdfmod needed gconf, but was later broken anyway
      gimp # gimp-with-plugins is broken in unstable
      inkscape
