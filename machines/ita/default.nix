@@ -5,6 +5,7 @@
       ./hardware-configuration.nix
       ../../desktop.nix
       ../../dev.nix
+      ../../stable.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
