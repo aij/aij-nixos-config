@@ -52,6 +52,8 @@
        # extraPackages = p: [ p.taffybar ];
       };
     };
+    # Deprecated workaroung
+    desktopManager.default = "none";
   };
 
   services.keybase.enable = true;
