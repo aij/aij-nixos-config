@@ -5,6 +5,7 @@
     ../../zfs.nix
     ../../desktop.nix
     ../../dev.nix
+    ../../unstable.nix
     # ../../profiles/miner.nix
   ];
 
