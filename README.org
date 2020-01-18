@@ -1,0 +1,34 @@
+These are my NixOS config files, excluding sensitive bits. 
+
+* Reproducibility
+
+I am tracking nixpkgs as git submodules for system build
+reproducibility. Compared to using nix-channels, using submodules
+allows me to more easily track nixpkgs versions corresponding to a
+given configuration, as I can atomically commit updates to both.
+
+See [[https://binarin.ru/post/truly-reproducible-nixos/][here]] for more information.
+
+Since I use both the current stable and unstable channels, I track
+them as separate submodules. To reduce network bandwidth and make it
+easier to keep both up-to-date, I use ~git worktree~ to maintain a
+single local nixpkgs repo with two checkouts. There does not appear to
+be a good way to automate this, so it needs to be set up manually when
+first checkingout the repo.
+
+** TODO Document it next time.
+
+* Testing
+
+It's a good idea to test configs for other machines before pushing
+changes that might affect them.
+
+To build a specific machine, run something like
+
+#+BEGIN_SRC bash
+nix build -f '<nixpkgs/nixos>' system -I nixpkgs=$PWD/stable -I nixos-config=$PWD/machines/ita
+ #+END_SRC
+or
+#+BEGIN_SRC bash
+nix build -f '<nixpkgs/nixos>' system -I nixpkgs=$PWD/unstable -I nixos-config=$PWD/machines/tobati
+ #+END_SRC
