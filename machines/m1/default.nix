@@ -7,6 +7,6 @@
   imports =
     [ ./hardware-configuration.nix
       ../../zfs.nix
-      ../../standard.nix
+      ../../nixops.nix
     ];
 }
