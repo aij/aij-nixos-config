@@ -35,6 +35,7 @@
      # nodePackages_10_x.ocaml-language-server # Only in nixos-unstable
      coursier # scalafmt # scalafix
      bloop
+     mercurial
      # Customized emacs package
      #(import pkg/emacs.nix { inherit pkgs; })
      emacs
