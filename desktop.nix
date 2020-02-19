@@ -33,6 +33,8 @@
 
      tetex ghostscriptX
      rclone google-drive-ocamlfuse
+     # For getting pulseaudio to do something sane with sound https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/DefaultDevice/
+     pavucontrol
   ];
 
   nixpkgs.config.android_sdk.accept_license = true;
@@ -62,6 +64,8 @@
   programs.gnupg.agent.enable = true;
 
   sound.enable = true;
+  # Firefox 72 broke ALSA support. :(
+  hardware.pulseaudio.enable = true;
 
   fonts = {
     enableFontDir = true;
