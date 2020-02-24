@@ -61,7 +61,7 @@
   services.keybase.enable = true;
   services.kbfs.enable = true;
   programs.browserpass.enable = true;
-  programs.gnupg.agent.enable = true;
+  programs.gnupg.agent = { enable = true; pinentryFlavor = "gtk2"; };
 
   sound.enable = true;
   # Firefox 72 broke ALSA support. :(
