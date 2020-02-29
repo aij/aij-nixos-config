@@ -21,7 +21,7 @@
      audacity fldigi
      exif exiftags
      keepassxc
-     (pass.withExtensions (ext: with ext; [ pass-import ]))
+     (pass.withExtensions (ext: with ext; [ pass-import pass-otp ]))
      browserpass
      # androidsdk TODO: Where'd it go?
      graphviz
