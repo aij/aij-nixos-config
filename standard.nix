@@ -27,6 +27,7 @@
      ripgrep # rg
      rxvt_unicode.terminfo
      linuxPackages.bcc
+     mkpasswd
      lm_sensors s-tui stress
   ];
 
@@ -44,6 +45,8 @@
   users.extraUsers.aij = {
     isNormalUser = true;
     uid = 1001;
+    # If you crack this, let me know and I will send you a cookie. ;)
+    initialHashedPassword = "$6$rounds=999999$aijinitialpass$DKAI93olFt5z4AKpcXK/QiQBqqPU1pHbG8.zMCnzbeGRhsss/WTUTE2azNsTBk3t0tuRdm6aGsuCC7/e/BnBe1";
   };
   users.extraUsers.ijager = {
     isNormalUser = true;

@@ -1,4 +1,4 @@
-{ config, pkgs, nixpkgs, options, ... }:
+{ config, pkgs, nixpkgs, options, lib, ... }:
 {
   imports = [ ./standard.nix ./dev.nix ];
 
@@ -79,4 +79,13 @@
         terminus_font
     ];
   };
+
+  # Options for nixos-rebuild build-vm
+  # (The default 384MB RAM is not enough to run Firefox)
+  virtualisation =
+    lib.optionalAttrs (builtins.hasAttr "qemu" options.virtualisation) {
+      memorySize = 4096;
+      cores = 4;
+      qemu.options = [ "-soundhw ac97" ];
+    };
 }
