@@ -1,4 +1,4 @@
-{ config, pkgs, nixpkgs, ... }:
+{ config, pkgs, nixpkgs, options, ... }:
 {
   imports = [ ./standard.nix ./dev.nix ];
 
@@ -61,7 +61,11 @@
   services.keybase.enable = true;
   services.kbfs.enable = true;
   programs.browserpass.enable = true;
-  programs.gnupg.agent = { enable = true; pinentryFlavor = "gtk2"; };
+  programs.gnupg.agent =
+    { enable = true;  } //
+    (if builtins.hasAttr "pinentryFlavor" options.programs.gnupg.agent # False on NixOS 19.09
+     then { pinentryFlavor = "gtk2"; }
+     else {});
 
   sound.enable = true;
   # Firefox 72 broke ALSA support. :(
