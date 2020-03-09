@@ -15,7 +15,7 @@
      dash zsh
      dhall
      ghc
-     idris
+     #idris
      ispell
      jbuilder
      nix-prefetch-git
