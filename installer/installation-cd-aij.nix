@@ -2,6 +2,9 @@
 # Build with
 # cd nixpkgs/nixos
 # nix-build '<nixpkgs/nixos>' -A config.system.build.isoImage -I nixos-config=installer/installation-cd-aij.nix
+# Since this file imports from <nixpkgs> be sure to set nixpkgs when not using the default.
+# Eg:
+# nix-build '<nixpkgs/nixos>' -A config.system.build.isoImage -I nixos-config=installer/installation-cd-aij.nix -I nixpkgs=/etc/nixos/aij/stable/
 { config, lib, pkgs, ... }:
 
 {
