@@ -80,6 +80,18 @@ hostlist = {
       ip = "10.0.9.15";
     };
   };
+  m6 = {
+    net0 = {
+      iface = "eno1";
+      mac = "90:b1:1c:fc:c6:51";
+      ip = "10.0.0.16";
+    };
+    net1 = {
+      iface = "eno2";
+      mac = "90:b1:1c:fc:c6:53";
+      ip = "10.0.1.16";
+    };
+  };
   c0n0 = {
     net1 = {
       #iface = "eno1"
