@@ -37,20 +37,26 @@
   programs.mtr.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.extraUsers.ivan = {
-     isNormalUser = true;
-     uid = 1000;
-     extraGroups = [ "cdrom" ];
-   };
-  users.extraUsers.aij = {
-    isNormalUser = true;
-    uid = 1001;
-    # If you crack this, let me know and I will send you a cookie. ;)
-    initialHashedPassword = "$6$rounds=999999$aijinitialpass$DKAI93olFt5z4AKpcXK/QiQBqqPU1pHbG8.zMCnzbeGRhsss/WTUTE2azNsTBk3t0tuRdm6aGsuCC7/e/BnBe1";
-  };
-  users.extraUsers.ijager = {
-    isNormalUser = true;
-    uid = 1002;
+  users.extraUsers = {
+    ivan = {
+      isNormalUser = true;
+      uid = 1000;
+      extraGroups = [ "cdrom" ];
+    };
+    aij = {
+      isNormalUser = true;
+      uid = 1001;
+      # If you crack this, let me know and I will send you a cookie. ;)
+      initialHashedPassword = "$6$rounds=999999$aijinitialpass$DKAI93olFt5z4AKpcXK/QiQBqqPU1pHbG8.zMCnzbeGRhsss/WTUTE2azNsTBk3t0tuRdm6aGsuCC7/e/BnBe1";
+    };
+    ijager = {
+      isNormalUser = true;
+      uid = 1002;
+    };
+    bob = {
+      isNormalUser = true;
+      uid = 1003;
+    };
   };
 
   # pcspkr won't load automatically because it is blacklisted by

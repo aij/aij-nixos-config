@@ -78,7 +78,20 @@
 
   virtualisation.libvirtd.enable = true;
 
-  nix.useSandbox = true;
+  nix = {
+    useSandbox = true;
+    # Don't build big-parallel jobs locally
+    systemFeatures =  [ "nixos-test" "benchmark" "kvm" ];
+    distributedBuilds = true;
+    buildMachines = [{
+      hostName = "tobati";
+      sshUser = "bob";
+      system = "x86_64-linux";
+      maxJobs = 32;
+      speedFactor = 5;
+      supportedFeatures = ["nixos-test" "benchmark" "big-parallel" "kvm"];
+    }];
+  };
 
   system.stateVersion = "16.09";
 }
