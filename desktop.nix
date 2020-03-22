@@ -46,16 +46,14 @@
     autoRepeatDelay = 160;
     autoRepeatInterval = 45;
     enableCtrlAltBackspace = true;
+    displayManager.defaultSession = "none+xmonad";
     windowManager = {
-      default = "xmonad";
       xmonad = {
         enable = true;
         enableContribAndExtras = true;
        # extraPackages = p: [ p.taffybar ];
       };
     };
-    # Deprecated workaroung
-    desktopManager.default = "none";
   };
 
   services.keybase.enable = true;
