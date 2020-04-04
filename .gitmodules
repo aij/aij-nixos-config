@@ -5,4 +5,4 @@
 [submodule "unstable"]
 	path = unstable
 	url = https://github.com/NixOS/nixpkgs-channels
-	branch = nixos-unstable
+	branch = nixos-unstable-small
