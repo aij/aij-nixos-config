@@ -57,6 +57,8 @@
     };
   };
 
+  nix.trustedUsers = [ "bob" ];
+
   # pcspkr won't load automatically because it is blacklisted by
   # /etc/modprobe.d/ubuntu.conf
   # TODO: Patch/override pkgs.kmod-blacklist-ubuntu instead?
