@@ -91,6 +91,9 @@
       speedFactor = 5;
       supportedFeatures = ["nixos-test" "benchmark" "big-parallel" "kvm"];
     }];
+    extraOptions = ''
+	    builders-use-substitutes = true
+    '';
   };
 
   system.stateVersion = "16.09";
