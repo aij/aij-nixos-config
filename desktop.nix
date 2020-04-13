@@ -12,6 +12,7 @@
      chromium  firefox #google-chrome # chromiumDev
      notmuch offlineimap msmtp
      evince gphoto2 gphoto2fs imagemagick gnumeric abiword
+     libmtp # Transfer files from Android over MTP
      # pdfmod gnome3.gconf # hack: pdfmod needed gconf, but was later broken anyway
      gimp # gimp-with-plugins is broken in unstable
      inkscape
@@ -30,6 +31,7 @@
      (pidgin.override {
        plugins = [ purple-plugin-pack ];
      })
+     # jitsi # video conferencing alternative to Hangouts / Zoom
 
      tetex ghostscriptX
      rclone google-drive-ocamlfuse
