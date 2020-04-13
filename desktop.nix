@@ -4,7 +4,8 @@
 
   environment.systemPackages = with pkgs; [
      gkrellm
-     gnupg kismet wireshark # openssh_with_kerberos
+     gnupg wireshark # openssh_with_kerberos
+     # kismet # broken in unstable
      xscreensaver rxvt_unicode terminus_font geeqie mplayer vlc mpv
      xorg.xinit xorg.xdpyinfo xorg.xbacklight xorg.xdriinfo xorg.xev xorg.xmodmap xfontsel x2x
      xrestop
@@ -27,7 +28,8 @@
      # androidsdk TODO: Where'd it go?
      graphviz
      sshfs-fuse ansible nixops
-     lsdvd dvdbackup handbrake cdrkit
+     lsdvd handbrake cdrkit
+     # dvdbackup # Tool to backup DVDs -- broken in unstable
      (pidgin.override {
        plugins = [ purple-plugin-pack ];
      })
