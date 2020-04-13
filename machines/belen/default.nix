@@ -43,6 +43,9 @@
   # Enable touchpad support.
   services.xserver.libinput.enable = true;
 
+  # Reduce pparanoia. Needed for rr to record debugging traces.
+  boot.kernel.sysctl."kernel.perf_event_paranoid" = 1;
+
   virtualisation.docker.enable = true;
 
   # This value determines the NixOS release with which your system is to be
