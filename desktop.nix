@@ -11,7 +11,7 @@
      xrestop
      xclip
      chromium  firefox #google-chrome # chromiumDev
-     notmuch offlineimap msmtp
+     notmuch offlineimap msmtp muchsync
      evince gphoto2 gphoto2fs imagemagick gnumeric abiword
      libmtp # Transfer files from Android over MTP
      # pdfmod gnome3.gconf # hack: pdfmod needed gconf, but was later broken anyway
