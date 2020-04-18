@@ -45,6 +45,28 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  nix = {
+    useSandbox = true;
+    # Don't build big-parallel jobs locally
+    systemFeatures =  [ "nixos-test" "benchmark" "kvm" ];
+    distributedBuilds = true;
+    buildMachines =
+      let m = hostName: maxJobs: speedFactor: {
+            hostName = hostName;
+            maxJobs = maxJobs;
+            speedFactor = speedFactor;
+            sshUser = "bob";
+            system = "x86_64-linux";
+            supportedFeatures = ["nixos-test" "benchmark" "big-parallel" "kvm"];
+          }; in
+        [(m "m0" 32 2.6)
+         (m "m4" 32 1.8)
+         (m "m5" 64 2.5)
+         (m "m6" 64 2.4)];
+  };
+
+
+
   system.stateVersion = "19.03"; # Did you read the comment?
 
   nixpkgs.overlays = [

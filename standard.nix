@@ -57,6 +57,7 @@
     };
   };
 
+  nix.useSandbox = true;
   nix.trustedUsers = [ "bob" ];
 
   # pcspkr won't load automatically because it is blacklisted by
