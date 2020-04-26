@@ -60,8 +60,8 @@
             system = "x86_64-linux";
             supportedFeatures = ["nixos-test" "benchmark" "big-parallel" "kvm"];
           }; in
-        [(m "m0" 32 2.6)
-         (m "m4" 32 1.8)
+        [#(m "m0" 32 2.6)
+         #(m "m4" 32 1.8)
          (m "m5" 64 2.5)
          (m "m6" 64 2.4)];
   };
