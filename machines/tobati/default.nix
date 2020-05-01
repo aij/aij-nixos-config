@@ -21,15 +21,15 @@
   services.openssh.enable = true;
 
   services.xserver = {
-    videoDrivers = [ "amdgpu" "modesetting" ];
+    videoDrivers = [ "radeon" "modesetting" ];
     xrandrHeads = [
-      { output = "HDMI-A-0";
+      { output = "DisplayPort-0";
         monitorConfig = ''
           Option "Primary" "true"
         ''; }
-      { output = "DisplayPort-2";
+      { output = "DVI-0";
         monitorConfig = ''
-          Option "RightOf" "HDMI-A-0"
+          Option "RightOf" "DisplayPort-0"
         ''; }
     ];
   };
