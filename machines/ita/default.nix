@@ -35,7 +35,7 @@
      libinput
      sysbench
      keepassx2
-     unetbootin
+     # unetbootin
      # adb
      SDL2 SDL2_image
      # kde4.kpat
