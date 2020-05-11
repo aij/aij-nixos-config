@@ -8,6 +8,8 @@
      # kismet # broken in unstable
      xscreensaver rxvt_unicode terminus_font geeqie mplayer vlc mpv
      xorg.xinit xorg.xdpyinfo xorg.xbacklight xorg.xdriinfo xorg.xev xorg.xmodmap xfontsel x2x
+     xcompmgr
+     read-edid edid-decode
      xrestop
      xclip
      chromium  firefox #google-chrome # chromiumDev
