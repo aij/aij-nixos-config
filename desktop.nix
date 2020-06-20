@@ -11,6 +11,7 @@
      xcompmgr
      read-edid edid-decode
      xrestop
+     glxinfo
      xclip
      chromium  firefox #google-chrome # chromiumDev
      notmuch offlineimap msmtp muchsync

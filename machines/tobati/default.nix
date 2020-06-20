@@ -21,18 +21,25 @@
   services.openssh.enable = true;
 
   services.xserver = {
-    videoDrivers = [ "radeon" "modesetting" ];
+    videoDrivers = [ "amdgpu" "modesetting" ];
     xrandrHeads = [
       { output = "DisplayPort-0";
         monitorConfig = ''
           Option "Primary" "true"
         ''; }
-      { output = "DVI-0";
+      { output = "DVI-I-0";
         monitorConfig = ''
           Option "RightOf" "DisplayPort-0"
         ''; }
     ];
   };
+  # Enable SI support for W5000 with AMDGPU, per
+  # https://wiki.archlinux.org/index.php/AMDGPU#Enable_Southern_Islands_(SI)_and_Sea_Islands_(CIK)_support
+  boot.extraModprobeConfig = ''
+    options amdgpu si_support=1
+    options amdgpu cik_support=0
+  '';
+
   # boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Use the GRUB 2 boot loader.
