@@ -33,4 +33,4 @@ tests/machine-builds.sh
 test -e ../home0.nix && nixops deploy --build-only
     
 git add stable unstable
-GIT_COMMITTER_NAME=update.sh git commit -m 'Update nixpkgs'
+GIT_AUTHOR_NAME=update.sh GIT_COMMITTER_NAME=update.sh git commit -m 'Update nixpkgs'
