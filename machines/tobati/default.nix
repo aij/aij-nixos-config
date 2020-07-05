@@ -25,11 +25,11 @@
     xrandrHeads = [
       { output = "DisplayPort-0";
         monitorConfig = ''
-          Option "Primary" "true"
-        ''; }
+          Option "RightOf" "DVI-I-0"
+        '';  }
       { output = "DVI-I-0";
         monitorConfig = ''
-          Option "RightOf" "DisplayPort-0"
+          Option "Primary" "true"
         ''; }
     ];
   };
