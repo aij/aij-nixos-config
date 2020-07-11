@@ -31,7 +31,7 @@
      # androidsdk TODO: Where'd it go?
      graphviz
      sshfs-fuse ansible nixops
-     lsdvd handbrake cdrkit
+     lsdvd cdrkit
      # dvdbackup # Tool to backup DVDs -- broken in unstable
      (pidgin.override {
        plugins = [ purple-plugin-pack ];

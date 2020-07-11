@@ -6,11 +6,16 @@
 
 mkdir logs
 
+all_machines="`ls machines/`"
+all_channels="stable unstable"
+
+machines=${1:-"$all_machines"}
+channels=${2:-"$all_channels"}
+
 rc=0
 
-for d in machines/*; do
-    name=`basename $d`
-    for channel in stable unstable; do
+for name in $machines; do
+    for channel in $channels; do
 
 	echo "Building: $name $channel"
 	nix-build "<nixpkgs/nixos>" -A system \
