@@ -43,6 +43,9 @@
   # Enable touchpad support.
   services.xserver.libinput.enable = true;
 
+  # Workaround for excessive thermal throttling.
+  services.throttled.enable = true;
+
   # Reduce pparanoia. Needed for rr to record debugging traces.
   boot.kernel.sysctl."kernel.perf_event_paranoid" = 1;
 
