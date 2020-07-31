@@ -13,6 +13,8 @@
      xrestop
      glxinfo
      xclip
+     xdotool
+     sway swaylock dmenu alacritty xwayland
      chromium  firefox #google-chrome # chromiumDev
      notmuch offlineimap msmtp muchsync
      evince gphoto2 gphoto2fs imagemagick gnumeric abiword
@@ -71,6 +73,8 @@
     (if builtins.hasAttr "pinentryFlavor" options.programs.gnupg.agent # False on NixOS 19.09
      then { pinentryFlavor = "gtk2"; }
      else {});
+
+  programs.sway.enable = true;
 
   sound.enable = true;
   # Firefox 72 broke ALSA support. :(
