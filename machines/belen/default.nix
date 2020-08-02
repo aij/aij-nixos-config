@@ -7,6 +7,7 @@
       ../../desktop.nix
       ../../zfs.nix
       ../../unstable.nix
+      ../../bluetooth.nix
     ];
 
   # Use the GRUB 2 boot loader.
