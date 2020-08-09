@@ -23,6 +23,9 @@
      lynx w3m
      git ack binutils ocaml
      ripgrep # rg
+     du-dust # more graphical du / less graphical fsv
+     fd # faster find alternative
+     hyperfine # cmdline benchmarking tool
      rxvt_unicode.terminfo
      linuxPackages.bcc
      mkpasswd
