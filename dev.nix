@@ -20,6 +20,7 @@
      jbuilder
      nix-prefetch-git
      nix-index
+     nixpkgs-fmt
      nox
      python
      python3
