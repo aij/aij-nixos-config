@@ -27,7 +27,7 @@
   environment.systemPackages = with pkgs; [
     megacli ncurses5
     freeipmi ipmitool ipmiutil
-    xmr-stak
+    # xmr-stak
     ((python3
       .withPackages(ps: with ps; [
         docker
