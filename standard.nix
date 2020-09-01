@@ -16,6 +16,8 @@
      sg3_utils
      nvme-cli
      ddrescue
+     rsync
+     strace
      dmidecode
      memtester
      fio
