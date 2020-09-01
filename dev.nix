@@ -11,11 +11,14 @@
      inotifyTools watchexec
      (clang.overrideAttrs(oldAttrs: { meta.priority = -1; }))
      clang-tools
+     jq
      rtags
      dash zsh
      dhall
      ghc
-     #idris
+     idris
+     unison
+     fstar
      ispell
      jbuilder
      nix-prefetch-git
