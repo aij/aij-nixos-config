@@ -25,12 +25,12 @@
     xrandrHeads = [
       { output = "DisplayPort-0";
         monitorConfig = ''
-          Option "RightOf" "DVI-I-0"
-        '';  }
-      { output = "DVI-I-0";
-        monitorConfig = ''
           Option "Primary" "true"
         ''; }
+      { output = "DisplayPort-1";
+        monitorConfig = ''
+          Option "RightOf" "DisplayPort-0"
+        '';  }
     ];
   };
   # Enable SI support for W5000 with AMDGPU, per
