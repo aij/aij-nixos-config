@@ -26,10 +26,14 @@
       { output = "DisplayPort-0";
         monitorConfig = ''
           Option "Primary" "true"
+          # Size extracted from xrandr. This really shouldn't need to be configured.
+          DisplaySize 697 392
         ''; }
       { output = "DisplayPort-1";
         monitorConfig = ''
           Option "RightOf" "DisplayPort-0"
+          #Option "DisplaySize" "697" "392"
+          DisplaySize 697 392
         '';  }
     ];
   };
