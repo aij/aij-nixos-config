@@ -32,6 +32,7 @@
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
     vpnc
+    openconnect
     wirelesstools
     # gnome3.gnome-keyring
     slack-dark

@@ -16,7 +16,7 @@
      xdotool
      sway swaylock dmenu alacritty xwayland
      chromium  firefox #google-chrome # chromiumDev
-     notmuch offlineimap msmtp muchsync
+     notmuch offlineimap msmtp muchsync gmailieer
      evince gphoto2 gphoto2fs imagemagick gnumeric abiword
      libmtp # Transfer files from Android over MTP
      # pdfmod gnome3.gconf # hack: pdfmod needed gconf, but was later broken anyway
