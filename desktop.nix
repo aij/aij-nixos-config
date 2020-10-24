@@ -35,6 +35,7 @@
      sshfs-fuse ansible nixops
      lsdvd cdrkit
      # dvdbackup # Tool to backup DVDs -- broken in unstable
+     signal-desktop
      (pidgin.override {
        plugins = [ purple-plugin-pack ];
      })
