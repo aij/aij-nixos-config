@@ -3,8 +3,16 @@
 {
   # Select internationalisation properties.
   console.font = "Lat2-Terminus16";
-  console.keyMap = "dvorak";
+  #console.keyMap = "dvorak";
   i18n.defaultLocale = "en_US.UTF-8";
+  console.useXkbConfig = true;
+  services.xserver = {
+    layout = "dvorak";
+    xkbOptions = "ctrl:nocaps, terminate:ctrl_alt_bksp, compose:ralt";
+    autoRepeatDelay = 160;
+    autoRepeatInterval = 45;
+  };
+
 
   # Set your time zone.
   time.timeZone = "America/Chicago";
