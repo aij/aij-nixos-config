@@ -48,5 +48,6 @@
      emacs
   ];
 
+  virtualisation.podman.enable = true;
   virtualisation.virtualbox.host.enable = true;
 }
