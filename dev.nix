@@ -11,7 +11,8 @@
      inotifyTools watchexec
      (clang.overrideAttrs(oldAttrs: { meta.priority = -1; }))
      clang-tools
-     jq
+     jq yq
+     sqlite-interactive
      rtags
      dash zsh
      dhall
@@ -40,6 +41,8 @@
      coursier # scalafmt # scalafix
      bloop
      mercurial
+     kubectl
+     kubernix
      # Customized emacs package
      #(import pkg/emacs.nix { inherit pkgs; })
      emacs
