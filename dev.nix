@@ -17,7 +17,7 @@
      dash zsh
      dhall
      ghc
-     idris
+     # idris
      unison
      fstar
      ispell
