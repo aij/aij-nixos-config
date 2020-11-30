@@ -98,4 +98,10 @@
       cores = 4;
       qemu.options = [ "-soundhw ac97" ];
     };
+
+  # Needed by nixops. https://github.com/NixOS/nixops/issues/1242
+  nixpkgs.config.permittedInsecurePackages = [
+    "python2.7-cryptography-2.9.2"
+  ];
+
 }
