@@ -27,13 +27,15 @@
         monitorConfig = ''
           Option "Primary" "true"
           # Size extracted from xrandr. This really shouldn't need to be configured.
-          DisplaySize 697 392
+          # Unfortunately, setting the size explicitly causes Xorg to
+          # miscalculate double the DPI in one dimension and casuse Firefox
+          # to render everything bigger than ideal.
+          # DisplaySize 697 392
         ''; }
       { output = "DisplayPort-1";
         monitorConfig = ''
           Option "RightOf" "DisplayPort-0"
-          #Option "DisplaySize" "697" "392"
-          DisplaySize 697 392
+          # DisplaySize 697 392
         '';  }
     ];
   };
