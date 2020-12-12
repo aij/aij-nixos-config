@@ -15,6 +15,10 @@
 
   networking.hosts = (import ../../hosts-home.nix).networking.hosts;
 
+  environment.systemPackages = with pkgs; [
+      ceph
+  ];
+
   # dhcpcd is no longer configuring the DNS server without this :(
   services.resolved.enable = true;
 
