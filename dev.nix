@@ -43,6 +43,8 @@
      mercurial
      kubectl
      kubernix
+     qemu
+     vde2
      # Customized emacs package
      #(import pkg/emacs.nix { inherit pkgs; })
      emacs
