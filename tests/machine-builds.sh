@@ -20,7 +20,7 @@ for name in $machines; do
 	echo "Building: $name $channel"
 	nix-build "<nixpkgs/nixos>" -A system \
 		  -I nixpkgs=$PWD/$channel -I nixos-config=$PWD/machines/$name \
-		  -o result-$name-$channel >logs/$name-$channel.out 2>&1
+		  --no-out-link >logs/$name-$channel.out 2>&1
 	if [ $? == 0 ]; then
             echo "Success!";
 	else
