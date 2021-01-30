@@ -8,6 +8,7 @@
      man-pages wdiff
      gnumake gcc scala ack ag ocamlPackages.utop
      gdb
+     rr
      inotifyTools watchexec
      (clang.overrideAttrs(oldAttrs: { meta.priority = -1; }))
      clang-tools
