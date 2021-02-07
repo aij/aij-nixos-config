@@ -40,6 +40,8 @@
      linuxPackages.bcc
      mkpasswd
      lm_sensors s-tui stress
+     pv # monitor the progress of data through a pipe
+     iperf # network bandwidth measurement tool
   ];
 
   # Default changed in 5a5db609e5bd83bc589f36eef394f3ad172d6648 and 9df79de1a115920bd96a7d4e66bc3782865c8146
