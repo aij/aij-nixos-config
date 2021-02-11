@@ -33,7 +33,7 @@
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/9303ebd8-13c3-40cb-ae9f-e5a392aaf3c1";
+    { device = "/dev/disk/by-id/md-uuid-d85f02f0:364adc26:fe41cb12:26204818";
       fsType = "ext4";
     };
 
