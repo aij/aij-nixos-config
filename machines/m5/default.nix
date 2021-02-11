@@ -14,12 +14,11 @@
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
-  boot.loader.grub.efiSupport = true;
-  #boot.loader.grub.efiInstallAsRemovable = true;
-  boot.loader.efi.efiSysMountPoint = "/boot";
-  boot.loader.efi.canTouchEfiVariables = true;
-  # Define on which hard drive you want to install Grub.
-  boot.loader.grub.device = "/dev/disk/by-id/ata-MTFDDAK256MAR-1K1AA_90Y8664_90Y8667IBM_0344FDEB-part2";
+  boot.loader.grub.devices = [
+    "/dev/disk/by-id/ata-MTFDDAK256MAR-1K1AA_90Y8664_90Y8667IBM_0344FDEB-part2"
+    "/dev/disk/by-id/wwn-0x5001173100179f60" # Sun F40
+    "/dev/disk/by-id/wwn-0x5001173100181ddc" # Sun F40
+  ];
 
   networking.hostId = "1f9081c2";
   networking.hostName = "m5";
