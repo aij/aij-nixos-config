@@ -12,9 +12,8 @@
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
   boot.loader.grub.devices = [
-    "/dev/disk/by-id/wwn-0x5002361000244453" # Sun F80
-    "/dev/disk/by-id/usb-ORACLE_UNIGEN-UFD_40D112003CF972C0-0:0" # temporary USB stick
-    "/dev/disk/by-id/wwn-0x500117310017e884" # Sun F40
+    "/dev/disk/by-id/wwn-0x500117310017e884" # Sun F40 (slot 3)
+    "/dev/disk/by-id/wwn-0x50011731001832ec" # Sun F40 (slot 4)
   ];
 
   networking.hostName = "m6";

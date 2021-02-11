@@ -4,6 +4,7 @@ set -e
 
 if [ $# -lt 2 ]; then
     echo "Usage: $0 <poolname> <device> [zfs create opts]" >&2
+    echo "Eg: $0 rpool /dev/sdb2  -O encryption=on  -O keylocation=prompt -O keyformat=passphrase" >&2
     exit 1
 fi
 
@@ -18,11 +19,12 @@ echo extra_opts = $@
 zpool create             \
      -o ashift=12        \
      -o altroot=/mnt     \
-     -O atime=on         \
+     -O atime=off        \
      -O relatime=on      \
      -O compression=on   \
      -O snapdir=visible  \
      -O xattr=sa         \
+     -O acltype=posixacl \
      -O dedup=on         \
      "$@"                \
     "$poolname"          \
