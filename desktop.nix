@@ -7,7 +7,9 @@
      gnupg wireshark # openssh_with_kerberos
      # kismet # broken in unstable
      xscreensaver rxvt_unicode terminus_font geeqie mplayer vlc mpv
-     xorg.xinit xorg.xdpyinfo xorg.xbacklight xorg.xdriinfo xorg.xev xorg.xmodmap xfontsel x2x
+     xorg.xinit xorg.xdpyinfo xorg.xbacklight xorg.xdriinfo xorg.xev xorg.xmodmap xfontsel
+     x2x
+     barrier # Fancier x2x / fork of Synergy
      xcompmgr
      read-edid edid-decode
      xrestop

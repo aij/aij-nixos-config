@@ -16,6 +16,10 @@
 
   networking.hosts = (import ../../hosts-home.nix).networking.hosts;
 
+  networking.firewall.allowedTCPPorts = [
+    24800  # Default port for barrier
+  ];
+
   environment.systemPackages = with pkgs; [
       ceph
   ];
