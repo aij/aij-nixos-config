@@ -84,13 +84,15 @@
   hardware.pulseaudio.enable = true;
 
   fonts = {
-    enableFontDir = true;
     enableGhostscriptFonts = true;
     enableDefaultFonts = true;
     fonts = with pkgs; [
         terminus_font
     ];
-  };
+  } //
+  (if builtins.hasAttr "fontDir" options.fonts # False on NixOS 20.09
+   then { fontDir.enable = true; }
+   else { enableFontDir = true; });
 
   # Options for nixos-rebuild build-vm
   # (The default 384MB RAM is not enough to run Firefox)
