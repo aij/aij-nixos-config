@@ -30,7 +30,7 @@
   services.xserver = {
     videoDrivers = [ "amdgpu" "modesetting" ];
     xrandrHeads = [
-      { output = "DisplayPort-0";
+      { output = "DisplayPort-2";
         monitorConfig = ''
           Option "Primary" "true"
           # Size extracted from xrandr. This really shouldn't need to be configured.
@@ -41,7 +41,7 @@
         ''; }
       { output = "DisplayPort-1";
         monitorConfig = ''
-          Option "RightOf" "DisplayPort-0"
+          Option "RightOf" "DisplayPort-2"
           # DisplaySize 697 392
         '';  }
     ];

@@ -58,6 +58,8 @@
     autoRepeatDelay = 160;
     autoRepeatInterval = 45;
     enableCtrlAltBackspace = true;
+    logFile = null; # use default instead of /dev/null
+    displayManager.startx.enable = true;
     displayManager.defaultSession = "none+xmonad";
     windowManager = {
       xmonad = {
