@@ -58,7 +58,6 @@
     autoRepeatDelay = 160;
     autoRepeatInterval = 45;
     enableCtrlAltBackspace = true;
-    logFile = null; # use default instead of /dev/null
     displayManager.startx.enable = true;
     displayManager.defaultSession = "none+xmonad";
     windowManager = {
@@ -68,16 +67,19 @@
        # extraPackages = p: [ p.taffybar ];
       };
     };
-  };
+  } //
+  (if builtins.hasAttr "logFile" options.services.xserver # False on NixOS 20.09
+   then {
+     logFile = null; # use default instead of /dev/null
+   } else {});
 
   services.keybase.enable = true;
   services.kbfs.enable = true;
   programs.browserpass.enable = true;
-  programs.gnupg.agent =
-    { enable = true;  } //
-    (if builtins.hasAttr "pinentryFlavor" options.programs.gnupg.agent # False on NixOS 19.09
-     then { pinentryFlavor = "gtk2"; }
-     else {});
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryFlavor = "gtk2";
+  };
 
   programs.sway.enable = true;
 
