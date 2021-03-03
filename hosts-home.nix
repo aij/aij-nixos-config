@@ -1,3 +1,4 @@
+{ config, lib, ...}:
 let
 nets = {
   net0 = {
@@ -69,6 +70,7 @@ hostlist = {
       iface = "eno1";
       mac = "d4:ae:52:e8:e8:25";
       ip = "10.0.0.15";
+      driver = "bnx2";
     };
     net1 = {
       iface = "eno2";
@@ -85,6 +87,7 @@ hostlist = {
       iface = "eno1";
       mac = "90:b1:1c:fc:c6:51";
       ip = "10.0.0.16";
+      driver = "bnx2";
     };
     net1 = {
       iface = "eno2";
@@ -165,6 +168,8 @@ hostlist = {
   };
 };
 #netOrder = ["net0", "net1"];
+myconf = hostlist.${config.networking.hostName} or {};
+mystatic = lib.filterAttrs (_: i: i ? iface) myconf;
 in {
   networking.hosts = (
     with builtins;
@@ -180,20 +185,36 @@ in {
     listToAttrs(concatLists nested)
   );
 
-  networking.interfaces = { config, lib, ...}: (
+  networking.interfaces = (
     with builtins;
-    let c = hostlist.${config.networking.hostName} or {}; in
-    let s = lib.filterAttrs (_: i: i ? iface) c; in
-    {
-      networking.interfaces =  lib.mapAttrs' (n: v: {
-        name = v.iface;
-        value = {
-          ipv4.addresses = [{
-            address = v.ip;
-            prefixLength = nets.${n}.prefixLength;
-          }];
-        };
-      }) s;
-    }
+    let s = lib.filterAttrs (_: i: i ? iface) myconf; in
+    lib.mapAttrs' (n: v: {
+      name = v.iface;
+      value = {
+        ipv4.addresses = [{
+          address = v.ip;
+          prefixLength = nets.${n}.prefixLength;
+        }];
+      };
+    }) s
   );
+
+  boot.kernelParams = lib.optional (mystatic ? net0 && mystatic.net0 ? driver) (
+    let client-ip = mystatic.net0.ip;
+        server-ip = "";
+        gw-ip = "10.0.0.1";
+        netmask = "255.255.255.0";
+        hostname = config.networking.hostName;
+        device = mystatic.net0.iface;
+        autoconf = "off";
+        dns0-ip = builtins.head config.networking.nameservers;
+        dns1-ip = builtins.head (builtins.tail config.networking.nameservers);
+        ntp0-ip = "";
+    in
+      # Per https://www.kernel.org/doc/Documentation/filesystems/nfs/nfsroot.txt
+      "ip=${client-ip}:${server-ip}:${gw-ip}:${netmask}:${hostname}:${device}:${autoconf}:${dns0-ip}:${dns1-ip}:${ntp0-ip}"
+  );
+
+  boot.initrd.availableKernelModules = lib.optional (mystatic ? net0 && mystatic.net0 ? driver) mystatic.net0.driver;
+
 }

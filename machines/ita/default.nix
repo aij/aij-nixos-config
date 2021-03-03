@@ -7,6 +7,7 @@
       ../../dev.nix
       ../../stable.nix
       ../../bluetooth.nix
+      ../../hosts-home.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -25,7 +26,6 @@
   networking.hostName = "ita";
   networking.hostId = "49e32584";
   networking.domain = "mrph.org";
-  networking.hosts = (import ../../hosts-home.nix).networking.hosts;
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   nixpkgs.config.allowUnfree = true;
