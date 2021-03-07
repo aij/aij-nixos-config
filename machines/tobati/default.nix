@@ -5,6 +5,7 @@
     ../../zfs.nix
     ../../desktop.nix
     ../../dev.nix
+    ../../hosts-home.nix
     ../../latencytop.nix
     ../../unstable.nix
     # ../../profiles/miner.nix
@@ -14,7 +15,6 @@
   #networking.hostId = "235d6160";
   networking.hostId = "a638cdd5";
 
-  networking.hosts = (import ../../hosts-home.nix).networking.hosts;
 
   networking.firewall.allowedTCPPorts = [
     24800  # Default port for barrier
