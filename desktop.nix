@@ -58,7 +58,10 @@
     autoRepeatDelay = 160;
     autoRepeatInterval = 45;
     enableCtrlAltBackspace = true;
-    displayManager.startx.enable = true;
+    # Using startx is causing issues with Xmobar on 20.09... Not sure
+    # why, but it should be fixed when later xserver module changes
+    # land, so probably not worth spending too much time on.
+    displayManager.startx.enable = builtins.hasAttr "logFile" options.services.xserver; # true after 20.09
     displayManager.defaultSession = "none+xmonad";
     windowManager = {
       xmonad = {
