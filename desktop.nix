@@ -34,7 +34,9 @@
      browserpass
      # androidsdk TODO: Where'd it go?
      graphviz
-     sshfs-fuse ansible nixops
+     sshfs-fuse
+     ansible
+     nixopsUnstable
      lsdvd cdrkit
      # dvdbackup # Tool to backup DVDs -- broken in unstable
      signal-desktop
