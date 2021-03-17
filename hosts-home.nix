@@ -171,18 +171,22 @@ hostlist = {
     };
   };
 };
-#netOrder = ["net0", "net1"];
+netpref = ["ib" "net1" "net0"];
 myconf = hostlist.${config.networking.hostName} or {};
 mystatic = lib.filterAttrs (_: i: i ? iface) myconf;
+mynetpref = let p = lib.partition (n: myconf ? ${n}) netpref; in p.right ++ p.wrong;
 in {
   networking.hosts = (
     with builtins;
     let names = attrNames hostlist; in
-    let genLine = hostname: netname: let conf = hostlist.${hostname}.${netname}; in {
+    let genLine = hostname: netname:
+          let hostconf = hostlist.${hostname};
+              conf = hostlist.${hostname}.${netname};
+              is_preferred = netname == lib.findFirst (x: hostconf ? ${x} ) "net0" mynetpref;
+          in {
       name = conf.ip;
-      value = [ "${hostname}.${netname}" hostname ];
+      value = [ "${hostname}.${netname}" ] ++ lib.optional is_preferred hostname;
     }; in
-    # TODO: Avoid duplicating short names
     let nested = map (hostname:
       map (genLine hostname) (attrNames hostlist.${hostname})
     ) names; in
