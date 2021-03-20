@@ -32,7 +32,7 @@ tests/machine-builds.sh
 
 # nixops deploy --build-only is broken with nixopsUnstable, so
 # ignore the result.
-test -e ../home0.nix && { nixops deploy --build-only || true }
+test -e ../home0.nix && { nixops deploy --build-only || true; }
     
 git add stable unstable
 GIT_AUTHOR_NAME=update.sh GIT_COMMITTER_NAME=update.sh git commit -m 'Update nixpkgs'
