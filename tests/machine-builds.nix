@@ -15,10 +15,13 @@ let
     ../machines/m6
   ];
   configs = builtins.listToAttrs (map (f: {name = baseNameOf f; value = import f; }) config_files) ;
-  nixes = [ ./stable ./unstable ];
+  nixes = {
+    stable = import ../stable/nixos;
+    unstable = import ../unstable/nixos;
+  };
   build = config: nixos:
-    (import ../stable/nixos { configuration = config; }).system;
-  hosts =  builtins.mapAttrs (name: conf: {unstable = build conf ./unstable; stable = build conf ./stable; }) configs;
+    (nixos { configuration = config; }).system;
+  hosts =  builtins.mapAttrs (name: conf: builtins.mapAttrs (n: build conf) nixes) configs;
   machine_builds = builtins.concatMap (n: [hosts.${n}.stable hosts.${n}.unstable]) (builtins.attrNames hosts);
 
 in machine_builds
