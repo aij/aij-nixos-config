@@ -1,0 +1,26 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out repository under $GITHUB_WORKSPACE
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      # Install nix
+      - uses: cachix/install-nix-action@v12
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+
+      - run: pwd
+      - run: git status
+      - run: declare
+
+      - run: nix-build tests/machine-builds.nix
+      - run: tests/machine-builds.sh
