@@ -171,10 +171,11 @@ hostlist = {
     };
   };
 };
-netpref = ["ib" "net1" "net0"];
+localnetpref = ["ib" "net1" "net0"];
+defaultnetpref = ["net0"];
 myconf = hostlist.${config.networking.hostName} or {};
 mystatic = lib.filterAttrs (_: i: i ? iface) myconf;
-mynetpref = let p = lib.partition (n: myconf ? ${n}) netpref; in p.right ++ p.wrong;
+mynetpref = lib.filter (n: myconf ? ${n}) localnetpref ++ defaultnetpref;
 in {
   networking.hosts = (
     with builtins;
