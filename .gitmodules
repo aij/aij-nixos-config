@@ -1,8 +1,8 @@
 [submodule "stable"]
 	path = stable
-	url = https://github.com/NixOS/nixpkgs-channels
+	url = https://github.com/NixOS/nixpkgs
 	branch = nixos-20.09-small
 [submodule "unstable"]
 	path = unstable
-	url = https://github.com/NixOS/nixpkgs-channels
+	url = https://github.com/NixOS/nixpkgs
 	branch = nixos-unstable-small
