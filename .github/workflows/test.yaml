@@ -30,7 +30,7 @@ jobs:
       - run: docker rmi $(docker image ls -aq)
       - name: Free disk space
         run: |
-          sudo apt-get remove -yq aria2 ansible azure-cli shellcheck rpm xorriso zsync \
+          sudo apt-get purge -yq aria2 ansible azure-cli shellcheck rpm xorriso zsync \
             esl-erlang firefox g++-8 g++-9 gfortran-8 gfortran-9 google-chrome-stable \
             google-cloud-sdk  heroku imagemagick \
             libmagickcore-dev libmagickwand-dev libmagic-dev ant ant-optional kubectl \
@@ -152,6 +152,9 @@ jobs:
             aspnetcore-runtime-3.1             \
             libwxgtk3.0-gtk3-0v5               \
             gh                                 \
+            'linux-azure-tools.*' \
+            'linux-modules.*' \
+            'linux-headers.*'
       # perl-modules-5.30                   17,226      installed
       # locales                             17,196      installed
       # shellcheck                          17,179      installed
@@ -190,6 +193,7 @@ jobs:
       - run: wajig large
 
       - run: df -h
+      - run: du | sort -nr | head -n 100
 
       - run: nix-build tests/machine-builds.nix
       - run: tests/machine-builds.sh
