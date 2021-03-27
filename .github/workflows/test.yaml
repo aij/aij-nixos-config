@@ -16,7 +16,7 @@ jobs:
       # Install nix
       - uses: cachix/install-nix-action@v12
         with:
-          nix_path: nixpkgs=channel:nixos-unstable
+          nix_path: nixpkgs=$GITHUB_WORKSPACE/unstable
 
       - run: pwd
       - run: git status
@@ -154,46 +154,22 @@ jobs:
             gh                                 \
             'linux-azure-tools.*' \
             'linux-modules.*' \
-            'linux-headers.*'
-      # perl-modules-5.30                   17,226      installed
-      # locales                             17,196      installed
-      # shellcheck                          17,179      installed
-      # libruby2.7                          16,817      installed
-      # llvm-8                              16,698      installed
-      # libstdc++-8-dev                     16,115      installed
-      # liblldb-11                          15,889      installed
-      # libstdc++-7-dev                     15,353      installed
-      # systemd                             15,292      installed
-      # git-lfs                             14,936      installed
-      # liblldb-10                          14,918      installed
-      # mono-roslyn                         14,823      installed
-      # libc6-i386                          14,399      installed
-      # libgcc-9-dev                        13,892      installed
-      # libgcc-10-dev                       13,773      installed
-      # mercurial-common                    13,714      installed
-      # libgcc-8-dev                        13,369      installed
-      # grub-common                         13,336      installed
-      # libc6                               13,246      installed
-      # libgcc-7-dev                        13,100      installed
-      # linux-headers-5.4.0-1041-azure      12,614      installed
-      # aspnetcore-targeting-pack-5.0       12,348      installed
-      # python3-twisted                     12,320      installed
-      # fonts-lato                          11,749      installed
-      # texinfo                             11,320      installed
-      # dotnet-apphost-pack-5.0             10,790      installed
-      # perl-base                           10,786      installed
-      # aspnetcore-targeting-pack-3.1       10,691      installed
-      # ieee-data                           10,137      installed
-      # aptitude-common                     10,099      installed
+            'linux-headers.*' \
+            locales fonts-lato python3-twisted libc6-i386
 
 
-      - run: sudo apt-get autoremove -y
+      - run: sudo apt-get autoremove -y --purge
       - run: sudo apt-get autoclean -y
       - run: sudo rm -rf /usr/local/lib/android
       - run: wajig large
+      - run: apt-mark showmanual
 
       - run: df -h
-      - run: du | sort -nr | head -n 100
+      - run: du -x / | sort -nr | head -n 100
+      - run: free
 
-      - run: nix-build tests/machine-builds.nix
-      - run: tests/machine-builds.sh
+      - run: tests/machine-builds.sh tobati unstable
+      - run: tests/machine-builds.sh ita stable
+
+      # - run: nix-build tests/machine-builds.nix
+      # - run: tests/machine-builds.sh
