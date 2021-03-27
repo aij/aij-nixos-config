@@ -160,7 +160,7 @@ jobs:
 
       - run: sudo apt-get autoremove -y --purge
       - run: sudo apt-get autoclean -y
-      - run: sudo rm -rf /usr/local/lib/android
+      - run: sudo rm -rf /usr/local/lib/android /usr/share/{dotnet,swift,rust,miniconda} /opt/hostedtoolcache /home/linuxbrew /usr/local
       - run: wajig large
       - run: apt-mark showmanual
 
