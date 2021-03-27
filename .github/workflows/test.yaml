@@ -26,10 +26,11 @@ jobs:
       - run: id
       - run: sudo apt-get update && sudo apt-get install wajig && wajig large
 
-      # From https://github.community/t/bug-strange-no-space-left-on-device-ioexceptions-on-github-runners/17616/12?u=aij
+      # Based on https://github.community/t/bug-strange-no-space-left-on-device-ioexceptions-on-github-runners/17616/12?u=aij
+      - run: docker rmi $(docker image ls -aq)
       - name: Free disk space
         run: |
-          sudo apt-get remove aria2 ansible azure-cli shellcheck rpm xorriso zsync \
+          sudo apt-get remove -yq aria2 ansible azure-cli shellcheck rpm xorriso zsync \
             clang-6.0 lldb-6.0 lld-6.0 clang-format-6.0 clang-8 lldb-8 lld-8 clang-format-8 \
             clang-9 lldb-9 lld-9 clangd-9 clang-format-9 dotnet-sdk-3.0 dotnet-sdk-3.1=3.1.101-1 \
             esl-erlang firefox g++-8 g++-9 gfortran-8 gfortran-9 google-chrome-stable \
@@ -64,12 +65,150 @@ jobs:
             php7.4-tidy php7.4-xml php7.4-xmlrpc php7.4-xsl php7.4-zip php-amqp php-apcu \
             php-igbinary php-memcache php-memcached php-mongodb php-redis php-xdebug \
             php-zmq snmp pollinate libpq-dev postgresql-client powershell ruby-full \
-            sphinxsearch subversion mongodb-org -yq >/dev/null  || true
+            sphinxsearch subversion mongodb-org -yq \
+            ghc-8.10.4                         \
+            ghc-9.0.1                          \
+            azure-cli                          \
+            google-cloud-sdk                   \
+            adoptopenjdk-11-hotspot            \
+            libgl1-mesa-dri                    \
+            hhvm                               \
+            google-chrome-stable               \
+            dotnet-sdk-5.0                     \
+            llvm-11-dev                        \
+            firefox                            \
+            adoptopenjdk-8-hotspot             \
+            llvm-10-dev                        \
+            llvm-9-dev                         \
+            dotnet-sdk-3.1                     \
+            powershell                         \
+            llvm-8-dev                         \
+            moby-containerd                    \
+            snapd                              \
+            mysql-server-core-8.0              \
+            moby-engine                        \
+            mono-devel                         \
+            podman                             \
+            libllvm11                          \
+            mongodb-org-server                 \
+            libllvm10                          \
+            dotnet-runtime-3.1                 \
+            moby-cli                           \
+            linux-azure-headers-5.4.0-1041     \
+            dotnet-runtime-5.0                 \
+            libllvm9                           \
+            linux-modules-5.4.0-1041-azure     \
+            mysql-client-core-8.0              \
+            mongodb-org-mongos                 \
+            mono-llvm-tools                    \
+            libllvm8                           \
+            libclang-common-11-dev             \
+            moby-buildx                        \
+            gcc-10                             \
+            ansible                            \
+            libclang-common-10-dev             \
+            mecab-ipadic                       \
+            mongodb-org-shell                  \
+            containernetworking-plugins        \
+            postgresql-13                      \
+            libclang-common-9-dev              \
+            msbuild                            \
+            libclang-cpp11                     \
+            libclang-common-8-dev              \
+            libclang-cpp10                     \
+            libicu-dev                         \
+            kubectl                            \
+            r-base-core                        \
+            liblldb-9                          \
+            libclang-cpp9                      \
+            git                                \
+            libclang1-10                       \
+            libicu66                           \
+            liblldb-8                          \
+            llvm-11                            \
+            clang-8                            \
+            vim-runtime                        \
+            g++-10                             \
+            gcc-9                              \
+            gfortran-10                        \
+            gcc-8                              \
+            dotnet-targeting-pack-5.0          \
+            mono-llvm-support                  \
+            cpp-10                             \
+            referenceassemblies-pcl            \
+            g++-9                              \
+            g++-8                              \
+            gcc-7                              \
+            gfortran-9                         \
+            libperl5.30                        \
+            gfortran-8                         \
+            buildah                            \
+            cpp-9                              \
+            libclang1-8                        \
+            g++-7                              \
+            cpp-8                              \
+            libclang1-11                       \
+            liblapack-dev                      \
+            dotnet-targeting-pack-3.1          \
+            cpp-7                              \
+            linux-azure-tools-5.4.0-1041       \
+            skopeo                             \
+            mono-utils                         \
+            ruby2.7-doc                        \
+            libz3-4                            \
+            monodoc-manual                     \
+            humanity-icon-theme                \
+            llvm-10                            \
+            netstandard-targeting-pack-2.1     \
+            iso-codes                          \
+            libpython3.8-dev                   \
+            moby-runc                          \
+            libc6-dev                          \
+            sphinxsearch                       \
+            aspnetcore-runtime-5.0             \
+            libstdc++-10-dev                   \
+            llvm-9                             \
+            libstdc++-9-dev                    \
+            aspnetcore-runtime-3.1             \
+            libwxgtk3.0-gtk3-0v5               \
+            gh                                 \
+            >/dev/null  || true
+      # perl-modules-5.30                   17,226      installed
+      # locales                             17,196      installed
+      # shellcheck                          17,179      installed
+      # libruby2.7                          16,817      installed
+      # llvm-8                              16,698      installed
+      # libstdc++-8-dev                     16,115      installed
+      # liblldb-11                          15,889      installed
+      # libstdc++-7-dev                     15,353      installed
+      # systemd                             15,292      installed
+      # git-lfs                             14,936      installed
+      # liblldb-10                          14,918      installed
+      # mono-roslyn                         14,823      installed
+      # libc6-i386                          14,399      installed
+      # libgcc-9-dev                        13,892      installed
+      # libgcc-10-dev                       13,773      installed
+      # mercurial-common                    13,714      installed
+      # libgcc-8-dev                        13,369      installed
+      # grub-common                         13,336      installed
+      # libc6                               13,246      installed
+      # libgcc-7-dev                        13,100      installed
+      # linux-headers-5.4.0-1041-azure      12,614      installed
+      # aspnetcore-targeting-pack-5.0       12,348      installed
+      # python3-twisted                     12,320      installed
+      # fonts-lato                          11,749      installed
+      # texinfo                             11,320      installed
+      # dotnet-apphost-pack-5.0             10,790      installed
+      # perl-base                           10,786      installed
+      # aspnetcore-targeting-pack-3.1       10,691      installed
+      # ieee-data                           10,137      installed
+      # aptitude-common                     10,099      installed
+
 
       - run: sudo apt-get autoremove -y
       - run: sudo apt-get autoclean -y
       - run: sudo rm -rf /usr/local/lib/android
-      - run: docker rmi $(docker image ls -aq)
+      - run: wajig large
 
       - run: df -h
 
