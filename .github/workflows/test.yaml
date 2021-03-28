@@ -171,5 +171,9 @@ jobs:
       - run: tests/machine-builds.sh tobati unstable
       - run: tests/machine-builds.sh ita stable
 
-      # - run: nix-build tests/machine-builds.nix
+      - run: df -h
+
+      - run: nix-build tests/machine-builds.nix
       # - run: tests/machine-builds.sh
+
+      - run: df -h
