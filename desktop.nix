@@ -86,7 +86,7 @@
     enable = true;
     pinentryFlavor = "gtk2";
   };
-
+  programs.ssh.startAgent = true;
   programs.sway.enable = true;
 
   sound.enable = true;
