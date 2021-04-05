@@ -16,7 +16,7 @@
      glxinfo
      xclip
      xdotool
-     sway swaylock dmenu alacritty xwayland
+     sway swaylock alacritty xwayland wev grim wl-clipboard slurp wf-recorder mako libnotify
      chromium  firefox #google-chrome # chromiumDev
      notmuch offlineimap msmtp muchsync gmailieer
      evince gphoto2 gphoto2fs imagemagick gnumeric abiword
