@@ -9,6 +9,7 @@
      gnumake gcc scala ack ag ocamlPackages.utop
      gdb
      rr
+     heaptrack
      inotifyTools watchexec
      (clang.overrideAttrs(oldAttrs: { meta.priority = -1; }))
      clang-tools
