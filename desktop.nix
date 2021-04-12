@@ -16,7 +16,6 @@
      glxinfo
      xclip
      xdotool
-     sway swaylock alacritty xwayland wev grim wl-clipboard slurp wf-recorder mako libnotify
      chromium  firefox #google-chrome # chromiumDev
      notmuch offlineimap msmtp muchsync gmailieer
      evince gphoto2 gphoto2fs imagemagick gnumeric abiword
@@ -87,7 +86,23 @@
     pinentryFlavor = "gtk2";
   };
   programs.ssh.startAgent = true;
-  programs.sway.enable = true;
+  programs.sway = {
+    enable = true;
+    extraPackages = with pkgs; [
+      dmenu # Launcher (mod-X)
+      waybar
+      swaylock-effects # swaylock with more features
+      alacritty
+      xwayland
+      wev
+      grim
+      wl-clipboard
+      slurp
+      wf-recorder
+      mako
+      libnotify # for notify-send
+    ];
+  };
 
   sound.enable = true;
   # Firefox 72 broke ALSA support. :(
