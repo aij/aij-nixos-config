@@ -53,6 +53,8 @@
     options amdgpu cik_support=0
   '';
 
+  boot.tmpOnTmpfs = true;
+
   # boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Use the GRUB 2 boot loader.
