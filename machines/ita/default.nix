@@ -41,7 +41,7 @@
      # kde4.kpat
      gnome3.aisleriot
      # openarena zeroad openttd xonotic # ioquake3
-     esniper
+     # esniper # Broken and unmaintained?
      icedtea8_web
      tetex ghostscriptX
      transmission rtorrent
