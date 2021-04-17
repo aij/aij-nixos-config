@@ -112,7 +112,8 @@
     enableGhostscriptFonts = true;
     enableDefaultFonts = true;
     fonts = with pkgs; [
-        terminus_font
+        terminus_font # For urxvt / xterm
+        font-awesome # For waybar
     ];
   } //
   (if builtins.hasAttr "fontDir" options.fonts # False on NixOS 20.09
