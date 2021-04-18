@@ -5,7 +5,8 @@
 
 {
   imports =
-    [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
+    [
+      <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usb_storage" "sd_mod" "sr_mod" "sdhci_pci" ];
@@ -13,27 +14,32 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "rpool/ROOT";
+    {
+      device = "rpool/ROOT";
       fsType = "zfs";
     };
 
   fileSystems."/home" =
-    { device = "rpool/HOME";
+    {
+      device = "rpool/HOME";
       fsType = "zfs";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/C461-EA67";
+    {
+      device = "/dev/disk/by-uuid/C461-EA67";
       fsType = "vfat";
     };
 
   fileSystems."/home/aij" =
-    { device = "rpool/HOME/aij";
+    {
+      device = "rpool/HOME/aij";
       fsType = "zfs";
     };
 
   fileSystems."/data" =
-    { device = "rpool/DATA";
+    {
+      device = "rpool/DATA";
       fsType = "zfs";
     };
 

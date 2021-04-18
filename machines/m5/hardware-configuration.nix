@@ -5,7 +5,8 @@
 
 {
   imports =
-    [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
+    [
+      <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
     ];
 
   boot.initrd.availableKernelModules = [ "ahci" "ohci_pci" "ehci_pci" "mpt3sas" "usb_storage" "usbhid" "sd_mod" "sr_mod" ];
@@ -13,27 +14,32 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "rpool/ROOT";
+    {
+      device = "rpool/ROOT";
       fsType = "zfs";
     };
 
   fileSystems."/nix" =
-    { device = "rpool/NIX";
+    {
+      device = "rpool/NIX";
       fsType = "zfs";
     };
 
   fileSystems."/var" =
-    { device = "rpool/VAR";
+    {
+      device = "rpool/VAR";
       fsType = "zfs";
     };
 
   fileSystems."/home" =
-    { device = "rpool/HOME";
+    {
+      device = "rpool/HOME";
       fsType = "zfs";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-id/md-uuid-d85f02f0:364adc26:fe41cb12:26204818";
+    {
+      device = "/dev/disk/by-id/md-uuid-d85f02f0:364adc26:fe41cb12:26204818";
       fsType = "ext4";
     };
 

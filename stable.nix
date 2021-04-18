@@ -1,4 +1,4 @@
-{...}:
+{ ... }:
 {
   nix.nixPath = [
     "nixpkgs=/etc/nixos/aij/stable"

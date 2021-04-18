@@ -5,7 +5,8 @@
   system.stateVersion = "18.03";
 
   imports =
-    [ ./hardware-configuration.nix
+    [
+      ./hardware-configuration.nix
       ../../nixops.nix
     ];
 

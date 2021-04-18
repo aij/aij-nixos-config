@@ -9,7 +9,8 @@
 
 {
   imports =
-    [ <nixpkgs/nixos/modules/installer/cd-dvd/installation-cd-base.nix>
+    [
+      <nixpkgs/nixos/modules/installer/cd-dvd/installation-cd-base.nix>
       ../standard.nix
     ];
 
@@ -52,7 +53,7 @@
         outputHashAlgo = "sha256";
         outputHashMode = "recursive";
         outputHash = "1ndwp9yhpmx0kzayddy9i93mpv3d8gxypqm85069ic13lrjz1gdf";
-        });
+      });
     })
   ];
 

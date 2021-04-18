@@ -17,11 +17,11 @@
 
 
   networking.firewall.allowedTCPPorts = [
-    24800  # Default port for barrier
+    24800 # Default port for barrier
   ];
 
   environment.systemPackages = with pkgs; [
-      ceph
+    ceph
   ];
 
   services.openssh.enable = true;
@@ -30,7 +30,8 @@
   services.xserver = {
     videoDrivers = [ "amdgpu" "modesetting" ];
     xrandrHeads = [
-      { output = "DisplayPort-2";
+      {
+        output = "DisplayPort-2";
         monitorConfig = ''
           Option "Primary" "true"
           # Size extracted from xrandr. This really shouldn't need to be configured.
@@ -38,12 +39,15 @@
           # miscalculate double the DPI in one dimension and casuse Firefox
           # to render everything bigger than ideal.
           # DisplaySize 697 392
-        ''; }
-      { output = "DisplayPort-1";
+        '';
+      }
+      {
+        output = "DisplayPort-1";
         monitorConfig = ''
           Option "RightOf" "DisplayPort-2"
           # DisplaySize 697 392
-        '';  }
+        '';
+      }
     ];
   };
   # Enable SI support for W5000 with AMDGPU, per
@@ -71,21 +75,23 @@
   nix = {
     useSandbox = true;
     # Don't build big-parallel jobs locally
-    systemFeatures =  [ "nixos-test" "benchmark" "kvm" ];
+    systemFeatures = [ "nixos-test" "benchmark" "kvm" ];
     distributedBuilds = true;
     buildMachines =
       let m = hostName: maxJobs: speedFactor: {
-            hostName = hostName;
-            maxJobs = maxJobs;
-            speedFactor = speedFactor;
-            sshUser = "bob";
-            system = "x86_64-linux";
-            supportedFeatures = ["nixos-test" "benchmark" "big-parallel" "kvm"];
-          }; in
-        [#(m "m0" 32 2.6)
-         #(m "m4" 32 1.8)
-         (m "m5" 64 2)
-         (m "m6" 64 2)];
+        hostName = hostName;
+        maxJobs = maxJobs;
+        speedFactor = speedFactor;
+        sshUser = "bob";
+        system = "x86_64-linux";
+        supportedFeatures = [ "nixos-test" "benchmark" "big-parallel" "kvm" ];
+      }; in
+      [
+        #(m "m0" 32 2.6)
+        #(m "m4" 32 1.8)
+        (m "m5" 64 2)
+        (m "m6" 64 2)
+      ];
   };
 
   system.stateVersion = "19.03"; # Did you read the comment?

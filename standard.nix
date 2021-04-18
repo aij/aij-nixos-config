@@ -18,30 +18,66 @@
   time.timeZone = "America/Chicago";
 
   environment.systemPackages = with pkgs; [
-     wget vim screen powertop htop lsof psmisc pwgen traceroute tree tcpdump zip unzip pciutils ethtool sdparm lsscsi rlwrap
-     file usbutils bsdgames fping hdparm iotop finger_bsd openssl inetutils smartmontools sysstat beep numactl
-     # unar
-     sg3_utils
-     nvme-cli
-     ddrescue
-     rsync
-     strace
-     dmidecode
-     memtester
-     fio
-     btrfs-progs xfsprogs
-     lynx w3m
-     git ack binutils ocaml
-     ripgrep # rg
-     du-dust # more graphical du / less graphical fsv
-     fd # faster find alternative
-     hyperfine # cmdline benchmarking tool
-     rxvt_unicode.terminfo
-     linuxPackages.bcc
-     mkpasswd
-     lm_sensors s-tui stress
-     pv # monitor the progress of data through a pipe
-     iperf # network bandwidth measurement tool
+    wget
+    vim
+    screen
+    powertop
+    htop
+    lsof
+    psmisc
+    pwgen
+    traceroute
+    tree
+    tcpdump
+    zip
+    unzip
+    pciutils
+    ethtool
+    sdparm
+    lsscsi
+    rlwrap
+    file
+    usbutils
+    bsdgames
+    fping
+    hdparm
+    iotop
+    finger_bsd
+    openssl
+    inetutils
+    smartmontools
+    sysstat
+    beep
+    numactl
+    # unar
+    sg3_utils
+    nvme-cli
+    ddrescue
+    rsync
+    strace
+    dmidecode
+    memtester
+    fio
+    btrfs-progs
+    xfsprogs
+    lynx
+    w3m
+    git
+    ack
+    binutils
+    ocaml
+    ripgrep # rg
+    du-dust # more graphical du / less graphical fsv
+    fd # faster find alternative
+    hyperfine # cmdline benchmarking tool
+    rxvt_unicode.terminfo
+    linuxPackages.bcc
+    mkpasswd
+    lm_sensors
+    s-tui
+    stress
+    pv # monitor the progress of data through a pipe
+    iperf # network bandwidth measurement tool
   ];
 
   # Default changed in 5a5db609e5bd83bc589f36eef394f3ad172d6648 and 9df79de1a115920bd96a7d4e66bc3782865c8146

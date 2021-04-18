@@ -1,7 +1,8 @@
 { config, pkgs, ... }:
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../desktop.nix
       ../../dev.nix
@@ -26,26 +27,29 @@
   networking.hostName = "ita";
   networking.hostId = "49e32584";
   networking.domain = "mrph.org";
-  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
 
   nixpkgs.config.allowUnfree = true;
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
-     libinput
-     sysbench
-     keepassx2
-     # unetbootin
-     # adb
-     SDL2 SDL2_image
-     # kde4.kpat
-     gnome3.aisleriot
-     # openarena zeroad openttd xonotic # ioquake3
-     # esniper # Broken and unmaintained?
-     icedtea8_web
-     tetex ghostscriptX
-     transmission rtorrent
-     bitcoin
+    libinput
+    sysbench
+    keepassx2
+    # unetbootin
+    # adb
+    SDL2
+    SDL2_image
+    # kde4.kpat
+    gnome3.aisleriot
+    # openarena zeroad openttd xonotic # ioquake3
+    # esniper # Broken and unmaintained?
+    icedtea8_web
+    tetex
+    ghostscriptX
+    transmission
+    rtorrent
+    bitcoin
   ];
 
   programs.adb.enable = true;
@@ -53,7 +57,7 @@
   services.xserver = {
     synaptics = {
       enable = false; #true;
-	    twoFingerScroll = true;
+      twoFingerScroll = true;
     };
     videoDrivers = [ "intel" ];
     modules = with pkgs.xorg; [ xf86inputsynaptics ];
@@ -78,7 +82,7 @@
   nix = {
     useSandbox = true;
     # Don't build big-parallel jobs locally
-    systemFeatures =  [ "nixos-test" "benchmark" "kvm" ];
+    systemFeatures = [ "nixos-test" "benchmark" "kvm" ];
     distributedBuilds = true;
     buildMachines = [{
       hostName = "tobati";
@@ -86,7 +90,7 @@
       system = "x86_64-linux";
       maxJobs = 32;
       speedFactor = 5;
-      supportedFeatures = ["nixos-test" "benchmark" "big-parallel" "kvm"];
+      supportedFeatures = [ "nixos-test" "benchmark" "big-parallel" "kvm" ];
     }];
   };
 

@@ -1,4 +1,5 @@
-{ pkgs, ...}: let
+{ pkgs, ... }:
+let
   cfg = {
     extraConfig =
       ''
@@ -6,7 +7,8 @@
         SCHEDSTATS y
       '';
   };
-in {
+in
+{
 
   nixpkgs.config.packageOverrides = pkgs: {
     # It would be nice if this wasn't version-specific

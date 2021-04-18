@@ -1,4 +1,4 @@
-{config, pkgs, ...}: {
+{ config, pkgs, ... }: {
   imports = [
     ./standard.nix
     ./sshd.nix
@@ -35,15 +35,16 @@
   networking.useDHCP = false;
 
   environment.systemPackages = with pkgs; [
-    megacli ncurses5
-    freeipmi ipmitool ipmiutil
+    megacli
+    ncurses5
+    freeipmi
+    ipmitool
+    ipmiutil
     # xmr-stak
-    ((python3
-      .withPackages(ps: with ps; [
-        docker
-        requests # docker package depends on requests
-      ]))
-      .overrideAttrs(oldAttrs: { meta.priority = -1000; })
+    ((python3.withPackages (ps: with ps; [
+      docker
+      requests # docker package depends on requests
+    ])).overrideAttrs (oldAttrs: { meta.priority = -1000; })
     )
 
   ];

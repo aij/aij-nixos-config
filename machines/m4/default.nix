@@ -5,7 +5,8 @@
   system.stateVersion = "17.09";
 
   imports =
-    [ ./hardware-configuration.nix
+    [
+      ./hardware-configuration.nix
       ../../nixops.nix
     ];
 
