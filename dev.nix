@@ -23,6 +23,10 @@
     jq
     yq
     sqlite-interactive
+    gitAndTools.hub
+    gitAndTools.lab
+    gitAndTools.gh
+    # gitAndTools.glab
     rtags
     dash
     zsh
