@@ -57,10 +57,7 @@
     exif
     exiftags
     keepassxc
-    (pass.withExtensions (ext: with ext; [
-      # pass-import # Broken in unstable https://github.com/NixOS/nixpkgs/issues/121188
-      pass-otp
-    ]))
+    (pass.withExtensions (ext: with ext; [ pass-import pass-otp ]))
     browserpass
     # androidsdk TODO: Where'd it go?
     graphviz
