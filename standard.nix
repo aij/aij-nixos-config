@@ -56,6 +56,8 @@
     rsync
     strace
     dmidecode
+    lshw
+    hwinfo
     memtester
     fio
     btrfs-progs
@@ -106,6 +108,15 @@
     bob = {
       isNormalUser = true;
       uid = 1003;
+    };
+    lshelby = {
+      isNormalUser = true;
+      uid = 1099;
+      description = "Leonard Shelby";
+      openssh.authorizedKeys.keys = [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDTGD3FImr4dsW6pmGT5muMDjEoOTPMxxvhwWMMyAcpC ivan@tobati"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIORLMYgWkpO8Psfx9cI/kLtgrxo7M4sbgBL/4wNKQDvL ivan@ita"
+      ];
     };
   };
 
