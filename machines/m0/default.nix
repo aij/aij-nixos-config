@@ -18,4 +18,9 @@
     device = "nodev";
     #device = "/dev/disk/by-id/ata-ST4000LM024-2AN17V_WCK0WHYR-part2";
   };
+
+  # Avoid dmesg errors like
+  # ACPI Error: No handler for Region [POWS] (000000008ed47a71) [IPMI]
+  # https://github.com/netdata/netdata/issues/2961
+  boot.blacklistedKernelModules = [ "acpi_power_meter" ];
 }
