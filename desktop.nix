@@ -90,10 +90,7 @@
     autoRepeatDelay = 160;
     autoRepeatInterval = 45;
     enableCtrlAltBackspace = true;
-    # Using startx is causing issues with Xmobar on 20.09... Not sure
-    # why, but it should be fixed when later xserver module changes
-    # land, so probably not worth spending too much time on.
-    displayManager.startx.enable = builtins.hasAttr "logFile" options.services.xserver; # true after 20.09
+    displayManager.startx.enable = true;
     displayManager.defaultSession = "none+xmonad";
     windowManager = {
       xmonad = {
@@ -102,11 +99,8 @@
         # extraPackages = p: [ p.taffybar ];
       };
     };
-  } //
-  (if builtins.hasAttr "logFile" options.services.xserver # False on NixOS 20.09
-  then {
     logFile = null; # use default instead of /dev/null
-  } else { });
+  };
 
   services.keybase.enable = true;
   services.kbfs.enable = true;
@@ -142,14 +136,12 @@
   fonts = {
     enableGhostscriptFonts = true;
     enableDefaultFonts = true;
+    fontDir.enable = true;
     fonts = with pkgs; [
       terminus_font # For urxvt / xterm
       font-awesome # For waybar
     ];
-  } //
-  (if builtins.hasAttr "fontDir" options.fonts # False on NixOS 20.09
-  then { fontDir.enable = true; }
-  else { enableFontDir = true; });
+  };
 
   # Options for nixos-rebuild build-vm
   # (The default 384MB RAM is not enough to run Firefox)

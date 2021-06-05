@@ -67,7 +67,7 @@
     '';
     libinput = {
       enable = true;
-      tapping = false;
+      touchpad.tapping = false;
     };
   };
 
