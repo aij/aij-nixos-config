@@ -15,7 +15,7 @@
     ];
 
   boot.supportedFilesystems = [ "zfs" ];
-  boot.zfs.enableUnstable = true;
+  # boot.zfs.enableUnstable = true;
   boot.zfs.forceImportRoot = false;
   boot.zfs.forceImportAll = false;
 
@@ -37,9 +37,17 @@
   #  "linksys" = {};
   #};
 
-  # For Tobati:
-  nixpkgs.overlays = [
-    (self: super: {
+  # Extra packages for hardware support
+  environment.systemPackages = with pkgs; [
+    # hpssacli # HP SmartArray configuration tool
+    megacli # LSI/Broadcom MegaRaid configuration tool
+  ];
+  hardware.raid.HPSmartArray.enable = true;
+  nixpkgs.config.allowUnfree = true;
+
+  nixpkgs.overlays =
+    # Originally for Tobati. I think no longer necessary.
+    lib.optional false (self: super: {
       # The "firmware-linux-nonfree: 20181017 -> 20181213" upgrade causes crashing on boot.
       # (nixos/nixpkgs@374a672424f9407ac5c3f66578e42b7fa8775c34)
       # I suspect https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/commit/?id=ec4b0cd394472ee1491df6ef5f215d1f0953f836
@@ -54,7 +62,6 @@
         outputHashMode = "recursive";
         outputHash = "1ndwp9yhpmx0kzayddy9i93mpv3d8gxypqm85069ic13lrjz1gdf";
       });
-    })
-  ];
+    });
 
 }
