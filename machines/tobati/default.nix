@@ -6,7 +6,7 @@
     ../../desktop.nix
     ../../dev.nix
     ../../hosts-home.nix
-    ../../latencytop.nix
+    # ../../latencytop.nix
     ../../unstable.nix
     # ../../profiles/miner.nix
   ];
