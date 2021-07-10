@@ -10,4 +10,10 @@
       ../../zfs.nix
       ../../nixops.nix
     ];
+
+  boot.loader.grub = {
+    enable = true;
+    version = 2;
+    device = "/dev/FIXME"; # Set this when re-installing m1
+  };
 }
