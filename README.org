@@ -16,7 +16,27 @@ single local nixpkgs repo with two checkouts. There does not appear to
 be a good way to automate this, so it needs to be set up manually when
 first checkingout the repo.
 
-** TODO Document it next time.
+   Ok, I think this worked:
+   #+begin_example
+root@nixos:~# cd /etc/nixos/aij/
+root@nixos:/etc/nixos/aij# git submodule init unstable
+Submodule 'unstable' (https://github.com/NixOS/nixpkgs) registered for path 'unstable'
+root@nixos:/etc/nixos/aij# git submodule update
+Cloning into '/etc/nixos/aij/unstable'...
+Submodule path 'unstable': checked out 'd8079260a3028ae3221d7a5467443ee3a9edd2b8'
+root@nixos:/etc/nixos/aij# cd unstable/
+root@nixos:/etc/nixos/aij/unstable# git worktree add ../stable nixos-21.05
+Preparing worktree (new branch 'nixos-21.05')
+Branch 'nixos-21.05' set up to track remote branch 'nixos-21.05' from 'origin'.
+HEAD is now at c06613c25df tor-browser-bundle-bin: 10.0.17 -> 10.0.18
+root@nixos:/etc/nixos/aij/unstable# cd ../
+root@nixos:/etc/nixos/aij# git submodule init stable
+Submodule 'stable' (https://github.com/NixOS/nixpkgs) registered for path 'stable'
+root@nixos:/etc/nixos/aij# git submodule update
+Submodule path 'stable': checked out '21b696caf392ad6fa513caf3327d0aa0430ffb72'
+root@nixos:/etc/nixos/aij#
+
+   #+end_example
 
 * Testing
 
@@ -32,3 +52,32 @@ or
 #+BEGIN_SRC bash
 nix build -f '<nixpkgs/nixos>' system -I nixpkgs=$PWD/unstable -I nixos-config=$PWD/machines/tobati
  #+END_SRC
+
+
+* New install
+
+  To install a new machine
+
+  #+begin_src bash
+git clone https://github.com/aij/aij-nixos-config.git aij
+aij/install-scripts/part-zfs-boot.sh /dev/nvme0n1
+
+mkfs.ext4 -L boot /dev/nvme0n1p1
+
+# For luks+btrfs. (Alternatively, see install-scripts/format-zfs.sh for encrypted ZFS)
+cryptsetup luksFormat /dev/nvme0n1p2
+cryptsetup luksOpen /dev/nvme0n1p2 root
+mkfs.btrfs /dev/mapper/root
+mount /dev/mapper/root /mnt/ -o noatime
+# TODO Subvolumes?
+
+mkdir /mnt/boot
+
+mount /dev/nvme0n1p1 /mnt/boot
+nixos-generate-config --root /mnt/
+mv aij /mnt/etc/nixos/aij
+
+vi /mnt/etc/nixos/configuration.nix
+
+time nixos-install
+  #+end_src
