@@ -53,7 +53,7 @@
     haskellPackages.xmobar # TODO: Remove after fully switching to taffybar.
     # taffybar Broken in unstable :(
     audacity
-    fldigi
+    # fldigi # Broken because fldigi-4.1.19.tar.gz is no longer available from Sourceforge
     exif
     exiftags
     keepassxc
