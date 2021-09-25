@@ -30,9 +30,10 @@ git submodule update --remote
 # Test that everything still builds
 tests/machine-builds.sh
 
-# nixops deploy --build-only is broken with nixopsUnstable, so
-# ignore the result.
-test -e ../home0.nix && { nixops deploy --build-only || true; }
+# Test nixops can still build my configuration with new submodules
+test -e ../nixops.nix && {
+    nix-shell -p nixopsUnstable --run 'cd .. && nixops deploy --build-only'
+}
     
 git add stable unstable
 GIT_AUTHOR_NAME=update.sh GIT_COMMITTER_NAME=update.sh git commit -m 'Update nixpkgs'
