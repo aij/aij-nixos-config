@@ -41,6 +41,7 @@
     gphoto2
     gphoto2fs
     imagemagick
+    obs-studio # Screen recorder
     gnumeric
     abiword
     libmtp # Transfer files from Android over MTP
@@ -63,6 +64,7 @@
     graphviz
     sshfs-fuse
     ansible
+    morph
     nixopsUnstable
     lsdvd
     cdrkit
