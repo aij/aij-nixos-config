@@ -51,6 +51,9 @@
       "/chia/09" = { device = "PARTUUID=e123ab7d-c685-8b4e-bde7-27f386cf3666"; options = [ "nofail" ]; };
       "/chia/10" = { device = "PARTUUID=213df242-d7b0-b34d-970a-98a18db146cf"; options = [ "nofail" ]; };
       "/chia/11" = { device = "PARTUUID=a20e0811-be6a-7d40-95d7-9f3016c9dbda"; options = [ "nofail" ]; };
+      # i=12; blkid -o udev /dev/sd[mn]4 | grep ID_FS_PARTUUID | sed 's/ID_FS_PARTUUID/PARTUUID/' | while read dev; do printf '"/chia/%02d" = { device = "%s"; options = [ "nofail" ]; };\n' $i $dev; i=$((i+1)); done
+      "/chia/12" = { device = "PARTUUID=f9943744-3cc2-0347-a9e6-273933b634fb"; options = [ "nofail" ]; };
+      "/chia/13" = { device = "PARTUUID=eb476a09-dd89-bf45-ae49-42fb0ad47c50"; options = [ "nofail" ]; };
 
     };
 
