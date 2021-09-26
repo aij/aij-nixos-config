@@ -1,4 +1,13 @@
 { config, pkgs, nixpkgs, options, lib, ... }:
+let
+  # Pin old version of nixopsUnstable to workaround https://github.com/NixOS/nixpkgs/issues/139532
+  nixopsUnstable = (import
+    (builtins.fetchTarball {
+      url = "https://github.com/NixOS/nixpkgs/archive/b769bd2b01bce5afe0af703218593355c6f52337.tar.gz";
+      #sha256 = "";
+    })
+    { }).nixopsUnstable;
+in
 {
   imports = [ ./standard.nix ./dev.nix ];
 
