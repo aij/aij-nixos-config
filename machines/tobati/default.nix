@@ -12,13 +12,19 @@
   ];
 
   networking.hostName = "tobati";
-  #networking.hostId = "235d6160";
-  networking.hostId = "a638cdd5";
+  networking.hostId = "bd5a2ab5";
 
 
   networking.firewall.allowedTCPPorts = [
     24800 # Default port for barrier
   ];
+
+  # The global useDHCP flag is deprecated, therefore explicitly set to false here.
+  # Per-interface useDHCP will be mandatory in the future, so this generated config
+  # replicates the default behaviour.
+  networking.useDHCP = false;
+  networking.interfaces.eno1.useDHCP = true;
+  networking.interfaces.enp5s0.useDHCP = true;
 
   environment.systemPackages = with pkgs; [
     ceph
@@ -57,6 +63,8 @@
     options amdgpu cik_support=0
   '';
 
+  hardware.video.hidpi.enable = false;
+
   boot.tmpOnTmpfs = true;
 
   # boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -66,13 +74,14 @@
   boot.loader.grub.version = 2;
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.efiInstallAsRemovable = true;
-  boot.loader.grub.device = "nodev";
+  boot.loader.grub.device = "/dev/nvme0n1"; # or "nodev" for efi only
   boot.loader.grub.memtest86.enable = true;
   boot.loader.grub.configurationLimit = 20;
 
   nixpkgs.config.allowUnfree = true;
 
   nix = {
+    nrBuildUsers = 56;
     useSandbox = true;
     # Don't build big-parallel jobs locally
     systemFeatures = [ "nixos-test" "benchmark" "kvm" ];
@@ -94,5 +103,6 @@
       ];
   };
 
-  system.stateVersion = "19.03"; # Did you read the comment?
+  system.stateVersion = "21.11"; # Did you read the comment?
+
 }
