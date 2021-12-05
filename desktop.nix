@@ -120,6 +120,7 @@
       swayidle
       swaylock-effects # swaylock with more features
       alacritty
+      foot
       xwayland
       wev
       grim
