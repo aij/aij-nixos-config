@@ -58,6 +58,7 @@
     dmidecode
     lshw
     hwinfo
+    neofetch # Pretty system info display
     memtester
     fio
     btrfs-progs
