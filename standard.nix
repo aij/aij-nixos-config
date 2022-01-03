@@ -94,7 +94,7 @@
     ivan = {
       isNormalUser = true;
       uid = 1000;
-      extraGroups = [ "cdrom" ];
+      extraGroups = [ "cdrom" "plugdev" ];
     };
     aij = {
       isNormalUser = true;

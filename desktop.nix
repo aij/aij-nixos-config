@@ -55,6 +55,9 @@
     # taffybar Broken in unstable :(
     audacity
     # fldigi # Broken because fldigi-4.1.19.tar.gz is no longer available from Sourceforge
+    hackrf
+    gqrx # SDR
+    urh # Universal Radio Hacker (SDR tool)
     exif
     exiftags
     keepassxc
@@ -136,6 +139,10 @@
   sound.enable = true;
   # Firefox 72 broke ALSA support. :(
   hardware.pulseaudio.enable = true;
+
+  #hardware.hackrf.enable = true;
+  services.udev.packages = [ pkgs.hackrf ];
+  users.groups.plugdev = {};
 
   fonts = {
     enableGhostscriptFonts = true;
