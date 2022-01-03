@@ -70,6 +70,7 @@
     cdrkit
     # dvdbackup # Tool to backup DVDs -- broken in unstable
     signal-desktop
+    element-desktop
     (pidgin.override {
       plugins = [ purple-plugin-pack ];
     })
