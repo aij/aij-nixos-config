@@ -173,6 +173,7 @@ let
         ip = "10.0.1.173";
       };
     };
+
     sw0 = {
       net0 = {
         ip = "10.0.0.2";
@@ -181,6 +182,13 @@ let
         ip = "10.0.1.1";
       };
     };
+
+    ap0.net0.ip = "10.0.0.1";
+    ap1.net0.ip = "10.0.0.251";
+    ap2.net0.ip = "10.0.0.252";
+    ap3.net0.ip = "10.0.0.253";
+    ap4.net0.ip = "10.0.0.254";
+    ap5.net0.ip = "10.0.0.249";
   };
   localnetpref = [ "ib" "net1" "net0" ];
   defaultnetpref = [ "net0" ];
