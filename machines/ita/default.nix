@@ -43,7 +43,7 @@
     SDL2
     SDL2_image
     # kde4.kpat
-    gnome3.aisleriot
+    # gnome3.aisleriot
     # openarena zeroad openttd xonotic # ioquake3
     # esniper # Broken and unmaintained?
     icedtea8_web
