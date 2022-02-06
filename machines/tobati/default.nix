@@ -84,8 +84,8 @@
     nrBuildUsers = 56;
     useSandbox = true;
     # Don't build big-parallel jobs locally
-    systemFeatures = [ "nixos-test" "benchmark" "kvm" ];
-    distributedBuilds = true;
+    # systemFeatures = [ "nixos-test" "benchmark" "kvm" ];
+    # distributedBuilds = true;
     buildMachines =
       let m = hostName: maxJobs: speedFactor: {
         hostName = hostName;
