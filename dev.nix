@@ -50,6 +50,7 @@
     cargo
     sshfs-fuse
     patdiff
+    diffoscope
     vagrant
     direnv
     ocamlPackages.merlin
