@@ -140,9 +140,7 @@
   # Firefox 72 broke ALSA support. :(
   hardware.pulseaudio.enable = true;
 
-  #hardware.hackrf.enable = true;
-  services.udev.packages = [ pkgs.hackrf ];
-  users.groups.plugdev = {};
+  hardware.hackrf.enable = true;
 
   fonts = {
     enableGhostscriptFonts = true;
