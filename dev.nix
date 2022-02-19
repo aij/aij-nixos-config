@@ -44,6 +44,11 @@
     nox
     python
     python3
+    mypy # TODO: pytype and/or pyre?
+    black
+    black-macchiato
+    python39Packages.isort
+    # TODO: ssort? From https://github.com/bwhmather/ssort
     ruby
     #androidsdk
     rustc
