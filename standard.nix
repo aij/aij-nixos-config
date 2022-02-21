@@ -61,6 +61,7 @@
     neofetch # Pretty system info display
     memtester
     fio
+    cryptsetup
     btrfs-progs
     xfsprogs
     lynx
