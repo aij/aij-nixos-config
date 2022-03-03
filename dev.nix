@@ -35,7 +35,7 @@
     unison
     fstar
     ispell
-    jbuilder
+    dune_1
     nix-prefetch-git
     nix-index
     nixpkgs-fmt
