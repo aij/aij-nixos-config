@@ -10,8 +10,6 @@
     gnumake
     gcc
     scala
-    ack
-    ag
     ocamlPackages.utop
     gdb
     rr
