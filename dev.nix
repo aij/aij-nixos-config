@@ -57,7 +57,7 @@
     vagrant
     direnv
     ocamlPackages.merlin
-    ocamlPackages.reason
+    # ocamlPackages.reason
     # nodePackages_10_x.ocaml-language-server # Only in nixos-unstable
     coursier # scalafmt # scalafix
     bloop
