@@ -133,6 +133,6 @@
   # TODO: Patch/override pkgs.kmod-blacklist-ubuntu instead?
   boot.kernelModules = [ "pcspkr" ];
 
-  boot.loader.grub.configurationLimit = 20;
-  boot.loader.systemd-boot.configurationLimit = 20;
+  boot.loader.grub.configurationLimit = 10;
+  boot.loader.systemd-boot.configurationLimit = 10;
 }

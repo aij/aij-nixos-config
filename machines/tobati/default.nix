@@ -76,7 +76,6 @@
   boot.loader.grub.efiInstallAsRemovable = true;
   boot.loader.grub.device = "/dev/nvme0n1"; # or "nodev" for efi only
   boot.loader.grub.memtest86.enable = true;
-  boot.loader.grub.configurationLimit = 20;
 
   nixpkgs.config.allowUnfree = true;
 
