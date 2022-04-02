@@ -89,6 +89,7 @@
 
   programs.mtr.enable = true;
   services.netdata.enable = true;
+  services.tailscale.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.extraUsers = {
