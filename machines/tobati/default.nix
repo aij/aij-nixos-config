@@ -74,8 +74,12 @@
   boot.loader.grub.version = 2;
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.efiInstallAsRemovable = true;
-  boot.loader.grub.device = "/dev/nvme0n1"; # or "nodev" for efi only
   boot.loader.grub.memtest86.enable = true;
+  boot.loader.grub.mirroredBoots = [
+    { path = "/boot"; devices = [ "/dev/disk/by-id/nvme-XP7102-1A102_ZDG000AI" ]; }
+    { path = "/boot1"; devices = [ "/dev/disk/by-id/nvme-UCSC-NVMEHW-H800_SDM00001B574" ]; }
+  ];
+
 
   nixpkgs.config.allowUnfree = true;
 
