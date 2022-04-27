@@ -26,7 +26,6 @@
     gitAndTools.gh
     # gitAndTools.glab
     cloc
-    rtags
     dash
     zsh
     dhall
