@@ -4,14 +4,14 @@ set -e
 
 if [ $# -lt 2 ]; then
     echo "Usage: $0 <poolname> <device> [zfs create opts]" >&2
-    echo "Eg: $0 rpool /dev/sdb2  -O encryption=on  -O keylocation=prompt -O keyformat=passphrase" >&2
+    echo "Eg: $0 /dev/sdb2  -O encryption=on  -O keylocation=prompt -O keyformat=passphrase" >&2
+    echo "Eg2: $0 'mirror /dev/sdb2 /dev/sdf2 mirror /dev/sdc /dev/sdg' -O encryption=on  -O keylocation=prompt -O keyformat=passphrase"
     exit 1
 fi
 
 set -x
 
-poolname=$1
-shift
+poolname=rpool
 device=$1
 shift
 echo extra_opts = $@
@@ -28,7 +28,7 @@ zpool create             \
      -O dedup=on         \
      "$@"                \
     "$poolname"          \
-    "$device"
+    $device
 
 
 # dataset for / (root)
