@@ -28,7 +28,7 @@
 
       "/boot2" =
         {
-          device = "/dev/disk/by-uuid/0b6ec62c-c809-46e6-b4b6-8ddf9d4fe6d6";
+          device = "/dev/disk/by-uuid/c29de5f2-9a13-4e4a-bfc7-67fdb3800cd6";
           fsType = "ext4";
           options = [ "nofail" ];
         };
@@ -43,8 +43,6 @@
       # Generated with
       # i=12; blkid -o udev /dev/sd[mn]4 | grep ID_FS_PARTUUID | sed 's/ID_FS_PARTUUID/PARTUUID/' | while read dev; do printf '"/chia/%02d" = { device = "%s"; options = [ "nofail" ]; };\n' $i $dev; i=$((i+1)); done
       "/chia/12" = { device = "PARTUUID=f9943744-3cc2-0347-a9e6-273933b634fb"; options = [ "nofail" ]; };
-      "/chia/13" = { device = "PARTUUID=eb476a09-dd89-bf45-ae49-42fb0ad47c50"; options = [ "nofail" ]; };
-
     };
 
 }

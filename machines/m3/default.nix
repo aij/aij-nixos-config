@@ -13,7 +13,7 @@
   boot.loader.grub.version = 2;
   boot.loader.grub.mirroredBoots = [
     { path = "/boot1"; devices = [ "/dev/disk/by-id/ata-HITACHI_HUA723030ALA640_YVHPR5LA" ]; }
-    { path = "/boot2"; devices = [ "/dev/disk/by-id/ata-HITACHI_HUA723030ALA640_YVHPR4UA" ]; }
+    { path = "/boot2"; devices = [ "/dev/disk/by-id/ata-HITACHI_HUA723030ALA640_YVHP2TKA" ]; }
   ];
 
   networking.hostName = "m3";
