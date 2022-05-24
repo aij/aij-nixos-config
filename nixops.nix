@@ -18,6 +18,7 @@
       hostKeys = [ /root/secrets/initrd/ssh_host_ed25519_key ];
     };
   };
+  boot.kernelModules = [ "sg" ];
 
   services.openssh.enable = true;
 
