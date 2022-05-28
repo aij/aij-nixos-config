@@ -4,6 +4,10 @@
 
 #export NIX_PATH=nixpkgs=https://nixos.org/channels/nixpkgs-unstable/nixexprs.tar.xz
 
+if [ $# == 0 ]; then
+    exec time nix-build tests/machine-builds.nix
+fi
+
 mkdir logs
 
 all_machines="`ls machines/`"
