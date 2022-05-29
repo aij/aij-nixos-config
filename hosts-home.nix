@@ -117,6 +117,7 @@ let
     m7 = {
       net0 = {
         iface = "enp2s0f0";
+        mac = "0C:C4:7A:B7:41:9A";
         ip = "10.0.0.17";
         driver = "ixgbe";
       };
