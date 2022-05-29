@@ -117,7 +117,8 @@ let
     m7 = {
       net0 = {
         iface = "enp2s0f0";
-        ip = "10.0.0.18";
+        ip = "10.0.0.17";
+        driver = "ixgbe";
       };
     };
     c0n0 = {
