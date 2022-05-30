@@ -48,6 +48,7 @@ let
         iface = "enp2s0f0";
         mac = "0c:c4:7a:b7:36:6e";
         ip = "10.0.0.12";
+        driver = "ixgbe";
       };
       ib = {
         iface = "ibp129s0";
