@@ -41,6 +41,7 @@
     freeipmi
     ipmitool
     ipmiutil
+    sasutils
     # xmr-stak
     ((python3.withPackages (ps: with ps; [
       docker
