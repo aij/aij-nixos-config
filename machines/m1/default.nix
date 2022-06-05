@@ -8,7 +8,7 @@
     [
       ./hardware-configuration.nix
       ../../zfs.nix
-      ../../nixops.nix
+      ../../server.nix
     ];
 
   boot.loader.grub = {

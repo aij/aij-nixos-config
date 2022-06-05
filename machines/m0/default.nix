@@ -7,7 +7,7 @@
   imports =
     [
       ./hardware-configuration.nix
-      ../../nixops.nix
+      ../../server.nix
     ];
 
   boot.loader.grub = {
