@@ -40,6 +40,9 @@
     evince
     gphoto2
     gphoto2fs
+    gthumb
+    digikam
+    darktable
     imagemagick
     obs-studio # Screen recorder
     gnumeric
