@@ -141,7 +141,12 @@
 
   sound.enable = true;
   # Firefox 72 broke ALSA support. :(
-  hardware.pulseaudio.enable = true;
+  services.pipewire ={
+    enable = true;
+    alsa.enable = true;
+    jack.enable = true;
+    pulse.enable = true;
+  };
 
   hardware.hackrf.enable = true;
 
