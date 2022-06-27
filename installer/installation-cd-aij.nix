@@ -25,7 +25,6 @@
   systemd.services.sshd.wantedBy = lib.mkForce [ "multi-user.target" ];
 
   users.users.root.openssh.authorizedKeys.keys = [
-    # "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDZZxLNfxTM3SMkP/3Q9aMRDS9tza5Zm4wxy0NlPkNuz5ka4h40kIP+TsyhQ9pFtWwYXtAB9MxmAcrQpo/yb1RqyXu2eUTnYEYmbKrPjTdRXKprXYrNsONJXb6JCI0V+fHddghNlH0MBYup/Lu2JZQ+uRa/W/2zvxi/y9RoQN2pNriZEG/znJfcTLnQogHbkuz6NHDJPOZ5K35ND7Afb0S4H8IX8u07F5kiW9DcB0h9YoDQ05EjwM+Xs0DK1b1h4hQyBBny2Lxd2m0vaC/J//8FI35Z1N1k8f3etLgJPRzjOiTf6zn5IUgE7GxM93JStKAvrryO+NcfMGzBx5yjCWjv aij@altos"
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDTGD3FImr4dsW6pmGT5muMDjEoOTPMxxvhwWMMyAcpC ivan@tobati"
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIORLMYgWkpO8Psfx9cI/kLtgrxo7M4sbgBL/4wNKQDvL ivan@ita"
   ];
