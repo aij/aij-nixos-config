@@ -11,6 +11,7 @@
       ../../sshd.nix
       ../../standard.nix
       ../../stable.nix
+      ../../hosts-home.nix
     ];
 
   # Use the extlinux boot loader. (NixOS wants to enable GRUB by default)
@@ -26,9 +27,10 @@
   # Per-interface useDHCP will be mandatory in the future, so this generated config
   # replicates the default behaviour.
   networking.useDHCP = false;
-  networking.interfaces.eth0.useDHCP = true;
+  #networking.interfaces.eth0.useDHCP = true;
   networking.interfaces.wlan0.useDHCP = false;
-
+  networking.defaultGateway = "10.0.0.1";
+  networking.nameservers = [ "10.0.0.1" "8.8.8.8" "4.4.4.4" ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
