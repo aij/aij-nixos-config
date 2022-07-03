@@ -38,6 +38,7 @@
     nix-prefetch-git
     nix-index
     nixpkgs-fmt
+    nixos-generators # For nixos-generate
     nox
     python
     python3
