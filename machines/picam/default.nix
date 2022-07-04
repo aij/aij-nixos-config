@@ -32,6 +32,28 @@
   networking.defaultGateway = "10.0.0.1";
   networking.nameservers = [ "10.0.0.1" "8.8.8.8" "4.4.4.4" ];
 
+  environment.systemPackages = with pkgs; [
+    libcamera
+    libraspberrypi
+    motion
+  ];
+
+  services.zoneminder = {
+    #enable = true;
+    #cameras = 2;
+    database.createLocally = true;
+    database.username = "zoneminder";
+    openFirewall = true;
+  };
+
+  services.mjpg-streamer = {
+    enable = true;
+    #inputPlugin = "input_uvc.so -r 1920x1080";
+    inputPlugin = "input_uvc.so -r 1280x720";
+    outputPlugin = "output_http.so -w @www@ -n -p 8000";
+  };
+  networking.firewall.allowedTCPPorts = [ 8000 ];
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
