@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -32,10 +32,25 @@
   networking.defaultGateway = "10.0.0.1";
   networking.nameservers = [ "10.0.0.1" "8.8.8.8" "4.4.4.4" ];
 
+  # networking.wlanInterfaces =
+  services.hostapd = {
+    enable = true;
+    ssid = "picam";
+    wpa = true;
+    wpaPassphrase = "testingpassword";
+    interface = "wlan0";
+  };
+
+  networking.interfaces."wlan0".ipv4.addresses =
+    lib.optionals config.services.hostapd.enable [{ address = "10.0.8.8"; prefixLength = 24; }];
+
+
   environment.systemPackages = with pkgs; [
     libcamera
     libraspberrypi
     motion
+    wirelesstools
+    iw
   ];
 
   services.zoneminder = {
