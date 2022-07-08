@@ -18,6 +18,7 @@
     watchexec
     (clang.overrideAttrs (oldAttrs: { meta.priority = -1; }))
     clang-tools
+    bear # Generates compile_commands.json for clang tools
     jq
     yq
     sqlite-interactive
