@@ -6,10 +6,12 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../server.nix
       ../../zfs.nix
+      ../../nextcloud-container.nix
     ];
 
   # Use the GRUB 2 boot loader.
@@ -32,4 +34,3 @@
   system.stateVersion = "21.11"; # Did you read the comment?
 
 }
-
