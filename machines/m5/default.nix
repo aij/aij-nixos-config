@@ -21,6 +21,10 @@
     "/dev/disk/by-id/wwn-0x5001173100181ddc" # Sun F40
   ];
 
+  # Import external pools at boot
+  # TODO: Check the system still boots if they are missing
+  boot.zfs.extraPools = [ "tank" "syn2" ];
+
   networking.hostId = "1f9081c2";
   networking.hostName = "m5";
 
