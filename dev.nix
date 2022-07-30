@@ -52,6 +52,7 @@
     #androidsdk
     rustc
     cargo
+    rust-analyzer
     sshfs-fuse
     patdiff
     diffoscope
