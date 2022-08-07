@@ -41,6 +41,7 @@
     nixpkgs-fmt
     nixos-generators # For nixos-generate
     nox
+    rnix-lsp
     python
     python3
     mypy # TODO: pytype and/or pyre?
