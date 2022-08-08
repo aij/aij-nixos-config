@@ -131,7 +131,7 @@
   nix.useSandbox = true;
   nix.trustedUsers = [ "bob" ];
   nix.extraOptions = ''
-    experimental-features = nix-command
+    experimental-features = nix-command flakes
   '';
 
   # pcspkr won't load automatically because it is blacklisted by
