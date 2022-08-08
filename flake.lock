@@ -1,0 +1,42 @@
+{
+  "nodes": {
+    "root": {
+      "inputs": {
+        "stable": "stable",
+        "unstable": "unstable"
+      }
+    },
+    "stable": {
+      "locked": {
+        "lastModified": 1659907814,
+        "narHash": "sha256-JEYCjAFJQK0JGe2ApyGu/+doxzTraT+g1LP3npXnuBI=",
+        "ref": "92fe622fdfe477a85662bb77678e39fa70373f13",
+        "rev": "92fe622fdfe477a85662bb77678e39fa70373f13",
+        "revCount": 382281,
+        "type": "git",
+        "url": "file:stable"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:stable"
+      }
+    },
+    "unstable": {
+      "locked": {
+        "lastModified": 1659939733,
+        "narHash": "sha256-LbKD02YBRahq17sb4wqE7rqvZz8E0iayj7MU9hyfVQc=",
+        "ref": "0e27b0d8c3e0e5046b87369c18246ab1132a3568",
+        "rev": "0e27b0d8c3e0e5046b87369c18246ab1132a3568",
+        "revCount": 398594,
+        "type": "git",
+        "url": "file:unstable"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:unstable"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
