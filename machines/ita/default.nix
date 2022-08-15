@@ -29,8 +29,13 @@
   networking.domain = "mrph.org";
   networking.wireless = {
     enable = true; # Enables wireless support via wpa_supplicant.
-    interfaces = [ "wlp3s0" ];
+    interfaces = [ "wlan-sta0" ];
   };
+  networking.wlanInterfaces = let device = "wlp3s0"; in
+    {
+      wlan-sta0 = { inherit device; };
+      wlan-sta1 = { inherit device; mac = "02:69:74:61:00:01"; };
+    };
   nixpkgs.config.allowUnfree = true;
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
@@ -52,6 +57,7 @@
     transmission
     rtorrent
     bitcoin
+    iwd
   ];
 
   programs.adb.enable = true;
