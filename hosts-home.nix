@@ -191,6 +191,8 @@ let
       net0 = { iface = "eth0"; ip = "10.0.0.8"; };
     };
 
+    ita.net0 = { iface = "enp0s25"; ip = "10.0.0.7"; };
+
     sw0 = {
       net0 = {
         ip = "10.0.0.2";

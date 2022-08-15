@@ -79,11 +79,11 @@
   #  client.enable = true;
   #};
 
-  networking.interfaces.enp0s25.ipv4.addresses = [
-    { address = "10.0.4.1"; prefixLength = 24; }
-  ];
+  # networking.interfaces.enp0s25.ipv4.addresses = [
+  #   { address = "10.0.4.1"; prefixLength = 24; }
+  # ];
   services.dhcpd4 = {
-    enable = true;
+    #enable = true;
     interfaces = [ "enp0s25" ];
     extraConfig = ''
       option subnet-mask 255.255.255.0;
