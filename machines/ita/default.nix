@@ -79,6 +79,29 @@
   #  client.enable = true;
   #};
 
+  networking.interfaces.enp0s25.ipv4.addresses = [
+    { address = "10.0.4.1"; prefixLength = 24; }
+  ];
+  services.dhcpd4 = {
+    enable = true;
+    interfaces = [ "enp0s25" ];
+    extraConfig = ''
+      option subnet-mask 255.255.255.0;
+      option broadcast-address 10.0.4.255;
+      #option routers 10.0.1.1;
+      #option domain-name-servers 10.0.0.1, 8.8.8.8, 4.4.4.4;
+      option domain-name "mrph.org";
+      subnet 10.0.4.0 netmask 255.255.255.0 {
+        range 10.0.4.140 10.0.4.250;
+      }
+      #allow booting;
+      #allow bootp;
+      #next-server 10.0.1.11;
+      #filename "/pxelinux.0";
+    '';
+  };
+
+
   virtualisation.libvirtd.enable = true;
 
   nix = {
