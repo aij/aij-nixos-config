@@ -28,7 +28,8 @@
   networking.hostId = "49e32584";
   networking.domain = "mrph.org";
   networking.wireless = {
-    enable = true; # Enables wireless support via wpa_supplicant.
+    #enable = true; # Enables wireless support via wpa_supplicant.
+    iwd.enable = true;
     interfaces = [ "wlan-sta0" ];
   };
   networking.wlanInterfaces = let device = "wlp3s0"; in
@@ -58,6 +59,8 @@
     rtorrent
     bitcoin
     iwd
+    iw
+    wirelesstools
   ];
 
   programs.adb.enable = true;
