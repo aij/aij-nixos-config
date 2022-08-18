@@ -109,6 +109,11 @@
       #filename "/pxelinux.0";
     '';
   };
+  networking.nat = {
+    enable = true;
+    externalInterface = "wlan0";
+    internalIPs = [ "10.0.0.0/24" ];
+  };
 
 
   virtualisation.libvirtd.enable = true;
