@@ -36,6 +36,10 @@
   #  "linksys" = {};
   #};
 
+  # For laptops that don't have (usable) ethernet
+  networking.wireless.iwd.enable = true; # Enables wireless support via iwd / iwctl
+  networking.wireless.enable = false;
+
   # Extra packages for hardware support
   environment.systemPackages = with pkgs; [
     # hpssacli # HP SmartArray configuration tool
