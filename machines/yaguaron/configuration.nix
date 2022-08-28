@@ -8,9 +8,9 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      aij/zfs.nix
-      aij/standard.nix
-      aij/stable.nix
+      ../../zfs.nix
+      ../../standard.nix
+      ../../stable.nix
     ];
 
   # Use the GRUB 2 boot loader.

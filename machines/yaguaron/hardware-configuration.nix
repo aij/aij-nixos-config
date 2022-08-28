@@ -8,7 +8,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" "sdhci_pci" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "sdhci_pci" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
@@ -19,22 +19,27 @@
     };
 
   fileSystems."/nix" =
-    { device = "rpool/NIX";
+    { device = "rpool/nix";
       fsType = "zfs";
     };
 
   fileSystems."/var" =
-    { device = "rpool/VAR";
+    { device = "rpool/var";
+      fsType = "zfs";
+    };
+
+  fileSystems."/tmp" =
+    { device = "rpool/tmp";
       fsType = "zfs";
     };
 
   fileSystems."/home" =
-    { device = "rpool/HOME";
+    { device = "rpool/home";
       fsType = "zfs";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/d3d79412-1696-4ea8-abe4-0fa6876b6c60";
+    { device = "/dev/disk/by-uuid/e5e65a95-4eec-4cd9-b853-2de144d8cec1";
       fsType = "ext4";
     };
 
