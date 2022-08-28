@@ -20,7 +20,7 @@ disk=$1
 # destroy existing data and I'm not sure I want to do that automatically...
 # blkdiscard $disk
 
-$mydir/part-boot-root-rest.sh $disk
+$mydir/part-zfs-boot.sh $disk
 
 # Wait for partitions to be re-read
 sleep 1
@@ -30,8 +30,8 @@ udevadm settle
 # /dev/sdn -> sdn1 sdn2 etc
 # /dev/nvme0n1 -> nvme0n1p1 nvme0n1p2 etc
 # /dev/disk/by-id always adds -part1 style suffixes though.
-bootpart=$disk-part2
-rootpart=$disk-part3
+bootpart=$disk-part1
+rootpart=$disk-part2
 
 test -e $bootpart
 test -e $rootpart
