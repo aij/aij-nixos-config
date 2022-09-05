@@ -6,11 +6,14 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../zfs.nix
       ../../standard.nix
       ../../stable.nix
+      ../../desktop.nix
+      ../../hosts-home.nix
     ];
 
   # Use the GRUB 2 boot loader.
@@ -23,7 +26,7 @@
   boot.loader.grub.device = "/dev/nvme0n1";
 
   networking.hostName = "yaguaron";
-networking.hostId = "dbffe949";
+  networking.hostId = "dbffe949";
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
@@ -48,7 +51,7 @@ networking.hostId = "dbffe949";
   # services.xserver.enable = true;
 
 
-  
+
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
@@ -117,4 +120,3 @@ networking.hostId = "dbffe949";
   system.stateVersion = "22.05"; # Did you read the comment?
 
 }
-
