@@ -36,11 +36,13 @@
   fileSystems."/boot1" =
     { device = "/dev/disk/by-uuid/1554b206-f42a-430a-8be6-fca0311928c7";
       fsType = "ext4";
+      options = [ "nofail" ];
     };
 
   fileSystems."/boot2" =
     { device = "/dev/disk/by-uuid/bda7041a-1b27-4591-836f-55b6e869ab85";
       fsType = "ext4";
+      options = [ "nofail" ];
     };
 
   swapDevices = [ ];
