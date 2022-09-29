@@ -8,7 +8,7 @@
     wireshark # openssh_with_kerberos
     # kismet # broken in unstable
     xscreensaver
-    rxvt_unicode
+    rxvt-unicode
     terminus_font
     geeqie
     mplayer
@@ -36,7 +36,7 @@
     offlineimap
     msmtp
     muchsync
-    gmailieer
+    lieer
     evince
     gphoto2
     gphoto2fs

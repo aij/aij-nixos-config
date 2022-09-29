@@ -74,7 +74,6 @@
     du-dust # more graphical du / less graphical fsv
     fd # faster find alternative
     hyperfine # cmdline benchmarking tool
-    rxvt_unicode.terminfo
     linuxPackages.bcc
     mkpasswd
     lm_sensors

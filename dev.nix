@@ -14,7 +14,7 @@
     gdb
     rr
     heaptrack
-    inotifyTools
+    inotify-tools
     watchexec
     (clang.overrideAttrs (oldAttrs: { meta.priority = -1; }))
     clang-tools
