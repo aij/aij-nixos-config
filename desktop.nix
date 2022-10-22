@@ -51,7 +51,7 @@
     # pdfmod gnome3.gconf # hack: pdfmod needed gconf, but was later broken anyway
     gimp # gimp-with-plugins is broken in unstable
     inkscape
-    qgis
+    # qgis # Broken in unstable https://github.com/NixOS/nixpkgs/issues/196432
     # enlightenment.rage enlightenment.terminology
     trayer
     haskellPackages.xmobar # TODO: Remove after fully switching to taffybar.
