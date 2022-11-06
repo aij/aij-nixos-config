@@ -88,6 +88,10 @@
     google-drive-ocamlfuse
     # For getting pulseaudio to do something sane with sound https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/DefaultDevice/
     pavucontrol
+
+    # Games
+    endless-sky
+    # TODO: 0ad xonotic quake3 blobwars openttd gotypist gtypist gtetrinet ?
   ];
 
   nixpkgs.config.android_sdk.accept_license = true;
