@@ -23,8 +23,13 @@
   # Per-interface useDHCP will be mandatory in the future, so this generated config
   # replicates the default behaviour.
   networking.useDHCP = false;
+  # Not using eno1 currently but this ensures I have dhcpcd available if needed.
   networking.interfaces.eno1.useDHCP = true;
-  networking.interfaces.enp5s0.useDHCP = true;
+
+  #networking.interfaces.enp5s0.useDHCP = true;
+  # Static IP set via hosts-home.nix
+  networking.defaultGateway = "10.0.0.1";
+  networking.nameservers = [ "10.0.0.1" "8.8.8.8" "4.4.4.4" ];
 
   environment.systemPackages = with pkgs; [
     ceph
@@ -90,14 +95,16 @@
     # systemFeatures = [ "nixos-test" "benchmark" "kvm" ];
     # distributedBuilds = true;
     buildMachines =
-      let m = hostName: maxJobs: speedFactor: {
-        hostName = hostName;
-        maxJobs = maxJobs;
-        speedFactor = speedFactor;
-        sshUser = "bob";
-        system = "x86_64-linux";
-        supportedFeatures = [ "nixos-test" "benchmark" "big-parallel" "kvm" ];
-      }; in
+      let
+        m = hostName: maxJobs: speedFactor: {
+          hostName = hostName;
+          maxJobs = maxJobs;
+          speedFactor = speedFactor;
+          sshUser = "bob";
+          system = "x86_64-linux";
+          supportedFeatures = [ "nixos-test" "benchmark" "big-parallel" "kvm" ];
+        };
+      in
       [
         #(m "m0" 32 2.6)
         #(m "m4" 32 1.8)

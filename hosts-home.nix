@@ -192,6 +192,7 @@ let
     };
 
     #ita.net0 = { iface = "enp0s25"; ip = "10.0.0.7"; };
+    tobati.net0 = { iface = "enp5s0"; ip = "10.0.0.9"; };
 
     sw0 = {
       net0 = {
@@ -208,6 +209,12 @@ let
     ap3.net0.ip = "10.0.0.253";
     ap4.net0.ip = "10.0.0.254";
     ap5.net0.ip = "10.0.0.249";
+
+    # plug1.net0 = {
+    #   mac = "CC:8C:BF:66:CC:2D";
+    # };
+    # plug2.net0.mac = "CC:8C:BF:78:ED:87";
+    # ipcam "3C:33:00:18:B5:09"  "10.0.0.119"
   };
   localnetpref = [ "ib" "net1" "net0" ];
   defaultnetpref = [ "net0" ];
@@ -219,21 +226,25 @@ in
   networking.hosts = (
     with builtins;
     let names = attrNames hostlist; in
-    let genLine = hostname: netname:
-      let
-        hostconf = hostlist.${hostname};
-        conf = hostlist.${hostname}.${netname};
-        is_preferred = netname == lib.findFirst (x: hostconf ? ${x}) "net0" mynetpref;
-      in
-      {
-        name = conf.ip;
-        value = [ "${hostname}.${netname}" ] ++ lib.optional is_preferred hostname;
-      }; in
-    let nested = map
-      (hostname:
-        map (genLine hostname) (attrNames hostlist.${hostname})
-      )
-      names; in
+    let
+      genLine = hostname: netname:
+        let
+          hostconf = hostlist.${hostname};
+          conf = hostlist.${hostname}.${netname};
+          is_preferred = netname == lib.findFirst (x: hostconf ? ${x}) "net0" mynetpref;
+        in
+        {
+          name = conf.ip;
+          value = [ "${hostname}.${netname}" ] ++ lib.optional is_preferred hostname;
+        };
+    in
+    let
+      nested = map
+        (hostname:
+          map (genLine hostname) (attrNames hostlist.${hostname})
+        )
+        names;
+    in
     listToAttrs (concatLists nested)
   );
 
