@@ -91,6 +91,7 @@
 
     # Games
     endless-sky
+    flightgear
     # TODO: 0ad xonotic quake3 blobwars openttd gotypist gtypist gtetrinet ?
   ];
 
