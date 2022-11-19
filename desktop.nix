@@ -153,6 +153,9 @@
     pulse.enable = true;
   };
 
+  services.redshift.enable = true;
+  location = { latitude = 43.074722; longitude = -89.384167; };
+
   hardware.hackrf.enable = true;
 
   fonts = {
