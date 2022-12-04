@@ -90,7 +90,6 @@
 
   nix = {
     nrBuildUsers = 56;
-    useSandbox = true;
     # Don't build big-parallel jobs locally
     # systemFeatures = [ "nixos-test" "benchmark" "kvm" ];
     # distributedBuilds = true;

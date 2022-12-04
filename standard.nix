@@ -128,11 +128,11 @@
     };
   };
 
-  nix.useSandbox = true;
-  nix.trustedUsers = [ "bob" ];
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes
-  '';
+  nix.settings = {
+    sandbox = true;
+    trusted-users = [ "bob" ];
+    experimental-features = [ "nix-command" "flakes" ];
+  };
 
   # pcspkr won't load automatically because it is blacklisted by
   # /etc/modprobe.d/ubuntu.conf

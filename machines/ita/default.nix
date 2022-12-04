@@ -118,9 +118,5 @@
 
   virtualisation.libvirtd.enable = true;
 
-  nix = {
-    useSandbox = true;
-  };
-
   system.stateVersion = "16.09";
 }
