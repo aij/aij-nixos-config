@@ -51,6 +51,7 @@
     # TODO: ssort? From https://github.com/bwhmather/ssort
     ruby
     #androidsdk
+    android-tools
     rustc
     cargo
     rust-analyzer
