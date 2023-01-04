@@ -177,6 +177,8 @@
   # Needed by nixops. https://github.com/NixOS/nixops/issues/1242
   nixpkgs.config.permittedInsecurePackages = [
     "python2.7-cryptography-2.9.2"
+    "python3.10-certifi-2022.9.24"
+    "python3.10-certifi-2022.12.7"
   ];
 
 }
