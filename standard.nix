@@ -95,6 +95,8 @@
   programs.mtr.enable = true;
   services.netdata.enable = true;
   services.tailscale.enable = true;
+  # Strict reverse path filtering breaks Tailscale exit node use and some subnet routing setups.
+  networking.firewall.checkReversePath = "loose";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.extraUsers = {
