@@ -34,4 +34,6 @@
     requires = [ "postgresql.service" ];
     after = [ "postgresql.service" ];
   };
+
+  system.stateVersion = "22.11";
 }
