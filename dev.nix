@@ -57,7 +57,7 @@
     sshfs-fuse
     patdiff
     diffoscope
-    vagrant
+    # vagrant # Broken in nixos-unstable. https://github.com/NixOS/nixpkgs/issues/211153
     direnv
     ocamlPackages.merlin
     # ocamlPackages.reason
