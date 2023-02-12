@@ -50,12 +50,6 @@
       fsType = "vfat";
     };
 
-  fileSystems."/boot2" =
-    {
-      device = "/dev/disk/by-uuid/0E88-691C";
-      fsType = "vfat";
-    };
-
   swapDevices = [ ];
 
   # high-resolution display
