@@ -50,6 +50,12 @@
       fsType = "vfat";
     };
 
+  fileSystems."/boot3" =
+    {
+      device = "/dev/disk/by-uuid/C739-FBC4";
+      fsType = "vfat";
+    };
+
   swapDevices = [ ];
 
   # high-resolution display
