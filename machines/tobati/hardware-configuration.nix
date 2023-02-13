@@ -47,7 +47,7 @@
 
   fileSystems."/boot1" =
     {
-      device = "/dev/disk/by-uuid/62C0-915F";
+      device = "/dev/disk/by-uuid/443A-AFF6";
       fsType = "vfat";
       options = [ "nofail" ];
     };

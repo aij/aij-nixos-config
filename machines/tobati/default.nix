@@ -83,7 +83,7 @@
   boot.loader.grub.memtest86.enable = true;
   boot.loader.grub.mirroredBoots = [
     { path = "/boot"; devices = [ "/dev/disk/by-id/nvme-XP7102-1A102_ZDG000AI" ]; }
-    { path = "/boot1"; devices = [ "/dev/disk/by-id/nvme-UCSC-NVMEHW-H800_SDM00001B574" ]; }
+    { path = "/boot1"; devices = [ "/dev/disk/by-id/nvme-HUSPR3238ADP301_CJH001010F63" ]; }
     { path = "/boot3"; devices = [ "/dev/disk/by-id/nvme-SAMSUNG_MZQLW3T8HMLP-00003_S2UDNX0J401690" ]; }
   ];
 
