@@ -30,9 +30,9 @@ git submodule update --remote
 # Test that everything still builds
 tests/machine-builds.sh
 
-# Test nixops can still build my configuration with new submodules
+# Test colmena can still build my configuration with new submodules
 test -e ../nixops.nix && {
-    nix-shell -p nixopsUnstable --run 'cd .. && nixops deploy --build-only'
+    nix-shell -p colmena --run 'cd .. && colmena apply build'
 }
     
 git add stable unstable
