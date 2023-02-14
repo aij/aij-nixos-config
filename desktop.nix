@@ -70,6 +70,7 @@
     graphviz
     sshfs-fuse
     ansible
+    colmena
     morph
     nixopsUnstable
     lsdvd
