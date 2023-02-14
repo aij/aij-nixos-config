@@ -71,8 +71,6 @@
     sshfs-fuse
     ansible
     colmena
-    morph
-    nixopsUnstable
     lsdvd
     cdrkit
     # dvdbackup # Tool to backup DVDs -- broken in unstable
