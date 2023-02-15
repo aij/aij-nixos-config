@@ -90,7 +90,7 @@
 
     # Games
     endless-sky
-    flightgear
+    # flightgear # Broken in unstable
     # TODO: 0ad xonotic quake3 blobwars openttd gotypist gtypist gtetrinet ?
   ];
 
