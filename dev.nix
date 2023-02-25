@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
   imports = [ ./standard.nix ];
 
@@ -76,4 +76,9 @@
 
   virtualisation.podman.enable = true;
   virtualisation.virtualbox.host.enable = true;
+
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "androidsdk"
+    "tools" # android-tools
+  ];
 }
