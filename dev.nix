@@ -29,6 +29,7 @@
     cloc
     dash
     zsh
+    shellcheck
     dhall
     ghc
     # idris
