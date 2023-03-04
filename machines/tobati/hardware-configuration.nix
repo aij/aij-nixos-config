@@ -51,7 +51,12 @@
       fsType = "vfat";
       options = [ "nofail" ];
     };
-
+  fileSystems."/boot2" =
+    {
+      device = "/dev/disk/by-uuid/0E88-691C";
+      fsType = "vfat";
+      options = [ "nofail" ];
+    };
   fileSystems."/boot3" =
     {
       device = "/dev/disk/by-uuid/C739-FBC4";
