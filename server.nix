@@ -3,6 +3,7 @@
     ./standard.nix
     ./sshd.nix
     ./hosts-home.nix
+    ./audit.nix
     # ./aij/profiles/miner.nix
   ];
 
