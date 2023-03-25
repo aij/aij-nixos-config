@@ -68,8 +68,6 @@
     options amdgpu cik_support=0
   '';
 
-  hardware.video.hidpi.enable = false;
-
   boot.tmpOnTmpfs = true;
 
   # boot.kernelPackages = pkgs.linuxPackages_latest;
