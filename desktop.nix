@@ -74,6 +74,7 @@
     lsdvd
     cdrkit
     # dvdbackup # Tool to backup DVDs -- broken in unstable
+    yt-dlp
     signal-desktop
     element-desktop
     (pidgin.override {
