@@ -43,6 +43,7 @@
     ipmitool
     ipmiutil
     sasutils
+    mstflint # Mellanox Firmware Tools
     # xmr-stak
     ((python3.withPackages (ps: with ps; [
       docker
