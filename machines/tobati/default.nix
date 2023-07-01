@@ -68,7 +68,7 @@
     options amdgpu cik_support=0
   '';
 
-  boot.tmpOnTmpfs = true;
+  boot.tmp.useTmpfs = true;
 
   # boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelPackages = pkgs.zfs.latestCompatibleLinuxPackages;
