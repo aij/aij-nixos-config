@@ -15,7 +15,6 @@
 
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
-  boot.loader.grub.version = 2;
   boot.loader.grub.mirroredBoots = [
     { path = "/boot1"; devices = [ "/dev/disk/by-id/wwn-0x5000516000023334" ]; }
     # FIXME { path = "/boot2"; devices = [ "/dev/disk/by-id/wwn-0x5000516000028514" ]; }

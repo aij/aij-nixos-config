@@ -11,7 +11,6 @@
 
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
-  boot.loader.grub.version = 2;
   boot.loader.grub.devices = [
     "/dev/disk/by-id/wwn-0x500117310017e884" # Sun F40 (slot 3)
     "/dev/disk/by-id/wwn-0x50011731001832ec" # Sun F40 (slot 4)
@@ -27,4 +26,3 @@
   system.stateVersion = "19.09"; # Did you read the comment?
 
 }
-

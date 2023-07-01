@@ -11,7 +11,6 @@
     ];
 
   boot.loader.grub.enable = true;
-  boot.loader.grub.version = 2;
   boot.loader.grub.devices = [
     "/dev/disk/by-id/ata-ST5000DM000-1FK178_W4J1VWW3"
     "/dev/disk/by-id/ata-HITACHI_HUA723030ALA640_YVHJJJ3A"

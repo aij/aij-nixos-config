@@ -16,7 +16,6 @@
 
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
-  boot.loader.grub.version = 2;
   boot.loader.grub.mirroredBoots = [
     { path = "/boot1"; devices = [ "/dev/disk/by-id/wwn-0x500051600003d818" ]; }
     { path = "/boot2"; devices = [ "/dev/disk/by-id/wwn-0x50005160000406b4" ]; }

@@ -14,7 +14,6 @@
 
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
-  boot.loader.grub.version = 2;
   boot.loader.grub.devices = [
     "/dev/disk/by-id/ata-MTFDDAK256MAR-1K1AA_90Y8664_90Y8667IBM_0344FDEB-part2"
     "/dev/disk/by-id/wwn-0x5001173100179f60" # Sun F40
