@@ -36,7 +36,7 @@
   ];
 
   services.openssh.enable = true;
-  services.openssh.passwordAuthentication = false;
+  services.openssh.settings.PasswordAuthentication = false;
 
   services.xserver = {
     videoDrivers = [ "amdgpu" "modesetting" ];
