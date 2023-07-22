@@ -7,7 +7,8 @@
   i18n.defaultLocale = "en_US.UTF-8";
   console.useXkbConfig = true;
   services.xserver = {
-    layout = "dvorak";
+    layout = "us";
+    xkbVariant = "dvorak";
     xkbOptions = "ctrl:nocaps, terminate:ctrl_alt_bksp, compose:ralt";
     autoRepeatDelay = 160;
     autoRepeatInterval = 45;
