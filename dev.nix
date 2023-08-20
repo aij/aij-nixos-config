@@ -72,7 +72,7 @@
     vde2
     # Customized emacs package
     #(import pkg/emacs.nix { inherit pkgs; })
-    emacs
+    emacs29
   ];
 
   virtualisation.podman.enable = true;
