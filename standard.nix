@@ -56,6 +56,7 @@
     ddrescue
     rsync
     strace
+    elfutils
     dmidecode
     lshw
     hwinfo
