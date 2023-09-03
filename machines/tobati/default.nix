@@ -5,6 +5,7 @@
     ../../zfs.nix
     ../../desktop.nix
     ../../dev.nix
+    ../../bluray.nix
     ../../hosts-home.nix
     # ../../latencytop.nix
     ../../unstable.nix
