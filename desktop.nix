@@ -73,6 +73,7 @@
     colmena
     lsdvd
     cdrkit
+    dvdplusrwtools
     # dvdbackup # Tool to backup DVDs -- broken in unstable
     yt-dlp
     signal-desktop
