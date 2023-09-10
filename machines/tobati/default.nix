@@ -85,6 +85,11 @@
     { path = "/boot3"; devices = [ "/dev/disk/by-id/nvme-SAMSUNG_MZQLW3T8HMLP-00003_S2UDNX0J401690" ]; }
   ];
 
+  fileSystems."/media/sr0" = {
+    device = "/dev/sr0";
+    #fsType = "auto";
+    options = [ "defaults" "user" "ro" "utf8" "noauto" "umask=000" ];
+  };
 
   nixpkgs.config.allowUnfree = true;
 
