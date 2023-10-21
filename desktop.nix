@@ -31,7 +31,7 @@
     xclip
     xdotool
     chromium
-    firefox #google-chrome # chromiumDev
+    #firefox #google-chrome # chromiumDev
     notmuch
     offlineimap
     msmtp
@@ -116,7 +116,7 @@
   services.keybase.enable = true;
   services.kbfs.enable = true;
   programs.browserpass.enable = true;
-  nixpkgs.config.firefox.enableBrowserpass = true; # Workaround for https://github.com/NixOS/nixpkgs/issues/262600
+  programs.firefox.enable = true;
   programs.gnupg.agent = {
     enable = true;
     pinentryFlavor = "gtk2";
