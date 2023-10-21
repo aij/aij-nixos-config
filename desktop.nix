@@ -116,6 +116,7 @@
   services.keybase.enable = true;
   services.kbfs.enable = true;
   programs.browserpass.enable = true;
+  nixpkgs.config.firefox.enableBrowserpass = true; # Workaround for https://github.com/NixOS/nixpkgs/issues/262600
   programs.gnupg.agent = {
     enable = true;
     pinentryFlavor = "gtk2";
