@@ -132,6 +132,7 @@
     };
   };
 
+  nix.daemonCPUSchedPolicy = "batch";
   nix.settings = {
     sandbox = true;
     trusted-users = [ "bob" ];
