@@ -192,7 +192,7 @@ let
     };
 
     #ita.net0 = { iface = "enp0s25"; ip = "10.0.0.7"; };
-    tobati.net0 = { iface = "enp8s0"; ip = "10.0.0.9"; };
+    tobati.net0 = { iface = "enp1s0"; ip = "10.0.0.9"; };
 
     sw0 = {
       net0 = {

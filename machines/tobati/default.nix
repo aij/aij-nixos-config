@@ -25,7 +25,7 @@
   # replicates the default behaviour.
   networking.useDHCP = false;
   # Not using eno1 currently but this ensures I have dhcpcd available if needed.
-  networking.interfaces.eno1.useDHCP = true;
+  #networking.interfaces.eno1.useDHCP = true;
 
   #networking.interfaces.enp5s0.useDHCP = true;
   # Static IP set via hosts-home.nix
