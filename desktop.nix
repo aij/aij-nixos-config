@@ -155,9 +155,9 @@
 
   fonts = {
     enableGhostscriptFonts = true;
-    enableDefaultFonts = true;
+    enableDefaultPackages = true;
     fontDir.enable = true;
-    fonts = with pkgs; [
+    packages = with pkgs; [
       terminus_font # For urxvt / xterm
       font-awesome # For waybar
     ];
