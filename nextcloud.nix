@@ -3,6 +3,7 @@
 
   services.nextcloud = {
     enable = true;
+    package = pkgs.nextcloud26;
     hostName = "nextcloud.mrph.org";
     config = {
       extraTrustedDomains = [
