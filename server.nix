@@ -45,14 +45,14 @@
     sasutils
     mstflint # Mellanox Firmware Tools
     # xmr-stak
-    ((python3.withPackages (ps: with ps; [
-      docker
-      requests # docker package depends on requests
-    ])).overrideAttrs (oldAttrs: { meta.priority = -1000; })
-    )
+    # ((python3.withPackages (ps: with ps; [
+    #   docker
+    #   requests # docker package depends on requests
+    # ])).overrideAttrs (oldAttrs: { meta.priority = -1000; })
+    # )
 
   ];
   nixpkgs.config.allowUnfree = true;
 
-  virtualisation.docker.enable = true;
+  # virtualisation.docker.enable = true;
 }
