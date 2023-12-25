@@ -19,6 +19,7 @@
     (clang.overrideAttrs (oldAttrs: { meta.priority = -1; }))
     clang-tools
     bear # Generates compile_commands.json for clang tools
+    fq
     jq
     yq
     sqlite-interactive
