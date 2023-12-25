@@ -29,6 +29,7 @@
     cloc
     dash
     zsh
+    semgrep
     shellcheck
     dhall
     ghc
