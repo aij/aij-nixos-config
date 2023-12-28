@@ -63,6 +63,7 @@
     # vagrant # Broken in nixos-unstable. https://github.com/NixOS/nixpkgs/issues/211153
     direnv
     ocamlPackages.merlin
+    ocamlformat
     # ocamlPackages.reason
     # nodePackages_10_x.ocaml-language-server # Only in nixos-unstable
     coursier # scalafmt # scalafix
