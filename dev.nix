@@ -66,6 +66,7 @@
     ocamlformat
     # ocamlPackages.reason
     # nodePackages_10_x.ocaml-language-server # Only in nixos-unstable
+    smlnj
     coursier # scalafmt # scalafix
     bloop
     mercurial
