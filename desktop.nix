@@ -119,7 +119,7 @@
   programs.firefox.enable = true;
   programs.gnupg.agent = {
     enable = true;
-    pinentryFlavor = "gnome3";
+    pinentryFlavor = "gtk2";
   };
   programs.ssh.startAgent = true;
   programs.sway = {
