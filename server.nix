@@ -43,7 +43,7 @@
     ipmitool
     ipmiutil
     sasutils
-    mstflint # Mellanox Firmware Tools
+    # mstflint # Mellanox Firmware Tools # Broken in unstable
     # xmr-stak
     # ((python3.withPackages (ps: with ps; [
     #   docker
