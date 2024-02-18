@@ -49,7 +49,7 @@
     mypy # TODO: pytype and/or pyre?
     black
     black-macchiato
-    python39Packages.isort
+    # python39Packages.isort # broken in unstable
     # TODO: ssort? From https://github.com/bwhmather/ssort
     ruby
     #androidsdk
