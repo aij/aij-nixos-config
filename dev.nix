@@ -50,6 +50,7 @@
     black
     black-macchiato
     # python39Packages.isort # broken in unstable
+    ruff # python linter / formatter
     # TODO: ssort? From https://github.com/bwhmather/ssort
     ruby
     #androidsdk
