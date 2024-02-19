@@ -121,6 +121,10 @@
       isNormalUser = true;
       uid = 1003;
     };
+    duff = {
+      isNormalUser = true;
+      uid = 1098;
+    };
     lshelby = {
       isNormalUser = true;
       uid = 1099;
