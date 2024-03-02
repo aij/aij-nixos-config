@@ -92,6 +92,7 @@
 
     # Games
     endless-sky
+    mindustry
     # flightgear # Broken in unstable
     # TODO: 0ad xonotic quake3 blobwars openttd gotypist gtypist gtetrinet ?
   ];
@@ -169,7 +170,7 @@
     lib.optionalAttrs (builtins.hasAttr "qemu" options.virtualisation) {
       memorySize = 4096;
       cores = 4;
-      qemu.options = [ "-soundhw ac97" ];
+      # qemu.options = [ "-soundhw ac97" ];
     };
 
   # Needed by nixops. https://github.com/NixOS/nixops/issues/1242
