@@ -44,7 +44,7 @@
     nixpkgs-fmt
     nixos-generators # For nixos-generate
     nox
-    rnix-lsp
+    # rnix-lsp # Removed to avoid dependency on vulnerable nix-2.15.3 (CVE-2024-27297)
     python3
     mypy # TODO: pytype and/or pyre?
     black
