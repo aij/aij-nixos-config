@@ -121,6 +121,10 @@
       isNormalUser = true;
       uid = 1003;
     };
+    ljager = {
+      isNormalUser = true;
+      uid = 1004;
+    };
     duff = {
       isNormalUser = true;
       uid = 1098;
