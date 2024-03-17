@@ -120,8 +120,12 @@
   programs.firefox.enable = true;
   programs.gnupg.agent = {
     enable = true;
-    pinentryFlavor = "qt";
-  };
+  } //
+  (if builtins.hasAttr "pinentryPackage" options.programs.gnupg.agent # False on NixOS 23.11
+  then { pinentryPackage = pkgs.pinentry-qt; }
+  else { pinentryFlavor = "qt"; }
+  );
+
   programs.ssh.startAgent = true;
   programs.sway = {
     enable = true;
