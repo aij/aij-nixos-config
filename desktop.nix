@@ -6,7 +6,7 @@
     gkrellm
     gnupg
     wireshark # openssh_with_kerberos
-    # kismet # broken in unstable
+    kismet
     xscreensaver
     rxvt-unicode
     terminus_font
@@ -49,15 +49,15 @@
     abiword
     libmtp # Transfer files from Android over MTP
     # pdfmod gnome3.gconf # hack: pdfmod needed gconf, but was later broken anyway
-    gimp # gimp-with-plugins is broken in unstable
+    gimp-with-plugins
     inkscape
-    # qgis # Broken in unstable https://github.com/NixOS/nixpkgs/issues/196432
+    qgis
     # enlightenment.rage enlightenment.terminology
     trayer
     haskellPackages.xmobar # TODO: Remove after fully switching to taffybar.
     # taffybar Broken in unstable :(
     audacity
-    # fldigi # Broken because fldigi-4.1.19.tar.gz is no longer available from Sourceforge
+    fldigi
     hackrf
     gqrx # SDR
     urh # Universal Radio Hacker (SDR tool)
@@ -74,7 +74,7 @@
     lsdvd
     cdrkit
     dvdplusrwtools
-    # dvdbackup # Tool to backup DVDs -- broken in unstable
+    dvdbackup # Tool to backup DVDs
     yt-dlp
     signal-desktop
     element-desktop
@@ -93,7 +93,7 @@
     # Games
     endless-sky
     mindustry
-    # flightgear # Broken in unstable
+    flightgear
     # TODO: 0ad xonotic quake3 blobwars openttd gotypist gtypist gtetrinet ?
   ];
 
