@@ -99,11 +99,12 @@
 
   nixpkgs.config.android_sdk.accept_license = true;
 
+  services.displayManager.defaultSession = "none+xmonad";
+
   services.xserver = {
     enable = true;
     enableCtrlAltBackspace = true;
     displayManager.startx.enable = true;
-    displayManager.defaultSession = "none+xmonad";
     windowManager = {
       xmonad = {
         enable = true;
@@ -120,11 +121,8 @@
   programs.firefox.enable = true;
   programs.gnupg.agent = {
     enable = true;
-  } //
-  (if builtins.hasAttr "pinentryPackage" options.programs.gnupg.agent # False on NixOS 23.11
-  then { pinentryPackage = pkgs.pinentry-qt; }
-  else { pinentryFlavor = "qt"; }
-  );
+    pinentryPackage = pkgs.pinentry-qt;
+  };
 
   programs.ssh.startAgent = true;
   programs.sway = {

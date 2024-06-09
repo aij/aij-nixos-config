@@ -7,9 +7,11 @@
   i18n.defaultLocale = "en_US.UTF-8";
   console.useXkbConfig = true;
   services.xserver = {
-    layout = "us";
-    xkbVariant = "dvorak";
-    xkbOptions = "ctrl:nocaps, terminate:ctrl_alt_bksp, compose:ralt";
+    xkb = {
+      layout = "us";
+      variant = "dvorak";
+      options = "ctrl:nocaps, terminate:ctrl_alt_bksp, compose:ralt";
+    };
     autoRepeatDelay = 160;
     autoRepeatInterval = 45;
   };
