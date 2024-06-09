@@ -31,7 +31,7 @@ git submodule update --remote
 tests/machine-builds.sh
 
 # Test colmena can still build my configuration with new submodules
-test -e ../nixops.nix && {
+test -e ../hive.nix && {
     nix-shell -p colmena --run 'cd .. && colmena apply build'
 }
     

@@ -3,7 +3,7 @@
 
   services.nextcloud = {
     enable = true;
-    package = pkgs.nextcloud26;
+    package = pkgs.nextcloud27;
     hostName = "nextcloud.mrph.org";
     config = {
       extraTrustedDomains = [
@@ -25,7 +25,7 @@
     ensureUsers = [
       {
         name = "nextcloud";
-        ensurePermissions."DATABASE nextcloud" = "ALL PRIVILEGES";
+        ensureDBOwnership = true;
       }
     ];
   };
