@@ -38,12 +38,6 @@
       fsType = "zfs";
     };
 
-  fileSystems."/boot1" =
-    {
-      device = "/dev/disk/by-uuid/443A-AFF6";
-      fsType = "vfat";
-      options = [ "nofail" ];
-    };
   fileSystems."/boot2" =
     {
       device = "/dev/disk/by-uuid/0E88-691C";

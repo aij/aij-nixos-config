@@ -80,7 +80,6 @@
   boot.loader.grub.efiInstallAsRemovable = true;
   boot.loader.grub.memtest86.enable = true;
   boot.loader.grub.mirroredBoots = [
-    { path = "/boot1"; devices = [ "/dev/disk/by-id/nvme-HUSPR3238ADP301_CJH001010F63" ]; }
     { path = "/boot2"; devices = [ "/dev/disk/by-id/nvme-SAMSUNG_MZQLW3T8HMLP-00003_S2UDNX0J100330" ]; }
     { path = "/boot3"; devices = [ "/dev/disk/by-id/nvme-SAMSUNG_MZQLW3T8HMLP-00003_S2UDNX0J401690" ]; }
   ];
