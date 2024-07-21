@@ -145,7 +145,6 @@
     ];
   };
 
-  sound.enable = true;
   # Firefox 72 broke ALSA support. :(
   services.pipewire = {
     enable = true;
