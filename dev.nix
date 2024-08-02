@@ -41,7 +41,7 @@
     dune_1
     nix-prefetch-git
     nix-index
-    nixpkgs-fmt
+    nixfmt-rfc-style
     nixos-generators # For nixos-generate
     nox
     # rnix-lsp # Removed to avoid dependency on vulnerable nix-2.15.3 (CVE-2024-27297)
