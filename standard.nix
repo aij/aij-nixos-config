@@ -71,6 +71,7 @@
     lynx
     w3m
     git
+    git-annex
     ack
     binutils
     ocaml
