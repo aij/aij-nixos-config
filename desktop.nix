@@ -94,6 +94,7 @@
     endless-sky
     mindustry
     flightgear
+    prismlauncher
     # TODO: 0ad xonotic quake3 blobwars openttd gotypist gtypist gtetrinet ?
   ];
 
