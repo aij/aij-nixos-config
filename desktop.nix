@@ -62,7 +62,7 @@
     gqrx # SDR
     urh # Universal Radio Hacker (SDR tool)
     exif
-    exiftags
+    # exiftags # CVE-2023-50671, CVE-2024-42851
     keepassxc
     (pass.withExtensions (ext: with ext; [ pass-import pass-otp ]))
     browserpass
