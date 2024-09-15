@@ -66,6 +66,7 @@
     keepassxc
     (pass.withExtensions (ext: with ext; [ pass-import pass-otp ]))
     browserpass
+    bitwarden
     # androidsdk TODO: Where'd it go?
     graphviz
     sshfs-fuse
