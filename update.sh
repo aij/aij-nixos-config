@@ -27,6 +27,9 @@ function do_update () {
 # Is this equivalent, or close enough?
 git submodule update --remote
 
+# Update flake.lock to match
+nix flake update
+
 # Test that everything still builds
 tests/machine-builds.sh
 
@@ -35,5 +38,5 @@ test -e ../hive.nix && {
     nix-shell -p colmena --run 'cd .. && colmena apply build'
 }
     
-git add stable unstable
+git add stable unstable flake.lock
 GIT_AUTHOR_NAME=update.sh GIT_COMMITTER_NAME=update.sh git commit -m 'Update nixpkgs'
