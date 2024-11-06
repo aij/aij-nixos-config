@@ -22,6 +22,7 @@
     fq
     jq
     yq
+    steampipe # Query cloud APIs with SQL
     sqlite-interactive
     gitAndTools.hub
     gitAndTools.lab
