@@ -63,6 +63,7 @@
     lshw
     hwinfo
     neofetch # Pretty system info display
+    fastfetch # Pretty system info display
     memtester
     fio
     cryptsetup
