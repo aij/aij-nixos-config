@@ -7,6 +7,7 @@ let
     # TODO: Use readdir
     ../machines/tobati
     ../machines/yaguaron
+    ../machines/curupayty
     ../machines/m0
     ../machines/m1
     ../machines/m4

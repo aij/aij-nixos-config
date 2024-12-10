@@ -76,6 +76,7 @@
     kubernix
     qemu
     vde2
+    libguestfs
     # Customized emacs package
     #(import pkg/emacs.nix { inherit pkgs; })
     emacs29
