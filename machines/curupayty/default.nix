@@ -20,7 +20,7 @@
   environment.systemPackages = with pkgs; [
     tuxtype
     tuxpaint
-
+    gcompris
   ];
 
   services.xserver.desktopManager.xfce.enable = true;
