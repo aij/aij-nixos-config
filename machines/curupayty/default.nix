@@ -7,6 +7,7 @@
       ../../stable.nix
       ../../sshd.nix
       ../../desktop.nix
+      ../../kids.nix
     ];
 
   boot.loader.grub.enable = true;
@@ -16,15 +17,6 @@
   networking.hostName = "curupayty";
   networking.hostId = "10154ee4";
   networking.wireless.iwd.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    tuxtype
-    tuxpaint
-    gcompris
-  ];
-
-  services.xserver.desktopManager.xfce.enable = true;
-  services.xserver.desktopManager.mate.enable = true;
 
   # Do NOT change this value unless you have manually inspected all the changes it would make to your configuration,
   # and migrated your data accordingly.

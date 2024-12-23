@@ -14,7 +14,8 @@
       ../../standard.nix
       ../../sshd.nix
       ../../stable.nix
-      #../../desktop.nix
+      ../../desktop.nix
+      ../../kids.nix
       ../../hosts-home.nix
     ];
 
