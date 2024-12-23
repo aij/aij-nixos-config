@@ -3,7 +3,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../zfs.nix
-    ../../desktop.nix
+    ../../desktop-extra.nix
     ../../dev.nix
     ../../bluray.nix
     ../../hosts-home.nix
