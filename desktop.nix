@@ -51,16 +51,11 @@
     # pdfmod gnome3.gconf # hack: pdfmod needed gconf, but was later broken anyway
     gimp-with-plugins
     inkscape
-    qgis
     # enlightenment.rage enlightenment.terminology
     trayer
     haskellPackages.xmobar # TODO: Remove after fully switching to taffybar.
     # taffybar Broken in unstable :(
     audacity
-    fldigi
-    hackrf
-    gqrx # SDR
-    urh # Universal Radio Hacker (SDR tool)
     exif
     # exiftags # CVE-2023-50671, CVE-2024-42851
     keepassxc
@@ -92,12 +87,6 @@
     # For getting pulseaudio to do something sane with sound https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/DefaultDevice/
     pavucontrol
 
-    # Games
-    endless-sky
-    mindustry
-    flightgear
-    prismlauncher
-    # TODO: 0ad xonotic quake3 blobwars openttd gotypist gtypist gtetrinet ?
   ];
 
   nixpkgs.config.android_sdk.accept_license = true;
@@ -118,8 +107,6 @@
     logFile = null; # use default instead of /dev/null
   };
 
-  services.keybase.enable = true;
-  services.kbfs.enable = true;
   programs.browserpass.enable = true;
   programs.firefox.enable = true;
   programs.gnupg.agent = {
@@ -155,8 +142,6 @@
     jack.enable = true;
     pulse.enable = true;
   };
-
-  hardware.hackrf.enable = true;
 
   fonts = {
     enableGhostscriptFonts = true;
