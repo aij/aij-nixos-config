@@ -22,7 +22,7 @@
         lib = unstable.lib;
         machines = lib.fold lib.mergeAttrs { } [
           (x64 machines/tobati)
-          (x64 machines/yaguaron)
+          (x64 machines/mbaritu)
           (x64 machines/curupayty)
           (x64 ./machines/m0)
           (x64 ./machines/m1)
@@ -44,7 +44,7 @@
       in
       machines // (with machines; {
         tobati = tobati-unstable;
-        yaguaron = yaguaron-stable;
+        mbaritu = mbaritu-stable;
         curupayty = curupayty-stable;
         m0 = m0-stable;
         m1 = m1-stable;
