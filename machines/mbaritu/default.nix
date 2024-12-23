@@ -12,8 +12,9 @@
       ./hardware-configuration.nix
       ../../zfs.nix
       ../../standard.nix
+      ../../sshd.nix
       ../../stable.nix
-      ../../desktop.nix
+      #../../desktop.nix
       ../../hosts-home.nix
     ];
 

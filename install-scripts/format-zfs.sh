@@ -16,7 +16,9 @@ poolname=rpool
 device=$1
 shift
 echo extra_opts = $@
-enc_opts=${enc_opts:--O encryption=on  -O keylocation=prompt -O keyformat=passphrase}
+#enc_opts=${enc_opts:--O encryption=on  -O keylocation=prompt -O keyformat=passphrase}
+# FIXME: Above doesn't allow it to be set to empty
+enc_opts=${enc_opts:-}
 echo enc_opts = $enc_opts
 
 zpool create             \
