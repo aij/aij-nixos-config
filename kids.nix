@@ -4,6 +4,8 @@
 
   services.xserver.desktopManager.mate.enable = true;
 
+  services.xserver.displayManager.gdm.enable = true;
+
   environment.systemPackages = with pkgs; [
     tuxtype
     tuxpaint
