@@ -14,6 +14,7 @@
 
     desktopManager.mate.enable = true;
     displayManager.gdm.enable = true;
+    displayManager.defaultSession = lib.mkForce "mate";
   };
 
   environment.systemPackages = with pkgs; [
