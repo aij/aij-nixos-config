@@ -2,9 +2,19 @@
 {
   imports = [ ./desktop.nix ];
 
-  services.xserver.desktopManager.mate.enable = true;
 
-  services.xserver.displayManager.gdm.enable = true;
+  services.xserver = {
+    xkb = {
+      layout = "us";
+      variant = lib.mkForce "";
+      options = lib.mkForce "terminate:ctrl_alt_bksp, compose:ralt";
+    };
+    autoRepeatDelay = lib.mkForce null;
+    autoRepeatInterval = lib.mkForce null;
+
+    desktopManager.mate.enable = true;
+    displayManager.gdm.enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
     tuxtype
