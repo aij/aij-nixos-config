@@ -6,7 +6,7 @@ let
   config_files = [
     # TODO: Use readdir
     ../machines/tobati
-    ../machines/yaguaron
+    ../machines/mbaritu
     ../machines/curupayty
     ../machines/m0
     ../machines/m1

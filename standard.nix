@@ -129,6 +129,30 @@
       isNormalUser = true;
       uid = 1004;
     };
+    tiff = {
+      isNormalUser = true;
+      uid = 1005;
+    };
+    chris = {
+      isNormalUser = true;
+      uid = 1006;
+    };
+    stnick = {
+      isNormalUser = true;
+      uid = 1007;
+    };
+    josiah = {
+      isNormalUser = true;
+      uid = 1008;
+    };
+    ans = {
+      isNormalUser = true;
+      uid = 1009;
+    };
+    nan = {
+      isNormalUser = true;
+      uid = 1010;
+    };
     duff = {
       isNormalUser = true;
       uid = 1098;
