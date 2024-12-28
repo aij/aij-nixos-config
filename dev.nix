@@ -13,7 +13,7 @@
     ocamlPackages.utop
     gdb
     rr
-    heaptrack
+    # heaptrack # Broken in unstable
     inotify-tools
     watchexec
     (clang.overrideAttrs (oldAttrs: { meta.priority = -1; }))

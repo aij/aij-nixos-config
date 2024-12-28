@@ -11,7 +11,7 @@
     rxvt-unicode
     terminus_font
     geeqie
-    mplayer
+    # mplayer # Broken in unstable
     vlc
     mpv
     xorg.xinit
@@ -49,7 +49,7 @@
     abiword
     libmtp # Transfer files from Android over MTP
     # pdfmod gnome3.gconf # hack: pdfmod needed gconf, but was later broken anyway
-    gimp-with-plugins
+    # gimp-with-plugins # Broken in unstable
     inkscape
     # enlightenment.rage enlightenment.terminology
     trayer

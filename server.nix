@@ -41,7 +41,7 @@
     ncurses5
     freeipmi
     ipmitool
-    ipmiutil
+    # ipmiutil # Broken in unstable
     sasutils
     # mstflint # Mellanox Firmware Tools # Broken in unstable
     # xmr-stak

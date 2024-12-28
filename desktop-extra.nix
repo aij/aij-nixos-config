@@ -10,7 +10,7 @@
     fldigi
     hackrf
     gqrx # SDR
-    urh # Universal Radio Hacker (SDR tool)
+    # urh # Universal Radio Hacker (SDR tool)  # Broken in unstable
 
     # Games
     endless-sky

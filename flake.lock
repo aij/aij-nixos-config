@@ -22,10 +22,11 @@
     },
     "unstable": {
       "locked": {
-        "lastModified": 1734753021,
-        "narHash": "sha256-xtqjYzqqGb723XT+V63weQOqW0LHj1Hov28Co+BMhIw=",
-        "rev": "3f0036916daca9836ba2c3f236b0ae051949a0a8",
-        "revCount": 725436,
+        "lastModified": 1735291276,
+        "narHash": "sha256-NYVcA06+blsLG6wpAbSPTCyLvxD/92Hy4vlY9WxFI1M=",
+        "ref": "refs/heads/nixos-unstable",
+        "rev": "634fd46801442d760e09493a794c4f15db2d0cbb",
+        "revCount": 729082,
         "type": "git",
         "url": "file:unstable"
       },

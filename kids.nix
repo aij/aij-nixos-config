@@ -18,7 +18,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    tuxtype
+    # tuxtype # Broken in unstable
     tuxpaint
     gcompris
     prismlauncher
