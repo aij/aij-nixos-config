@@ -18,6 +18,7 @@
 
   networking.firewall.allowedTCPPorts = [
     24800 # Default port for barrier
+    42424
   ];
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
