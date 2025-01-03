@@ -16,10 +16,17 @@
   networking.hostId = "bd5a2ab5";
 
 
-  networking.firewall.allowedTCPPorts = [
-    24800 # Default port for barrier
-    42424
-  ];
+  networking.firewall = {
+    allowedTCPPorts = [
+      24800 # Default port for barrier
+      25565 # Default port for Minecraft
+      42424
+    ];
+    allowedUDPPorts = [
+      25565
+      42424
+    ];
+  };
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
