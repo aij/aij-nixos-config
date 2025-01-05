@@ -18,7 +18,8 @@
   };
 
   environment.systemPackages = with pkgs; [
-    tuxtype
+    # https://github.com/NixOS/nixpkgs/issues/371170
+    # tuxtype # Broken in unstable
     tuxpaint
     gcompris
     prismlauncher
