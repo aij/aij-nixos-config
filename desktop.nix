@@ -11,7 +11,7 @@
     rxvt-unicode
     terminus_font
     geeqie
-    # mplayer # Broken in unstable
+    mplayer
     vlc
     mpv
     xorg.xinit

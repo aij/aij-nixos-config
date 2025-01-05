@@ -41,7 +41,7 @@
     rlwrap
     file
     usbutils
-    # bsdgames # Broken in unstable
+    bsdgames
     fping
     hdparm
     iotop
