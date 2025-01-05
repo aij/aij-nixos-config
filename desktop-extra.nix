@@ -10,6 +10,7 @@
     fldigi
     hackrf
     gqrx # SDR
+    # https://github.com/NixOS/nixpkgs/issues/371164
     # urh # Universal Radio Hacker (SDR tool)  # Broken in unstable
 
     # Games

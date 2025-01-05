@@ -18,6 +18,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    # https://github.com/NixOS/nixpkgs/issues/371170
     # tuxtype # Broken in unstable
     tuxpaint
     gcompris

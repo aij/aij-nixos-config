@@ -49,7 +49,8 @@
     abiword
     libmtp # Transfer files from Android over MTP
     # pdfmod gnome3.gconf # hack: pdfmod needed gconf, but was later broken anyway
-    # gimp-with-plugins # Broken in unstable
+    # https://github.com/NixOS/nixpkgs/issues/369212
+    gimp # gimp-with-plugins # Broken in unstable
     inkscape
     # enlightenment.rage enlightenment.terminology
     trayer
