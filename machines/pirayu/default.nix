@@ -21,6 +21,8 @@
   kernelParams = [
     "clk_ignore_unused"
     "pd_ignore_unused"
+    # Limit to 31 GB memory to work around blue screen on first keystroke
+    "mem=31G"
   ];
   kernelPatches = [
     {
