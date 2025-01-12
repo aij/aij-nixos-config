@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ../../standard.nix
       ../../stable.nix
+      ../../sshd.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
