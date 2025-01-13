@@ -11,6 +11,7 @@
       ../../standard.nix
       ../../stable.nix
       ../../sshd.nix
+      ../../desktop.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
