@@ -62,29 +62,20 @@ hardware = {
     name = "qcom/x1e78100-lenovo-thinkpad-t14s.dtb";
   };
   enableRedistributableFirmware = true;
-  firmware = [
-    (
-      let
-        t14sPkgs = builtins.fetchTarball {
-        #t14sPkgs = requireFile {
-          name = "t14s_gen6_snapdragon_firmware.tar";
-          url = "file:///root/extracted-firmware/t14s_gen6_snapdragon_firmware.tar";
-          # Hash per nix-prefetch-url
-          #sha256 = "0qffczslifbdqz1vj1349w7rn34p79prnsc5mflr7h8v4kbsnxpl";
-          # Hash when using fetchTarball, I was surprised to find the hash matches
-          # what ookhoi reported in
-          # https://discourse.nixos.org/t/configuration-for-thinkpad-t14s-gen-6-snapdragon-x-elite-x1e-78-100/56389
-          # even though I extracted the firmware independently and made no effort
-          # to make the tarball hash reproducible yet.
-          sha256 = "03vgfhq16q95fdh00mvqbprw1m84lhgk5x6jjj7m4f981vcnapha";
-        };
-      in
-      pkgs.runCommandNoCC "t14s" { } ''
-          mkdir -p $out/lib/firmware/qcom/x1e80100/LENOVO/
-        cp -r ${t14sPkgs} $out/lib/firmware/qcom/x1e80100/LENOVO/21N1/
-      ''
-    )
-  ];
+# firmware = [
+#   (
+#     let
+#       t14sPkgs = builtins.fetchTarball {
+#         url = "https://<redacted>/t14sfirmware.tar";
+#         sha256 = "03vgfhq16q95fdh00mvqbprw1m84lhgk5x6jjj7m4f981vcnapha";
+#       };
+#     in
+#     pkgs.runCommandNoCC "t14s" { } ''
+#         mkdir -p $out/lib/firmware/qcom/x1e80100/LENOVO/
+#       cp -r ${t14sPkgs} $out/lib/firmware/qcom/x1e80100/LENOVO/21N1/
+#     ''
+#   )
+# ];
 };
 
 networking = {
