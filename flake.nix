@@ -46,7 +46,7 @@
       in
       machines // (with machines; {
         tobati = tobati-unstable;
-        pirayu = pirayu-stable;
+        pirayu = pirayu-unstable;
         mbaritu = mbaritu-stable;
         curupayty = curupayty-stable;
         m0 = m0-stable;
