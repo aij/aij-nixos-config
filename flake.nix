@@ -18,10 +18,12 @@
           };
 
         x64 = m: mkSystemConfigs "x86_64-linux" m;
+        arm = m: mkSystemConfigs "aarch64-linux" m;
 
         lib = unstable.lib;
         machines = lib.fold lib.mergeAttrs { } [
           (x64 machines/tobati)
+          (arm machines/pirayu)
           (x64 machines/mbaritu)
           (x64 machines/curupayty)
           (x64 ./machines/m0)
@@ -44,6 +46,7 @@
       in
       machines // (with machines; {
         tobati = tobati-unstable;
+        pirayu = pirayu-unstable;
         mbaritu = mbaritu-stable;
         curupayty = curupayty-stable;
         m0 = m0-stable;

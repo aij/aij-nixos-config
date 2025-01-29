@@ -1,6 +1,9 @@
 { config, pkgs, nixpkgs, options, lib, ... }:
 {
-  imports = [ ./standard.nix ./dev.nix ];
+  imports = [
+   ./standard.nix
+   #./dev.nix
+ ];
 
   environment.systemPackages = with pkgs; [
     gkrellm
