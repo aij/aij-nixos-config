@@ -75,7 +75,7 @@ in {
     libguestfs
     # Customized emacs package
     #(import pkg/emacs.nix { inherit pkgs; })
-    emacs29
+    emacs30
   ] ++ lib.optionals (isx86) [
     diffoscope
     fstar
