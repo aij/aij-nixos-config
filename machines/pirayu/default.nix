@@ -12,6 +12,7 @@
       ../../stable.nix
       ../../sshd.nix
       ../../desktop.nix
+      ../../dev.nix
       ../../zfs.nix
     ];
 

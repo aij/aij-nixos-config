@@ -1,5 +1,6 @@
 { config, pkgs, lib, ... }:
-{
+let isx86 = pkgs.stdenv.targetPlatform.isx86_64;
+in {
   imports = [ ./standard.nix ];
 
   programs.java.enable = true;
@@ -37,7 +38,6 @@
     ghc
     # idris
     unison
-    fstar
     ispell
     dune_1
     nix-prefetch-git
@@ -60,17 +60,13 @@
     cargo
     rust-analyzer
     sshfs-fuse
-    patdiff
-    diffoscope
     # vagrant # Broken in nixos-unstable. https://github.com/NixOS/nixpkgs/issues/211153
     direnv
     ocamlPackages.merlin
     ocamlformat
     # ocamlPackages.reason
     # nodePackages_10_x.ocaml-language-server # Only in nixos-unstable
-    smlnj
     coursier # scalafmt # scalafix
-    bloop
     mercurial
     kubectl
     kubernix
@@ -80,10 +76,17 @@
     # Customized emacs package
     #(import pkg/emacs.nix { inherit pkgs; })
     emacs29
+  ] ++ lib.optionals (isx86) [
+    diffoscope
+    fstar
+    patdiff
+    smlnj
+    bloop
+
   ];
 
   virtualisation.podman.enable = true;
-  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enable = isx86;
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "androidsdk"
