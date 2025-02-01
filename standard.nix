@@ -73,6 +73,7 @@
     w3m
     git
     git-annex
+    git-lfs
     ack
     binutils
     ocaml
