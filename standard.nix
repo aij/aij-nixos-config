@@ -183,4 +183,8 @@
 
   boot.loader.grub.configurationLimit = 10;
   boot.loader.systemd-boot.configurationLimit = 10;
+  boot.kernel.sysctl = {
+    # Allow normal users to use dmesg
+    "kernel.dmesg_restrict" = 0;
+  };
 }
