@@ -28,8 +28,7 @@ function do_update () {
 git submodule update --remote
 
 # Update flake.lock to match
-# Use nix build from https://github.com/NixOS/nix/pull/12107 to work around regression of https://github.com/NixOS/nix/issues/9708
-/nix/store/bn0djaymav6qa4zg5vaskzcaija5nq2p-nix-2.26.0pre20241227_9111645/bin/nix flake update
+nix flake update
 
 # Test that everything still builds
 tests/machine-builds.sh
