@@ -16,25 +16,25 @@
 
   fileSystems."/" =
     {
-      device = "rpool/ROOT";
+      device = "tobati/ROOT";
       fsType = "zfs";
     };
 
   fileSystems."/nix" =
     {
-      device = "rpool/NIX";
+      device = "tobati/nix";
       fsType = "zfs";
     };
 
   fileSystems."/var" =
     {
-      device = "rpool/VAR";
+      device = "tobati/var";
       fsType = "zfs";
     };
 
   fileSystems."/home" =
     {
-      device = "rpool/HOME";
+      device = "tobati/home";
       fsType = "zfs";
     };
 
