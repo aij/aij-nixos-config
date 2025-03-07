@@ -57,6 +57,8 @@
     nvme-cli
     ddrescue
     rsync
+    borgbackup
+    restic
     strace
     elfutils
     dmidecode
