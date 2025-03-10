@@ -27,6 +27,16 @@
   services.jellyfin.enable = true;
   services.jellyfin.openFirewall = true;
 
+  services.borgbackup.repos = {
+    tobati = {
+      path = "/tank/borgbackup/tobati";
+      authorizedKeys = [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKXcoMF1LGxI+HMzf5LEx7XD4+vcn+ds4N9ja/uvW+Dh root@tobati"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDTGD3FImr4dsW6pmGT5muMDjEoOTPMxxvhwWMMyAcpC ivan@tobati"
+      ];
+    };
+  };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

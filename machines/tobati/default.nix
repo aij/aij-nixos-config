@@ -124,6 +124,30 @@
       ];
   };
 
+  services.borgbackup.jobs = {
+    m2Backup = {
+      paths = [ "/home" ];
+      exclude = [
+        "**.cache"
+        "*/tmp"
+        # Common CMake out-of-tree build paths
+        "*/build/"
+        # kbfs default mountpoint
+        "*/keybase/"
+        # Avoid recursing into ZFS snapshot mountpoints
+        "*/.zfs/"
+      ];
+      doInit = false;
+      repo = "borg@m2.net0:/tank/borgbackup/tobati";
+      encryption = {
+        mode = "repokey";
+        passCommand = "cat /root/keys/borgbackup_tobati_m2";
+      };
+      compression = "auto,lzma";
+      startAt = "daily";
+    };
+  };
+
   system.stateVersion = "23.05"; # Did you read the comment?
 
 }
