@@ -32,7 +32,7 @@ in {
     cloc
     dash
     zsh
-    semgrep
+    # semgrep # Broken in unstable
     shellcheck
     dhall
     ghc
