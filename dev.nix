@@ -49,7 +49,7 @@ in {
     python3
     mypy # TODO: pytype and/or pyre?
     black
-    black-macchiato
+    # black-macchiato # broken in unstable
     # python39Packages.isort # broken in unstable
     ruff # python linter / formatter
     # TODO: ssort? From https://github.com/bwhmather/ssort
