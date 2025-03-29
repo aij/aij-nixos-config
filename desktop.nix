@@ -124,6 +124,7 @@
     extraPackages = with pkgs; [
       dmenu # Launcher (mod-X)
       waybar
+      yambar
       swayidle
       swaylock-effects # swaylock with more features
       alacritty
