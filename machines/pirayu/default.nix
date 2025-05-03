@@ -21,7 +21,7 @@
   #boot.loader.efi.canTouchEfiVariables = true;
 
   boot = {
-  kernelPackages = pkgs.linuxPackages_6_13;
+  kernelPackages = pkgs.linuxPackages_6_14;
   kernelParams = [
     "clk_ignore_unused"
     "pd_ignore_unused"
@@ -63,7 +63,7 @@ hardware = {
     name = "qcom/x1e78100-lenovo-thinkpad-t14s.dtb";
   };
   enableRedistributableFirmware = true;
-  firmware = lib.optionals true [
+  firmware = lib.optionals false [
     (
       let
         t14sPkgs = builtins.fetchTarball {
