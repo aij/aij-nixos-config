@@ -29,6 +29,7 @@ in {
     gitAndTools.lab
     gitAndTools.gh
     # gitAndTools.glab
+    git-filter-repo
     cloc
     dash
     zsh
