@@ -34,6 +34,17 @@
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
   networking.wireless.iwd.enable = true;
 
+  networking.firewall = {
+    allowedTCPPorts = [
+      25565 # Default port for Minecraft
+      42424
+    ];
+    allowedUDPPorts = [
+      25565
+      42424
+    ];
+  };
+
   # Set your time zone.
   # time.timeZone = "Europe/Amsterdam";
 
