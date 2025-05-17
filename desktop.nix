@@ -26,6 +26,8 @@
     xfontsel
     x2x
     barrier # Fancier x2x / fork of Synergy
+    # input-leap # More modern fork of barrier. Currently broken in unstable
+    deskflow # Fancier x2x / new upstream of Synergy
     xcompmgr
     read-edid
     edid-decode
