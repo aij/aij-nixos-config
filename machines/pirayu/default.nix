@@ -208,5 +208,21 @@ networking = {
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "24.11"; # Did you read the comment?
 
+  nixpkgs.overlays = [
+    (self: super: {
+      # The "linux-firmware: 20250410 -> 20250509" upgrade broke WiFI on ath12 (including Thinkpad T14s Gen6)
+      # https://github.com/NixOS/nixpkgs/commit/d91d7cf3fdeeb7bbb33b53b9974170933d342e70
+      # Upstream bug report https://bugzilla.kernel.org/show_bug.cgi?id=220108
+      # https://discourse.nixos.org/t/configuration-for-thinkpad-t14s-gen-6-snapdragon-x-elite-x1e-78-100/56389/42?u=aij
+      linux-firmware = super.linux-firmware.overrideAttrs (oldAttrs: {
+        version = "20250410";
+        src = pkgs.fetchzip {
+          url = "https://cdn.kernel.org/pub/linux/kernel/firmware/linux-firmware-20250410.tar.xz ";
+           hash = "sha256-aQdEl9+7zbNqWSII9hjRuPePvSfWVql5u5TIrGsa+Ao=";
+        };
+      });
+    })
+  ];
+
 }
 
