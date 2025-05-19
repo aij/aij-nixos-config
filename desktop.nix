@@ -27,7 +27,6 @@
     x2x
     barrier # Fancier x2x / fork of Synergy
     # input-leap # More modern fork of barrier. Currently broken in unstable
-    deskflow # Fancier x2x / new upstream of Synergy
     xcompmgr
     read-edid
     edid-decode
@@ -93,6 +92,8 @@
     # For getting pulseaudio to do something sane with sound https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/DefaultDevice/
     pavucontrol
 
+  ] ++ lib.optionals (builtins.hasAttr "deskflow" pkgs) [
+    deskflow # Fancier x2x / new upstream of Synergy
   ];
 
   nixpkgs.config.android_sdk.accept_license = true;
