@@ -8,11 +8,10 @@
     },
     "stable": {
       "locked": {
-        "lastModified": 1748387883,
-        "narHash": "sha256-X5P7guNZfXJrMH/zv3rHenjML5R0JXFD4EsulXDbl5U=",
-        "ref": "refs/heads/nixos-25.05-small",
-        "rev": "d90ebe5aafcdd79dc9d4210aacf1ff21d4ca31c3",
-        "revCount": 802720,
+        "lastModified": 1748658721,
+        "narHash": "sha256-rPhrgqaDKtfpD4OLCnv11A2SLgw8kYuMdv46g0NHjiI=",
+        "rev": "added258d119000b81af2a56b000555eff2709f3",
+        "revCount": 802938,
         "type": "git",
         "url": "file:stable"
       },
@@ -23,10 +22,10 @@
     },
     "unstable": {
       "locked": {
-        "lastModified": 1748456040,
-        "narHash": "sha256-UfPOWPs5lA3DEO6/OtzNiUc7+JZFeeysr3rSZqO6tsQ=",
-        "rev": "7b3486bdc39d5b70e59215c7a0b23e5ff75101f3",
-        "revCount": 807367,
+        "lastModified": 1748676562,
+        "narHash": "sha256-7kLFXK3YSwFeSB5pQ6ltrVq/w9b1WaE4fiELAajO748=",
+        "rev": "f21e6d28b717da40718d8240bc72827bdd4af4b6",
+        "revCount": 808401,
         "type": "git",
         "url": "file:unstable"
       },
