@@ -123,6 +123,11 @@
   };
 
   programs.ssh.startAgent = true;
+  services.gnome = lib.optionalAttrs (builtins.hasAttr "gcr-ssh-agent" options.services.gnome) {
+    # Conflicting alternative to plain ssh-agent
+    gcr-ssh-agent.enable = false;
+  };
+
   programs.sway = {
     enable = true;
     extraPackages = with pkgs; [
