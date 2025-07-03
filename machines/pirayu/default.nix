@@ -21,14 +21,15 @@
   #boot.loader.efi.canTouchEfiVariables = true;
 
   boot = {
-  kernelPackages = pkgs.linuxPackages_6_14;
+  kernelPackages = pkgs.linuxPackages_6_15;
   kernelParams = [
     "clk_ignore_unused"
     "pd_ignore_unused"
     # Limit to 31 GB memory to work around blue screen on first keystroke
     "mem=31G"
   ];
-  kernelPatches = [
+  # Do we still need this?
+  kernelPatches = lib.optionals true [
     {
       name = "snapdragon-config";
       patch = null;
