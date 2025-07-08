@@ -94,6 +94,7 @@
 
     # Fancy mouse cursors
     capitaine-cursors
+    adwaita-icon-theme
   ] ++ lib.optionals (builtins.hasAttr "deskflow" pkgs) [
     deskflow # Fancier x2x / new upstream of Synergy
   ];
@@ -177,6 +178,8 @@
       cores = 4;
       # qemu.options = [ "-soundhw ac97" ];
     };
+
+  xdg.icons.fallbackCursorThemes = ["Adwaita"];
 
   # Needed by nixops. https://github.com/NixOS/nixops/issues/1242
   nixpkgs.config.permittedInsecurePackages = [
