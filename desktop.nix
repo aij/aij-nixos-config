@@ -92,6 +92,8 @@
     # For getting pulseaudio to do something sane with sound https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/DefaultDevice/
     pavucontrol
 
+    # Fancy mouse cursors
+    capitaine-cursors
   ] ++ lib.optionals (builtins.hasAttr "deskflow" pkgs) [
     deskflow # Fancier x2x / new upstream of Synergy
   ];
