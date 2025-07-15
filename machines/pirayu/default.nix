@@ -14,6 +14,7 @@
       ../../desktop.nix
       ../../dev.nix
       ../../zfs.nix
+      ../../bluetooth.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
