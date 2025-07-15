@@ -34,15 +34,15 @@
     {
       name = "snapdragon-config";
       patch = null;
-      structuredExtraConfig = with lib.kernel; {
-        TYPEC = yes;
-        PHY_QCOM_QMP = yes;
-        QCOM_CLK_RPM = yes;
-        MFD_QCOM_RPM = yes;
-        REGULATOR_QCOM_RPM = yes;
-        PHY_QCOM_QMP_PCIE = yes;
-        CLK_X1E80100_CAMCC = yes;
-      };
+      extraConfig = ''
+        TYPEC y
+        PHY_QCOM_QMP y
+        QCOM_CLK_RPM y
+        MFD_QCOM_RPM y
+        REGULATOR_QCOM_RPM y
+        PHY_QCOM_QMP_PCIE y
+        CLK_X1E80100_CAMCC y
+      '';
     }
   ];
   loader = {
