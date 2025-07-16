@@ -30,7 +30,7 @@
     "mem=31G"
   ];
   # Do we still need this?
-  kernelPatches = lib.optionals true [
+  kernelPatches = lib.optionals false [
     {
       name = "snapdragon-config";
       patch = null;

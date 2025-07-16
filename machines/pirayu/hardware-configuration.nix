@@ -8,7 +8,16 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" ];
+  boot.initrd.availableKernelModules = [
+    "nvme"
+    "qcom_rpm" # CONFIG_MFD_QCOM_RPM
+    "qcom_rpm-regulator" # CONFIG_REGULATOR_QCOM_RPM
+    "typec" # CONFIG_TYPEC
+    "camcc-x1e80100" # CONFIG_CLK_X1E80100_CAMCC
+    "clk-rpm" # CONFIG_QCOM_CLK_RPM
+    # CONFIG_PHY_QCOM_QMP seems to just be a gating option?
+    "phy-qcom-qmp-pcie" # CONFIG_PHY_QCOM_QMP_PCIE
+  ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
