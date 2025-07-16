@@ -74,6 +74,7 @@ in {
     qemu
     vde2
     libguestfs
+    linux-scripts # For extract-ikconfig
     # Customized emacs package
     #(import pkg/emacs.nix { inherit pkgs; })
     emacs30
