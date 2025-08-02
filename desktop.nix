@@ -181,12 +181,9 @@
 
   xdg.icons.fallbackCursorThemes = ["Adwaita"];
 
-  # Needed by nixops. https://github.com/NixOS/nixops/issues/1242
   nixpkgs.config.permittedInsecurePackages = [
     "dotnet-runtime-7.0.20"  # Needed by vintagestory
-    "python2.7-cryptography-2.9.2"
-    "python3.10-certifi-2022.9.24"
-    "python3.10-certifi-2022.12.7"
+
     # Needed by several things still... See them with
     # nix why-depends --all /run/current-system 'nixpkgs#libsoup_2_4'
     "libsoup-2.74.3"
