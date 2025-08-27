@@ -37,10 +37,12 @@
   networking.firewall = {
     allowedTCPPorts = [
       25565 # Default port for Minecraft
+      42420
       42424
     ];
     allowedUDPPorts = [
       25565
+      42420
       42424
     ];
   };
