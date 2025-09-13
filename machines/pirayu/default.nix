@@ -22,7 +22,7 @@
   #boot.loader.efi.canTouchEfiVariables = true;
 
   boot = {
-  kernelPackages = pkgs.linuxPackages_6_15;
+  kernelPackages = pkgs.linuxPackages_6_16;
   kernelParams = [
     "clk_ignore_unused"
     "pd_ignore_unused"
