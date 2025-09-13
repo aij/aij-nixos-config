@@ -104,6 +104,10 @@
   programs.mtr.enable = true;
   services.netdata.enable = true;
   services.tailscale.enable = true;
+  # Workaround for https://github.com/nixos/nixpkgs/issues/438765
+  # TODO: Remove after upgrading kernel to 6.12.46 and/or 6.16.6
+  services.tailscale.package = pkgs.tailscale.overrideAttrs { doCheck = false; };
+
   # Strict reverse path filtering breaks Tailscale exit node use and some subnet routing setups.
   networking.firewall.checkReversePath = "loose";
 
