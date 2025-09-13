@@ -20,10 +20,12 @@
     allowedTCPPorts = [
       24800 # Default port for barrier
       25565 # Default port for Minecraft
+      42420 # Vintagestory
       42424
     ];
     allowedUDPPorts = [
       25565
+      42420
       42424
     ];
   };
