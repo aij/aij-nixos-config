@@ -25,8 +25,7 @@
     xorg.xmodmap
     xfontsel
     x2x
-    barrier # Fancier x2x / fork of Synergy
-    # input-leap # More modern fork of barrier. Currently broken in unstable
+    deskflow # Fancier x2x / new upstream of Synergy
     xcompmgr
     read-edid
     edid-decode
@@ -95,8 +94,6 @@
     # Fancy mouse cursors
     capitaine-cursors
     adwaita-icon-theme
-  ] ++ lib.optionals (builtins.hasAttr "deskflow" pkgs) [
-    deskflow # Fancier x2x / new upstream of Synergy
   ];
 
   nixpkgs.config.android_sdk.accept_license = true;
