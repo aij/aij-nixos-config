@@ -80,7 +80,7 @@ in {
     #(import pkg/emacs.nix { inherit pkgs; })
     emacs30
   ] ++ lib.optionals (isx86) [
-    diffoscope
+    # diffoscope # Broken in nixos-25.05. https://github.com/NixOS/nixpkgs/issues/446683
     fstar
     patdiff
     smlnj
