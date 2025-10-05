@@ -11,7 +11,13 @@
     wireshark # openssh_with_kerberos
     kismet
     xscreensaver
-    rxvt-unicode
+    (rxvt-unicode.override {
+      configure = { availablePlugins, ... }: {
+        plugins = with availablePlugins; [
+          # None for now.
+        ];
+      };
+    })
     terminus_font
     geeqie
     mplayer
