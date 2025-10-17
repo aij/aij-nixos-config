@@ -183,13 +183,4 @@
     };
 
   xdg.icons.fallbackCursorThemes = ["Adwaita"];
-
-  nixpkgs.config.permittedInsecurePackages = [
-    "dotnet-runtime-7.0.20"  # Needed by vintagestory
-
-    # Needed by several things still... See them with
-    # nix why-depends --all /run/current-system 'nixpkgs#libsoup_2_4'
-    "libsoup-2.74.3"
-  ];
-
 }
