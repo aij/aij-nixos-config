@@ -120,6 +120,7 @@
     logFile = null; # use default instead of /dev/null
   };
   services.xscreensaver.enable = true;
+  services.flatpak.enable = true;
 
   programs.browserpass.enable = true;
   programs.firefox.enable = true;

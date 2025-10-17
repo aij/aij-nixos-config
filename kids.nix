@@ -17,15 +17,6 @@
     displayManager.defaultSession = lib.mkForce "mate";
   };
 
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-      "vintagestory"
-    ];
-
-  #nixpkgs.config.permittedInsecurePackages = [
-  #    "dotnet-runtime-7.0.20"
-  #  ];
-
-
   environment.systemPackages = with pkgs; [
     # https://github.com/NixOS/nixpkgs/issues/371170
     # tuxtype # Broken in unstable
@@ -33,6 +24,5 @@
     gcompris
     prismlauncher
     krita
-    vintagestory
   ];
 }

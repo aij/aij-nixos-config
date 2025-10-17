@@ -18,7 +18,6 @@
     mindustry
     flightgear
     prismlauncher
-    vintagestory
     # TODO: 0ad xonotic quake3 blobwars openttd gotypist gtypist gtetrinet ?
   ];
 
