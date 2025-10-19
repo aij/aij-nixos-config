@@ -102,6 +102,7 @@
     adwaita-icon-theme
   ];
 
+  nix.daemonCPUSchedPolicy = lib.mkForce "idle";
   nixpkgs.config.android_sdk.accept_license = true;
 
   services.displayManager.defaultSession = "none+xmonad";
