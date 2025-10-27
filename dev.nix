@@ -25,10 +25,11 @@ in {
     yq
     steampipe # Query cloud APIs with SQL
     sqlite-interactive
-    gitAndTools.hub
-    gitAndTools.lab
-    gitAndTools.gh
-    # gitAndTools.glab
+    # Git related tools
+    hub
+    lab
+    gh
+    glab
     git-filter-repo
     cloc
     dash
