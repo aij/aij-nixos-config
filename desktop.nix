@@ -36,7 +36,7 @@
     read-edid
     edid-decode
     xrestop
-    glxinfo
+    mesa-demos # For glxinfo
     xclip
     xdotool
     chromium
@@ -71,7 +71,7 @@
     keepassxc
     (pass.withExtensions (ext: with ext; [ pass-import pass-otp ]))
     browserpass
-    bitwarden
+    bitwarden-desktop
     bitwarden-cli
     # androidsdk TODO: Where'd it go?
     graphviz
@@ -86,7 +86,7 @@
     signal-desktop
     element-desktop
     (pidgin.override {
-      plugins = [ purple-plugin-pack ];
+      plugins = [ pidginPackages.purple-plugin-pack ];
     })
     # jitsi # video conferencing alternative to Hangouts / Zoom
 

@@ -45,7 +45,7 @@
     fping
     hdparm
     iotop
-    finger_bsd
+    bsd-finger
     openssl
     inetutils
     smartmontools
@@ -80,7 +80,7 @@
     binutils
     ocaml
     ripgrep # rg
-    du-dust # more graphical du / less graphical fsv
+    dust # more graphical du / less graphical fsv
     fd # faster find alternative
     hyperfine # cmdline benchmarking tool
     rxvt-unicode-unwrapped.terminfo
