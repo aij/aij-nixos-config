@@ -22,7 +22,8 @@
   #boot.loader.efi.canTouchEfiVariables = true;
 
   boot = {
-  kernelPackages = pkgs.linuxPackages_6_16;
+    zfs.package = pkgs.zfs_unstable; # Use ZFS 2.4rc3 as 2.3 does not support Linux 6.17
+    kernelPackages = pkgs.linuxPackages_6_17;
   kernelParams = [
     "clk_ignore_unused"
     "pd_ignore_unused"
