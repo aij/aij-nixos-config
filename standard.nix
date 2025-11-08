@@ -92,6 +92,8 @@
     pv # monitor the progress of data through a pipe
     iperf # network bandwidth measurement tool
     nvd # NixOS diff tool
+    nix-output-monitor
+    nh
   ];
 
   # Set $WORDLIST to a reasonable equivalent to /usr/share/dict/words
