@@ -42,9 +42,11 @@
   networking.defaultGateway = "10.0.0.1";
   networking.nameservers = [ "10.0.0.1" "8.8.8.8" "4.4.4.4" ];
 
-  # environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
+    nvtopPackages.amd # GPU top
+    radeontop
   #   ceph # broken in unstable
-  # ];
+  ];
 
   services.openssh.enable = true;
   services.openssh.settings.PasswordAuthentication = false;
