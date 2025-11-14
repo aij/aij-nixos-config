@@ -106,6 +106,7 @@
   programs.mtr.enable = true;
   services.netdata.enable = true;
   services.tailscale.enable = true;
+  security.sudo.enable = false;
 
   # Strict reverse path filtering breaks Tailscale exit node use and some subnet routing setups.
   networking.firewall.checkReversePath = "loose";
