@@ -63,6 +63,7 @@
     inkscape
     # enlightenment.rage enlightenment.terminology
     trayer
+    dunst
     haskellPackages.xmobar # TODO: Remove after fully switching to taffybar.
     # taffybar Broken in unstable :(
     audacity
