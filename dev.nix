@@ -41,7 +41,7 @@ in {
     # idris
     unison
     ispell
-    dune_1
+    dune_3
     nix-prefetch-git
     nix-index
     nixfmt-rfc-style
