@@ -20,7 +20,7 @@
     })
     terminus_font
     geeqie
-    mplayer
+    # mplayer # Broken in unstable
     vlc
     mpv
     xorg.xinit
