@@ -26,6 +26,7 @@ in {
     steampipe # Query cloud APIs with SQL
     sqlite-interactive
     # Git related tools
+    gitoxide # gix
     hub
     lab
     gh
