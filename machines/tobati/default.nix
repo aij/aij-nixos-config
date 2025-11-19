@@ -55,7 +55,7 @@
     videoDrivers = [ "amdgpu" "modesetting" ];
     xrandrHeads = [
       {
-        output = "DisplayPort-2";
+        output = "DisplayPort-0";
         monitorConfig = ''
           Option "Primary" "true"
           # Size extracted from xrandr. This really shouldn't need to be configured.
@@ -68,7 +68,7 @@
       {
         output = "DisplayPort-1";
         monitorConfig = ''
-          Option "RightOf" "DisplayPort-2"
+          Option "RightOf" "DisplayPort-0"
           # DisplaySize 697 392
         '';
       }
