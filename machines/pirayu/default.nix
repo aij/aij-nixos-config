@@ -58,6 +58,12 @@
       efiSupport = true;
     };
   };
+  # Not sure when this got enabled by default (maybe around 8a0ddfe)
+  # but it causes the boot process to wait 90 seconds before timing out
+  # waiting for /dev/tpm0 and /dev/tpmrm0.
+  initrd.systemd.tpm2.enable = false;
+  # Note to self: Check older versions with `nix repl .` and
+  # nixosConfigurations.pirayu.config.boot.initrd.systemd.tpm2.enable
 };
 
 hardware = {
