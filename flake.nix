@@ -21,7 +21,7 @@
         arm = m: mkSystemConfigs "aarch64-linux" m;
 
         lib = unstable.lib;
-        machines = lib.fold lib.mergeAttrs { } [
+        machines = lib.foldr lib.mergeAttrs { } [
           (x64 machines/tobati)
           (arm machines/pirayu)
           (x64 machines/mbaritu)
