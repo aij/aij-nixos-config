@@ -8,10 +8,10 @@
     },
     "stable": {
       "locked": {
-        "lastModified": 1764332037,
-        "narHash": "sha256-h18d5alI60VqYOe/9/Ooxc0zvepGTrVrSd3N3I8zKSg=",
-        "rev": "726f74044e04ad2601dafe4daf6883334d925447",
-        "revCount": 902219,
+        "lastModified": 1764564484,
+        "narHash": "sha256-9qjEFJ4YhkRCB3HPAdkC94pXjJKfjRHYDfilZcjI7pA=",
+        "rev": "b4a7d01bcc66b5a264af8b7a3eae6d791a9ed8de",
+        "revCount": 902495,
         "type": "git",
         "url": "file:stable"
       },
@@ -22,10 +22,10 @@
     },
     "unstable": {
       "locked": {
-        "lastModified": 1764374374,
-        "narHash": "sha256-naS7hg/D1yLKSZoENx9gvsPLFiNEOTcqamJSu0OEvCA=",
-        "rev": "6a49303095abc094ee77dc243a9e351b642e8e75",
-        "revCount": 903939,
+        "lastModified": 1764547213,
+        "narHash": "sha256-pGXM6frMKLRJmeMcQ228O1QQBuNEUjzmWx9uBd+CbXM=",
+        "rev": "64de27c1c985895c1a9f92aaeaab4e6a4c0960f5",
+        "revCount": 904772,
         "type": "git",
         "url": "file:unstable"
       },
