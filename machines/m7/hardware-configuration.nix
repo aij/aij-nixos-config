@@ -33,14 +33,13 @@
       fsType = "zfs";
     };
 
-  fileSystems."/boot1" =
-    { device = "/dev/disk/by-uuid/1554b206-f42a-430a-8be6-fca0311928c7";
+  fileSystems."/boot0" =
+    { device = "/dev/disk/by-id/nvme-SAMSUNG_MZ1LW960HMJP-000MV_S3E4NX0HC06503-part2";
       fsType = "ext4";
       options = [ "nofail" ];
     };
-
-  fileSystems."/boot2" =
-    { device = "/dev/disk/by-uuid/bda7041a-1b27-4591-836f-55b6e869ab85";
+  fileSystems."/boot1" =
+    { device = "/dev/disk/by-uuid/1554b206-f42a-430a-8be6-fca0311928c7";
       fsType = "ext4";
       options = [ "nofail" ];
     };
