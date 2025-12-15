@@ -33,6 +33,7 @@
           (x64 ./machines/m5)
           (x64 ./machines/m6)
           (x64 ./machines/m7)
+          (x64 ./machines/m9)
         ];
 
         # systemArgs = {
@@ -52,6 +53,7 @@
         m0 = m0-stable;
         m1 = m1-stable;
         m2 = m2-stable;
+        m9 = m9-stable;
       });
   };
 }

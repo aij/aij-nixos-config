@@ -8,9 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      aij/standard.nix
-      aij/sshd.nix
-    ];
+     ../../server.nix
+   ];
 
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
