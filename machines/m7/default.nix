@@ -16,8 +16,8 @@
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
   boot.loader.grub.mirroredBoots = [
+    { path = "/boot0"; devices = [ "/dev/disk/by-id/nvme-SAMSUNG_MZ1LW960HMJP-000MV_S3E4NX0HC06503" ]; }
     { path = "/boot1"; devices = [ "/dev/disk/by-id/wwn-0x5000516000023334" ]; }
-    # FIXME { path = "/boot2"; devices = [ "/dev/disk/by-id/wwn-0x5000516000028514" ]; }
   ];
 
   networking.hostName = "m7";

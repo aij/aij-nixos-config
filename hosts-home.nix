@@ -123,6 +123,13 @@ let
         driver = "ixgbe";
       };
     };
+    m9 = {
+      net0 = {
+        iface = "enp1s0f0";
+        mac = "0C:C4:7A:A4:47:42";
+        ip = "10.0.0.19";
+      };
+    };
     c0n0 = {
       net1 = {
         #iface = "eno1"

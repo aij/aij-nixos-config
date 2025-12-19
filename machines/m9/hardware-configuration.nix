@@ -8,7 +8,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "ehci_pci" "ahci" "megaraid_sas" "mpt3sas" "isci" "usbhid" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "ehci_pci" "ahci" "nvme" "mpt3sas" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
@@ -19,32 +19,39 @@
     };
 
   fileSystems."/nix" =
-    { device = "rpool/NIX";
+    { device = "rpool/nix";
       fsType = "zfs";
     };
 
   fileSystems."/var" =
-    { device = "rpool/VAR";
+    { device = "rpool/var";
+      fsType = "zfs";
+    };
+
+  fileSystems."/tmp" =
+    { device = "rpool/tmp";
       fsType = "zfs";
     };
 
   fileSystems."/home" =
-    { device = "rpool/HOME";
+    { device = "rpool/home";
       fsType = "zfs";
     };
 
-  fileSystems."/boot0" =
-    { device = "/dev/disk/by-id/nvme-SAMSUNG_MZ1LW960HMJP-000MV_S3E4NX0HC06503-part2";
-      fsType = "ext4";
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-id/nvme-MS1PC5ED3ORA3.2T_S2T7NA0J106038_1-part2";
+      fsType = "vfat";
       options = [ "nofail" ];
     };
+
   fileSystems."/boot1" =
-    { device = "/dev/disk/by-uuid/1554b206-f42a-430a-8be6-fca0311928c7";
-      fsType = "ext4";
+    { device = "/dev/disk/by-id/nvme-HUSPR3238ADP301_CJH001010F63_1-part2";
+      fsType = "vfat";
       options = [ "nofail" ];
     };
 
   swapDevices = [ ];
 
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
