@@ -65,6 +65,8 @@
   # Note to self: Check older versions with `nix repl .` and
   # nixosConfigurations.pirayu.config.boot.initrd.systemd.tpm2.enable
 };
+# Disabling it only in the initrd wasn't enough.
+systemd.tpm2.enable = false;
 
 hardware = {
   deviceTree = {
