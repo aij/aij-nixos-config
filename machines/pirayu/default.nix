@@ -22,8 +22,8 @@
   #boot.loader.efi.canTouchEfiVariables = true;
 
   boot = {
-    zfs.package = pkgs.zfs_unstable; # Use ZFS 2.4rc3 as 2.3 does not support Linux 6.17
-    kernelPackages = pkgs.linuxPackages_6_17;
+    zfs.package = pkgs.zfs_unstable; # Use ZFS 2.4 as 2.3 does not support Linux 6.17
+    kernelPackages = pkgs.linuxPackages_6_18;
   kernelParams = [
     "clk_ignore_unused"
     "pd_ignore_unused"
@@ -58,7 +58,15 @@
       efiSupport = true;
     };
   };
+  # Not sure when this got enabled by default (maybe around 8a0ddfe)
+  # but it causes the boot process to wait 90 seconds before timing out
+  # waiting for /dev/tpm0 and /dev/tpmrm0.
+  initrd.systemd.tpm2.enable = false;
+  # Note to self: Check older versions with `nix repl .` and
+  # nixosConfigurations.pirayu.config.boot.initrd.systemd.tpm2.enable
 };
+# Disabling it only in the initrd wasn't enough.
+systemd.tpm2.enable = false;
 
 hardware = {
   deviceTree = {
