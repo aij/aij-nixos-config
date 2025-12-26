@@ -110,6 +110,9 @@ networking = {
       };
     };
   };
+  # Enable wwan support
+  # https://modemmanager.org/docs/modemmanager/ip-connectivity-setup-in-lte-modems/
+  modemmanager.enable = true;
 };
 
 
