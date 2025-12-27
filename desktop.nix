@@ -137,6 +137,9 @@
     gcr-ssh-agent.enable = false;
   };
 
+  programs.hyprland.enable = true;
+  programs.hyprlock.enable = true;
+
   programs.sway = {
     enable = true;
     extraPackages = with pkgs; [
