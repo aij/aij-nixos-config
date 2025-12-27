@@ -172,6 +172,9 @@ networking = {
 
   # programs.firefox.enable = true;
 
+  programs.light.enable = true;
+  programs.light.brightnessKeys.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   # environment.systemPackages = with pkgs; [
