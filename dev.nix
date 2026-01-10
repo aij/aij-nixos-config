@@ -45,7 +45,7 @@ in {
     dune_3
     nix-prefetch-git
     nix-index
-    nixfmt-rfc-style
+    nixfmt
     nixos-generators # For nixos-generate
     nox
     nix-bisect

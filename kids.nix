@@ -13,8 +13,10 @@
     autoRepeatInterval = lib.mkForce null;
 
     desktopManager.mate.enable = true;
-    displayManager.gdm.enable = true;
-    displayManager.defaultSession = lib.mkForce "mate";
+  };
+  services.displayManager = {
+    gdm.enable = true;
+    defaultSession = lib.mkForce "mate";
   };
 
   environment.systemPackages = with pkgs; [
