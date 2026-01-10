@@ -30,7 +30,7 @@
     xorg.xev
     xorg.xmodmap
     xfontsel
-    x2x
+    # x2x # Broken in unstable
     deskflow # Fancier x2x / new upstream of Synergy
     xcompmgr
     read-edid
@@ -86,9 +86,10 @@
     yt-dlp
     signal-desktop
     element-desktop
-    (pidgin.override {
-      plugins = [ pidginPackages.purple-plugin-pack ];
-    })
+    # purple-plugin-pack is broken in unstable
+    # (pidgin.override {
+    #   plugins = [ pidginPackages.purple-plugin-pack ];
+    # })
     # jitsi # video conferencing alternative to Hangouts / Zoom
 
     tetex
