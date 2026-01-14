@@ -105,6 +105,11 @@
   ];
 
   nix.daemonCPUSchedPolicy = lib.mkForce "idle";
+  nix.daemonIOSchedClass = "idle";
+  # Also set a nice level for the nix daemon so CPU usage is reported
+  # as "nice". This used to be daemonNiceLevel but it was removed in
+  # nixpkgs ee8e993fd430ed80b1ea58b1b9b396270ade09a1
+  systemd.services.nix-daemon.serviceConfig.Nice = 5;
   nixpkgs.config.android_sdk.accept_license = true;
 
   services.displayManager.defaultSession = "none+xmonad";
