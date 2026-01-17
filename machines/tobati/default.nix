@@ -147,7 +147,8 @@
         passCommand = "cat /root/keys/borgbackup_tobati_m2";
       };
       compression = "auto,lzma";
-      startAt = "daily";
+      # Run every day at 2am
+      startAt = "*-*-* 2:00:00";
     };
   };
 
