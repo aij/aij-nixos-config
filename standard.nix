@@ -48,6 +48,7 @@
     bsd-finger
     openssl
     inetutils
+    unixtools.netstat
     smartmontools
     sysstat
     beep
