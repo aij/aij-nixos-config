@@ -132,6 +132,12 @@
 
   programs.browserpass.enable = true;
   programs.firefox.enable = true;
+  programs.firefox.preferences = {
+    # Set here instead of manually managing via about:config
+    "browser.link.open_newwindow" = 3;  # Open in a new tab
+    "browser.link.open_newwindow.override.external" = 3;  # Override external links to open in a new tab
+    "browser.link.open_newwindow.restriction" = 0;  # Scripts too.
+  };
   programs.gnupg.agent = {
     enable = true;
     pinentryPackage = pkgs.pinentry-qt;
