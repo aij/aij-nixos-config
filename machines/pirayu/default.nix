@@ -172,9 +172,6 @@ networking = {
 
   # programs.firefox.enable = true;
 
-  programs.light.enable = true;
-  programs.light.brightnessKeys.enable = true;
-
   services.tlp.enable = true;
   services.tlp.settings = {
     START_CHARGE_THRESH_BAT0 = 75;
