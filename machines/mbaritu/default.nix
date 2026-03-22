@@ -47,6 +47,9 @@
     ];
   };
 
+  nixpkgs.config.allowUnfree = true;
+  programs.steam.enable = true;
+
   # Set your time zone.
   # time.timeZone = "Europe/Amsterdam";
 

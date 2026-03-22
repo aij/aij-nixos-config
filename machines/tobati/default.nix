@@ -48,6 +48,8 @@
   #   ceph # broken in unstable
   ];
 
+  programs.steam.enable = true;
+
   services.openssh.enable = true;
   services.openssh.settings.PasswordAuthentication = false;
 
