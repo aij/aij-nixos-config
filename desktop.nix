@@ -72,7 +72,7 @@
     keepassxc
     (pass.withExtensions (ext: with ext; [ pass-import pass-otp ]))
     browserpass
-    bitwarden-desktop
+    # bitwarden-desktop  # Uses electron :(
     bitwarden-cli
     # androidsdk TODO: Where'd it go?
     graphviz
