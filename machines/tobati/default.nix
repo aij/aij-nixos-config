@@ -99,7 +99,7 @@
 
   fileSystems."/media/sr0" = {
     device = "/dev/sr0";
-    #fsType = "auto";
+    fsType = "auto";
     options = [ "defaults" "user" "ro" "utf8" "noauto" "umask=000" ];
   };
 
