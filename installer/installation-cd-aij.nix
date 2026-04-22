@@ -19,6 +19,9 @@
   boot.zfs.forceImportRoot = false;
   boot.zfs.forceImportAll = false;
 
+  # Since the installer has no passwords, we can't use su and really do want sudo here.
+  security.sudo.enable = lib.mkForce true;
+
   services.openssh.enable = true;
 
   # Don't stall sshd.
