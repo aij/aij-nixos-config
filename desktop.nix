@@ -125,6 +125,9 @@
         # extraPackages = p: [ p.taffybar ];
       };
     };
+
+    # systemd-managed xdg-desktop-portal-gtk needs to get $DISPLAY
+    updateDbusEnvironment = true;
     logFile = null; # use default instead of /dev/null
   };
   services.xscreensaver.enable = true;
