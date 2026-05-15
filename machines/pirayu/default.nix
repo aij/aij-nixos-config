@@ -23,7 +23,7 @@
 
   boot = {
     zfs.package = pkgs.zfs_2_4;
-    kernelPackages = pkgs.linuxPackages_6_18;
+    kernelPackages = pkgs.linuxPackages_latest;
   kernelParams = [
     "clk_ignore_unused"
     "pd_ignore_unused"
