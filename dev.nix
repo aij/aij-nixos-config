@@ -92,7 +92,7 @@ in {
   ];
 
   virtualisation.podman.enable = true;
-  virtualisation.virtualbox.host.enable = isx86;
+  # virtualisation.virtualbox.host.enable = isx86;
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "androidsdk"
