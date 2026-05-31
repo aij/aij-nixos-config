@@ -42,6 +42,7 @@
   # For laptops that don't have (usable) ethernet
   networking.wireless.iwd.enable = true; # Enables wireless support via iwd / iwctl
   networking.wireless.enable = false;
+  networking.networkmanager.enable = lib.mkForce false;
 
   # Extra packages for hardware support
   environment.systemPackages = with pkgs; [
