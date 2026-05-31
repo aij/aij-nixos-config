@@ -44,6 +44,13 @@
   networking.wireless.enable = false;
   networking.networkmanager.enable = lib.mkForce false;
 
+  services.xserver = {
+    enable = true;
+    enableCtrlAltBackspace = true;
+    displayManager.startx.enable = true;
+    logFile = null; # use default instead of /dev/null
+  };
+
   # Extra packages for hardware support
   environment.systemPackages = with pkgs; [
     # hpssacli # HP SmartArray configuration tool
