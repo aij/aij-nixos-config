@@ -8,10 +8,11 @@
     },
     "stable": {
       "locked": {
-        "lastModified": 1779771657,
-        "narHash": "sha256-OmS7eoI8ffGRsprz49v2yZqOKAcYr4JU8LlM9zabKss=",
-        "rev": "d60e39a68a425c89bfc5b1d3f26777c4d7e56279",
-        "revCount": 913243,
+        "lastModified": 1780203844,
+        "narHash": "sha256-K5sT4jTpGs15ADhviMKNBH38REpPf5Q6mM1+N6cArVE=",
+        "ref": "refs/heads/nixos-26.05-small",
+        "rev": "b51242d7d43689db2f3be91bd05d5b24fbb469c4",
+        "revCount": 1005180,
         "type": "git",
         "url": "file:stable"
       },
