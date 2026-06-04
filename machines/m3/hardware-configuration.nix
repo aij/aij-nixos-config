@@ -42,7 +42,7 @@
 
       # Generated with
       # i=12; blkid -o udev /dev/sd[mn]4 | grep ID_FS_PARTUUID | sed 's/ID_FS_PARTUUID/PARTUUID/' | while read dev; do printf '"/chia/%02d" = { device = "%s"; options = [ "nofail" ]; };\n' $i $dev; i=$((i+1)); done
-      "/chia/12" = { device = "PARTUUID=f9943744-3cc2-0347-a9e6-273933b634fb"; options = [ "nofail" ]; };
+      "/chia/12" = { device = "PARTUUID=f9943744-3cc2-0347-a9e6-273933b634fb"; fsType = "auto"; options = [ "nofail" ]; };
     };
 
 }
