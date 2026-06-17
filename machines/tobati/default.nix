@@ -85,7 +85,7 @@
 
   boot.tmp.useTmpfs = true;
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_7_0;
 
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
