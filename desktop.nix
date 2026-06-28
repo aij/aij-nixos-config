@@ -39,7 +39,6 @@
     mesa-demos # For glxinfo
     xclip
     xdotool
-    chromium
     #firefox #google-chrome # chromiumDev
     notmuch
     offlineimap
