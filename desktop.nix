@@ -23,12 +23,12 @@
     # mplayer # Broken in unstable
     vlc
     mpv
-    xorg.xinit
-    xorg.xdpyinfo
-    xorg.xbacklight
-    xorg.xdriinfo
-    xorg.xev
-    xorg.xmodmap
+    xinit
+    xdpyinfo
+    xbacklight
+    xdriinfo
+    xev
+    xmodmap
     xfontsel
     # x2x # Broken in unstable
     deskflow # Fancier x2x / new upstream of Synergy
