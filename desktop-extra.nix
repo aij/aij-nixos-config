@@ -4,7 +4,7 @@
 
   environment.systemPackages = with pkgs; [
     # GIS
-    qgis
+    # qgis # Broken in unstable
 
     # SDR
     fldigi

@@ -85,7 +85,7 @@ in {
     emacs30
   ] ++ lib.optionals (isx86) [
     # diffoscope # Broken in nixos-25.05. https://github.com/NixOS/nixpkgs/issues/446683
-    fstar
+    # fstar # Broken in unstable
     patdiff
     smlnj
     bloop
