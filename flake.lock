@@ -22,10 +22,10 @@
     },
     "unstable": {
       "locked": {
-        "lastModified": 1783891814,
-        "narHash": "sha256-TXhx+yUXb24h+Wu60Ck9wVk2AuSvf172qzCmJLJlqIs=",
-        "rev": "62290c9d1b6ff9e155da4da1de774cdd706cf48a",
-        "revCount": 1033464,
+        "lastModified": 1784224299,
+        "narHash": "sha256-FEyouc/8OeIlHTg8zMlHsFFPxPFP09amZFiUQYuF+Xg=",
+        "rev": "fd40dc70a9554de4370b6d5d08b858f7c4e49e30",
+        "revCount": 1036057,
         "type": "git",
         "url": "file:unstable"
       },
