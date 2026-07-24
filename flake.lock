@@ -8,10 +8,10 @@
     },
     "stable": {
       "locked": {
-        "lastModified": 1784308453,
-        "narHash": "sha256-44Qzf7HLwICq+33ajWci0oiWGi10tA68sVghewNfFA4=",
-        "rev": "0071366debccca5194e1add4be0f1c225d5de296",
-        "revCount": 1009779,
+        "lastModified": 1784879845,
+        "narHash": "sha256-sroT4rM0nYWmQDfIOPO3rbm8f4EHt6n/9BWv2YNcrCE=",
+        "rev": "4134e434300d2218b46c387fd623cf457042f408",
+        "revCount": 1010281,
         "type": "git",
         "url": "file:stable"
       },
