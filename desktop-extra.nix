@@ -15,7 +15,7 @@
 
     # Games
     endless-sky
-    mindustry
+    # mindustry # Broken in unstable https://github.com/NixOS/nixpkgs/issues/544566
     flightgear
     prismlauncher
     # TODO: 0ad xonotic quake3 blobwars openttd gotypist gtypist gtetrinet ?
