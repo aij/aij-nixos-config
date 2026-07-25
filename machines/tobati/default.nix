@@ -8,7 +8,6 @@
     ../../bluray.nix
     ../../hosts-home.nix
     # ../../latencytop.nix
-    ../../unstable.nix
     # ../../profiles/miner.nix
   ];
 

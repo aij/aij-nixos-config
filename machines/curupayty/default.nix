@@ -4,7 +4,6 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../standard.nix
-      ../../stable.nix
       ../../sshd.nix
       ../../desktop.nix
       ../../kids.nix

@@ -10,7 +10,6 @@
       ./hardware-configuration.nix
       ../../sshd.nix
       ../../standard.nix
-      ../../stable.nix
       ../../hosts-home.nix
     ];
 
