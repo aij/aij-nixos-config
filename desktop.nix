@@ -195,8 +195,7 @@
 
   # Options for nixos-rebuild build-vm
   # (The default 384MB RAM is not enough to run Firefox)
-  virtualisation =
-    lib.optionalAttrs (builtins.hasAttr "qemu" options.virtualisation) {
+  virtualisation.vmVariant.virtualisation = {
       memorySize = 4096;
       cores = 4;
       # qemu.options = [ "-soundhw ac97" ];
