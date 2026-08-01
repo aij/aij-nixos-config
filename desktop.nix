@@ -6,7 +6,6 @@
  ];
 
   environment.systemPackages = with pkgs; [
-    gkrellm
     gnupg
     wireshark # openssh_with_kerberos
     kismet
