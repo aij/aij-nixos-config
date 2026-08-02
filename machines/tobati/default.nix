@@ -17,12 +17,14 @@
 
   networking.firewall = {
     allowedTCPPorts = [
+      14004 # Veloren
       24800 # Default port for barrier
       25565 # Default port for Minecraft
       42420 # Vintagestory
       42424
     ];
     allowedUDPPorts = [
+      14004 # Veloren
       25565
       42420
       42424
