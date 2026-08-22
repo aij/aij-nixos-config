@@ -176,15 +176,6 @@ networking = {
     START_CHARGE_THRESH_BAT0 = 75;
     STOP_CHARGE_THRESH_BAT0 = 85;
   };
-  services.tlp.package = pkgs.tlp.overrideAttrs( oldAttrs: rec {
-    version = "1.9.0";
-    src = pkgs.fetchFromGitHub {
-      owner = "linrunner";
-      repo = "TLP";
-      rev = version;
-      hash = "sha256-aM/4+cgtUe6qv3MNT4moXvNzqG5gKvwMbg14L8ifWlc=";
-    };
-  });
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
