@@ -82,7 +82,7 @@ in {
     linux-scripts # For extract-ikconfig
     # Customized emacs package
     #(import pkg/emacs.nix { inherit pkgs; })
-    emacs30
+    emacs
   ] ++ lib.optionals (isx86) [
     # diffoscope # Broken in nixos-25.05. https://github.com/NixOS/nixpkgs/issues/446683
     # fstar # Broken in unstable
