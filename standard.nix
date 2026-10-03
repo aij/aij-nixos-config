@@ -193,4 +193,13 @@
     # Allow normal users to use dmesg
     "kernel.dmesg_restrict" = 0;
   };
+
+  nixpkgs.overlays = [
+    (self: super: {
+       # Workaround for https://github.com/NixOS/nixpkgs/issues/568896
+       rxvt-unicode-unwrapped = super.rxvt-unicode-unwrapped.override {
+         stdenv = pkgs.gcc15Stdenv;
+       };
+     })
+  ];
 }
