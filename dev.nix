@@ -51,7 +51,7 @@ in {
     nox
     nix-bisect
     hydra-check
-    # rnix-lsp # Removed to avoid dependency on vulnerable nix-2.15.3 (CVE-2024-27297)
+    nixd
     python3
     mypy # TODO: pytype and/or pyre?
     black
