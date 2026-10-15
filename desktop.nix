@@ -61,9 +61,12 @@
     inkscape
     # enlightenment.rage enlightenment.terminology
     trayer
+    stalonetray
+    haskellPackages.gtk-sni-tray
+    pasystray
     dunst
     haskellPackages.xmobar # TODO: Remove after fully switching to taffybar.
-    # taffybar Broken in unstable :(
+    taffybar
     audacity
     exif
     # exiftags # CVE-2023-50671, CVE-2024-42851
