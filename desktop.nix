@@ -60,7 +60,6 @@
     gimp # gimp-with-plugins # Broken in unstable
     inkscape
     # enlightenment.rage enlightenment.terminology
-    trayer
     stalonetray
     haskellPackages.gtk-sni-tray
     pasystray
