@@ -66,7 +66,7 @@
     dunst
     haskellPackages.xmobar # TODO: Remove after fully switching to taffybar.
     taffybar
-    audacity
+    # audacity # Broken in unstable https://github.com/NixOS/nixpkgs/issues/572942
     exif
     # exiftags # CVE-2023-50671, CVE-2024-42851
     keepassxc
