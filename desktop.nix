@@ -66,6 +66,7 @@
     dunst
     haskellPackages.xmobar # TODO: Remove after fully switching to taffybar.
     taffybar
+    haskellPackages.status-notifier-item # For status-notifier-watcher (used by taffybar sniTray)
     # audacity # Broken in unstable https://github.com/NixOS/nixpkgs/issues/572942
     exif
     # exiftags # CVE-2023-50671, CVE-2024-42851
