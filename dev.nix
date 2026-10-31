@@ -86,7 +86,7 @@ in {
   ] ++ lib.optionals (isx86) [
     # diffoscope # Broken in nixos-25.05. https://github.com/NixOS/nixpkgs/issues/446683
     # fstar # Broken in unstable
-    patdiff
+    # patdiff # Depends on pcre, which is broken in unstable since fa900f9e3014e2497c2bfc57846a30c1914f5f87
     smlnj
     bloop
 
