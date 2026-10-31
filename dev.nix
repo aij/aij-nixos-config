@@ -78,7 +78,7 @@ in {
     kubernix
     qemu
     vde2
-    libguestfs
+    # libguestfs # Broken in unstable
     linux-scripts # For extract-ikconfig
     # Customized emacs package
     #(import pkg/emacs.nix { inherit pkgs; })
