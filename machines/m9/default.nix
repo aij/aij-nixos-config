@@ -26,6 +26,10 @@
   networking.hostName = "m9";
   networking.hostId = "19b1f225";
 
+  # Connecting enp1s0f0 (10GBaseT from AOM-X10QBi-A) to 10Gbps switch
+  # causes the fans to spin up. Prefer ens4f0 (SFP+ DAC).
+  networking.bridges.br0 = { interfaces = ["enp1s0f0" "ens4f0"]; rstp = true; };
+
   # Configure network connections interactively with nmcli or nmtui.
   #networking.networkmanager.enable = true;
 
