@@ -187,8 +187,8 @@
   # TODO: Patch/override pkgs.kmod-blacklist-ubuntu instead?
   boot.kernelModules = [ "pcspkr" ];
 
-  boot.loader.grub.configurationLimit = 10;
-  boot.loader.systemd-boot.configurationLimit = 10;
+  boot.loader.grub.configurationLimit = 7;
+  boot.loader.systemd-boot.configurationLimit = 7;
   boot.kernel.sysctl = {
     # Allow normal users to use dmesg
     "kernel.dmesg_restrict" = 0;
