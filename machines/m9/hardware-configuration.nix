@@ -50,6 +50,17 @@
       options = [ "nofail" ];
     };
 
+  fileSystems."/m9mir" =
+    { device = "/dev/disk/by-uuid/9fe0b2a4-bea9-453f-bff2-b0d4f9acc56c";
+      fsType = "btrfs";
+    };
+
+  fileSystems."/borgbackup" =
+    { device = "/dev/disk/by-uuid/9fe0b2a4-bea9-453f-bff2-b0d4f9acc56c";
+      fsType = "btrfs";
+      options = [ "subvol=borgbackup" ];
+    };
+
   swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
