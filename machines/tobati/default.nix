@@ -5,7 +5,7 @@
     ../../zfs.nix
     ../../desktop-extra.nix
     ../../dev.nix
-    ../../bluray.nix
+    #../../bluray.nix
     ../../hosts-home.nix
     # ../../latencytop.nix
     # ../../profiles/miner.nix
