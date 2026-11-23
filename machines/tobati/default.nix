@@ -130,10 +130,8 @@
       ];
   };
 
-  services.borgbackup.jobs = {
-    m2Backup = {
-      paths = [ "/home" ];
-      exclude = [
+  services.borgbackup.jobs =
+    let common-excludes = [
         "**.cache"
         "*/tmp"
         # Common CMake out-of-tree build paths
@@ -142,7 +140,11 @@
         "*/keybase/"
         # Avoid recursing into ZFS snapshot mountpoints
         "*/.zfs/"
-      ];
+        ];
+    in    {
+    m2Backup = {
+      paths = [ "/home" ];
+      exclude = common-excludes;
       doInit = false;
       repo = "borg@m2.net0:/tank/borgbackup/tobati";
       encryption = {
@@ -152,6 +154,18 @@
       compression = "auto,lzma";
       # Run every day at 2am
       startAt = "*-*-* 2:00:00";
+    };
+    m9Backup = {
+      paths = [ "/home" ];
+      exclude = common-excludes;
+      doInit = false;
+      repo = "borg@m9.net0:/borgbackup/tobati";
+      encryption = {
+        mode = "repokey";
+        passCommand = "cat /root/keys/borgbackup_tobati_m9";
+      };
+      compression = "auto,lzma";
+      startAt = "weekly";
     };
   };
 

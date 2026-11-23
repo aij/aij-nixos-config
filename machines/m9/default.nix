@@ -30,6 +30,18 @@
   # causes the fans to spin up. Prefer ens4f0 (SFP+ DAC).
   networking.bridges.br0 = { interfaces = ["enp1s0f0" "ens4f0"]; rstp = true; };
 
+  services.borgbackup.repos = {
+    tobati = {
+      path = "/borgbackup/tobati";
+      authorizedKeys = [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKXcoMF1LGxI+HMzf5LEx7XD4+vcn+ds4N9ja/uvW+Dh root@tobati"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDTGD3FImr4dsW6pmGT5muMDjEoOTPMxxvhwWMMyAcpC ivan@tobati"
+      ];
+    };
+  };
+
+
+
   # Configure network connections interactively with nmcli or nmtui.
   #networking.networkmanager.enable = true;
 
